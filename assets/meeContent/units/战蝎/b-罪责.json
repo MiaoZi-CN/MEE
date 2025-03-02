@@ -1,0 +1,64 @@
+{
+  "type": "legs",
+  "name": "罪责",
+  "description": "战蝎单位，短暂蓄力后定向发射数枚子弹，并在短暂延迟后爆炸",
+  "speed": 1,
+  "hitSize": 8,
+  "health": 1250,
+  "armor": 4,
+  "research": "战蝎重构厂",
+  "template": "ErekirUnitType",
+  "legLength": 12,
+  "lockLegBase": true,
+  "legContinuousMove": true,
+  "legBaseOffset": 1,
+  "legGroupSize": 5.5,
+  "legExtension": 5,
+  "legMaxLength": 1.7,
+  "legMinLength": 1.6,
+  "legCount": 6,
+  "legStraightness": 0.2,
+  "baseLegStraightness": 0.1,
+  "legMoveSpace": 2,
+  "allowLegStep": true,
+  "weapons": [
+    {
+      "name": "罪责武器",
+      "mirror": true,
+      "x": 0,
+      "y": 0,
+      "reload": 170,
+      "recoil": 0,
+      "inaccuracy": 9,
+      "shoot": {
+        "shots": 10
+      },
+      "shootStatusDuration": 40,
+      "shootSound": "largeCannon",
+      "velocityRnd": 0.8,
+      "bullet": {
+        "type": "BasicBulletType",
+        "damage": 42,
+        "splashDamage": 45,
+        "splashDamageRadius": 16,
+        "buildingDamageMultiplier": 1.4,
+        "speed": 24,
+        "drag": 0.13,
+        "lifetime": 27,
+        "frontColor": "99F8FFFF",
+        "backColor": "64AE7FFF",
+        "trailColor": "64AE7FFF",
+        "trailLength": 2,
+        "trailWidth": 1.4,
+        "shrinkY": 0,
+        "hitEffect": {
+          "type": "ExplosionEffect",
+          "waveColor": "99F8FFFF",
+          "waveRad": 16,
+          "smokeColor": "74A1E3FF",
+          "sparkColor": "99F8FFFF"
+        }
+      }
+    }
+  ]
+}

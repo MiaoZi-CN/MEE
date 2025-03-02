@@ -1,0 +1,50 @@
+{
+  "name": "磁涡",
+  "description": "吸引附近子弹，并维持其动能",
+  "details": "昂贵的小玩具",
+  "reload": 180,
+  "range": 300,
+  "size": 4,
+  "health": 1800,
+  "chargeSound": "lasercharge",
+  "shootSound": "laserblast",
+  "category": "turret",
+  "buildVisibility": "sandboxOnly",
+  "shoot": {
+    "firstShotDelay": 80
+  },
+  "consumes": {
+    "power": 3
+  },
+  "requirements": [
+    "silicon/250",
+    "surge-alloy/150",
+    "phase-fabric/150"
+  ],
+  "drawer": {
+    "type": "DrawTurret",
+    "parts": [
+      {
+        "type": "RegionPart",
+        "suffix": "-左",
+        "progress": "warmup",
+        "moveRot": 5,
+        "mirror": false
+      },
+      {
+        "type": "RegionPart",
+        "suffix": "-右",
+        "progress": "warmup",
+        "moveRot": -5,
+        "mirror": false
+      },
+      {
+        "type": "RegionPart",
+        "suffix": "-top",
+        "progress": "warmup",
+        "heatProgress": "warmup",
+        "mirror": false
+      }
+    ]
+  }
+}

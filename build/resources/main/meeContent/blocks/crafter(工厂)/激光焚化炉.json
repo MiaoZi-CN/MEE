@@ -1,0 +1,18 @@
+{
+  "type": "Incinerator",
+  "category": "crafting",
+  "name": "激光焚化炉",
+  "description": "激光焚烧接触的物品和液体",
+  "details": "专门烧核废水和芳油污(",
+  "research": {
+    "parent": "芳油过滤器"
+  },
+  "requirements": [
+    "tungsten/30"
+  ],
+  "consumes": {
+    "power": 0.5
+  },
+  "size": 1,
+  "health": 460
+}

@@ -1,0 +1,386 @@
+{
+  "type": "PowerTurret",
+  "name": "千钧",
+  "description": "指示信标，标记敌人并呼叫空间陨星打击地面敌人",
+  "size": 5,
+  "health": 5600,
+  "category": "turret",
+  "canOverdrive": false,
+  "shootSound": "none",
+  "shootWarmupSpeed": 0.03,
+  "minWarmup": 0.9,
+  "heatRequirement": 45,
+  "reload": 120,
+  "rotateSpeed": 2,
+  "heatColor": "d370d3",
+  "range": 550,
+  "targetAir": false,
+  "research": "malign",
+  "requirements": [
+    "tungsten/1900",
+    "thorium/1800",
+    "beryllium/1500",
+    "silicon/3000",
+    "phase-fabric/300",
+    "carbide/800"
+  ],
+  "consumes": {
+    "power": 10,
+    "liquids": [
+      "hydrogen/1"
+    ]
+  },
+  "drawer": {
+    "type": "DrawTurret",
+    "parts": [
+      {
+        "type": "RegionPart",
+        "mirror": true,
+        "x": 0,
+        "y": 0,
+        "under": true,
+        "suffix": "-翼",
+        "outline": false,
+        "layerOffset": -0.3,
+        "heatProgress": "warmup",
+        "heatColor": "d370d3",
+        "progress": {
+          //移动
+          "type": "warmup",
+          "op": "delay",
+          "other": "reload",
+          "amount": 0.1
+        },
+        "moveX": 9,
+        "moveY": -7,
+        "moveRot": -0
+      },
+      {
+        "type": "RegionPart",
+        "mirror": true,
+        "x": 0,
+        "y": 0,
+        "under": true,
+        "suffix": "-翼",
+        "heatColor": "d370d3",
+        "heatProgress": "warmup",
+        "layerOffset": -0.3,
+        "turretHeatLayer": 50,
+        "progress": {
+          //移动
+          "type": "warmup",
+          "op": "delay",
+          "other": "reload",
+          "amount": 0.1
+        },
+        "moveX": 9,
+        "moveY": -7,
+        "moveRot": -20
+      },
+      {
+        "type": "RegionPart",
+        "mirror": true,
+        "x": 0,
+        "y": 0,
+        "under": true,
+        "suffix": "-翼",
+        "heatColor": "d370d3",
+        "heatProgress": "warmup",
+        "layerOffset": -0.3,
+        "turretHeatLayer": 50,
+        "progress": {
+          //移动
+          "type": "warmup",
+          "op": "delay",
+          "other": "reload",
+          "amount": 0.1
+        },
+        "moveX": 9,
+        "moveY": -7,
+        "moveRot": -40
+      },
+      {
+        "type": "RegionPart",
+        "mirror": true,
+        "suffix": "-前",
+        "heatProgress": "warmup",
+        "heatColor": "d370d3",
+        "moveX": 2.5,
+        "moveY": 2.5,
+        "moveRot": -10
+      },
+      {
+        "type": "RegionPart",
+        "mirror": true,
+        "suffix": "-边",
+        "heatProgress": "warmup",
+        "heatColor": "d370d3",
+        "moveX": -2,
+        "moveY": -2,
+        "moveRot": 0
+      },
+      {
+        "type": "RegionPart",
+        "mirror": true,
+        "suffix": "-侧",
+        "heatProgress": "warmup",
+        "heatColor": "d370d3",
+        "moveX": 1,
+        "moveY": 1,
+        "moveRot": 10
+      },
+      {
+        "type": "RegionPart",
+        "mirror": true,
+        "suffix": "-后",
+        "heatProgress": "warmup",
+        "heatColor": "d370d3",
+        "moveX": 0,
+        "moveY": 2,
+        "moveRot": 0
+      },
+      {
+        "type": "RegionPart",
+        "mirror": false,
+        "suffix": "-口",
+        "moveX": 0,
+        "moveY": -5,
+        "moveRot": 0
+      },
+      {
+        "type": "RegionPart",
+        "mirror": true,
+        "x": 0,
+        "y": 0,
+        "under": true,
+        "suffix": "-底",
+        "heatProgress": "warmup",
+        "heatColor": "d370d3",
+        "layerOffset": -0.3,
+        "turretHeatLayer": 50,
+        "moveX": 0,
+        "moveY": 0,
+        "moveRot": 0
+      },
+      {
+        "type": "ShapePart",
+        "y": 25,
+        "circle": true,
+        "hollow": true,
+        "radius": 0,
+        "radiusTo": 5,
+        "stroke": 0,
+        "strokeTo": 1,
+        "layer": 110,
+        "color": "d370d3"
+      },
+      //圆
+      {
+        "type": "HaloPart",
+        "shapes": 2,
+        "tri": true,
+        "y": 25,
+        "haloRotation": 180,
+        "radius": 0,
+        "radiusTo": 5,
+        "triLength": 4,
+        "triLengthTo": 4,
+        "haloRadius": 0,
+        "haloRadiusTo": 12,
+        "haloRotateSpeed": 2.4,
+        "color": "d370d3",
+        "layer": 110,
+        "colorTo": "d370d3",
+        "progress": "warmup"
+      },
+      //旋转俩三角形
+      {
+        "type": "HaloPart",
+        "shapes": 2,
+        "tri": true,
+        "y": 25,
+        "radius": 0,
+        "radiusTo": 3,
+        "triLength": 0,
+        "triLengthTo": 8,
+        "haloRadius": 0,
+        "haloRadiusTo": 35,
+        "haloRotation": 90,
+        "shapeRotation": 180,
+        "haloRotateSpeed": 0,
+        "color": "d370d3",
+        "layer": 110,
+        "colorTo": "d370d3",
+        "progress": "warmup"
+      },
+      //不动三角形
+      {
+        "type": "HaloPart",
+        "shapes": 2,
+        "tri": true,
+        "y": 25,
+        "radius": 0,
+        "radiusTo": 3,
+        "triLength": 0,
+        "triLengthTo": 8,
+        "haloRadius": 0,
+        "haloRadiusTo": 35,
+        "haloRotation": 90,
+        "shapeRotation": 0,
+        "haloRotateSpeed": 0,
+        "color": "d370d3",
+        "layer": 110,
+        "colorTo": "d370d3",
+        "progress": "warmup"
+      },
+      //不动三角形
+      {
+        "type": "ShapePart",
+        "y": 25,
+        "circle": true,
+        "hollow": true,
+        "radius": 0,
+        "radiusTo": 12,
+        "stroke": 0,
+        "strokeTo": 2,
+        "layer": 110,
+        "color": "d370d3"
+      },
+      //大圆
+      {
+        "type": "HaloPart",
+        "shapes": 4,
+        "tri": true,
+        "y": 25,
+        "radius": 0,
+        "radiusTo": 3,
+        "triLength": 0,
+        "triLengthTo": 5,
+        "haloRadius": 0,
+        "haloRadiusTo": 10,
+        "haloRotateSpeed": 2.4,
+        "haloRotation": 90,
+        "shapeRotation": 180,
+        "color": "d370d3",
+        "layer": 110,
+        "colorTo": "d370d3",
+        "progress": "warmup"
+      }
+      //旋转四三角形
+    ]
+  },
+  "shootType": {
+    "type": "PointBulletType",
+    "trailEffect": {
+      "type": "ParticleEffect",
+      "strokeFrom": 0,
+      "strokeTo": 0,
+      "length": 0,
+      "baseLength": 1,
+      "lifetime": 0,
+      "colorFrom": "4b4b4b00",
+      "colorTo": "4B4B4B00",
+      "cone": 0
+    },
+    "fragBullets": 5,
+    "fragAngle": 180,
+    "fragRandomSpread": 40,
+    "fragVelocityMax": 12,
+    "fragVelocityMin": 11,
+    "speed": 40,
+    "lifetime": 10,
+    "hitEffect": {
+      "type": "ParticleEffect",
+      "lifetime": 70,
+      "region": "mee-预瞄点",
+      "particles": 1,
+      "sizeFrom": 20,
+      "sizeTo": 10,
+      "colorFrom": "d370d3",
+      "colorTo": "d370d3",
+      "baseLength": 0,
+      "length": 0
+    },
+    "fragBullet": {
+      "type": "PointBulletType",
+      "trailEffect": {
+        "type": "ParticleEffect",
+        "strokeFrom": 0,
+        "strokeTo": 0,
+        "length": 0,
+        "baseLength": 1,
+        "lifetime": 0,
+        "colorFrom": "4B4B4B00",
+        "colorTo": "4B4B4B00",
+        "cone": 0
+      },
+      "fragBullets": 1,
+      "fragAngle": 180,
+      "fragRandomSpread": 5,
+      "fragVelocityMax": 11.5,
+      "fragVelocityMin": 10.9,
+      "fragBullet": {
+        "collides": false,
+        "pierce": true,
+        "pierceBuilding": true,
+        "sprite": "mee-星",
+        "backColor": "d370d3",
+        "frontColor": "d370d3",
+        "hitSound": "plasmaboom",
+        "shrinkX": 0.4,
+        "shrinkY": 0.4,
+        "width": 130,
+        "height": 130,
+        "trailLength": 20,
+        "trailWidth": 5,
+        "trailColor": "d370d3",
+        "spin": 5,
+        "splashDamageRadius": 130,
+        "splashDamage": 600,
+        "buildingDamageMultiplier": 0.1,
+        "lifetime": 100,
+        "hitEffect": {
+          "type": "MultiEffect",
+          "effects": [
+            {
+              "type": "ParticleEffect",
+              "interp": "pow10Out",
+              "sizeInterp": "pow10In",
+              "lifetime": 100,
+              "cone": 360,
+              "particles": 24,
+              "baseLength": 0,
+              "length": 120,
+              "sizeFrom": 10,
+              "sizeTo": 0,
+              "colorFrom": "ffffff",
+              "colorTo": "d370d3"
+            },
+            {
+              "type": "WaveEffect",
+              "lifetime": 30,
+              "sizeFrom": 0,
+              "sizeTo": 120,
+              "strokeFrom": 5,
+              "strokeTo": 0,
+              "colorFrom": "d370d3",
+              "colorTo": "d370d3"
+            },
+            {
+              "type": "ParticleEffect",
+              "lifetime": 200,
+              "region": "mee-star空心",
+              "particles": 1,
+              "sizeFrom": 100,
+              "sizeTo": 0,
+              "colorFrom": "d370d3",
+              "colorTo": "d370d3",
+              "baseLength": 0,
+              "length": 0
+            }
+          ]
+        }
+      }
+    }
+  }
+}

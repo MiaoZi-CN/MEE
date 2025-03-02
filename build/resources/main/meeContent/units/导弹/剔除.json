@@ -1,0 +1,53 @@
+{
+  "type": "missile",
+  "template": "MissileUnitType",
+  "name": "斥候",
+  "description": "瘤虫的辅助，使用瘤导弹打击敌人",
+  "speed": 1.2,
+  "flying": true,
+  "rotateSpeed": 5,
+  "hitSize": 15,
+  "health": 10,
+  "armor": 3,
+  "lifetime": 300,
+  "weapons": [
+    {
+      "name": "覆灭导弹",
+      "reload": 10,
+      "x": 0,
+      "y": 0,
+      "shoot": {
+        "type": "ShootSpread",
+        "spread": 120,
+        "shots": 2
+      },
+      "bullet": {
+        "type": "BasicBulletType",
+        "speed": 20,
+        "lifetime": 20,
+        "inaccuracy": 90,
+        "pierce": true,
+        "fragSpread": 10,
+        "fragBullets": 5,
+        "fragBullet": {
+          "pierce": true,
+          "pierceBuilding": false,
+          "type": "LiquidBulletType",
+          "liquid": "neoplasm",
+          "lifetime": 0.1,
+          "speed": 0,
+          "puddleSize": 5,
+          "orbSize": 5,
+          "damage": 0
+        },
+        "homingRange": 1500,
+        "homingPower": 0.8,
+        "damage": 10,
+        "width": 5,
+        "height": -50,
+        "trailLength": 5,
+        "trailWidth": 1
+      }
+    }
+  ]
+}

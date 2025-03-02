@@ -1,0 +1,165 @@
+{
+	"type": "payload",
+	"payloadCapacity": 600,
+	"allowedInPayloads": false,
+	"useUnitCap": false,
+	"name": "遣散",
+	"description": "战略型空中单位，可以使用电磁炮来进攻敌人，会使用解裂光束进行自我保护",
+	"speed": 1.6,
+	"hitSize": 20,
+	"armor": 6,
+	"health": 6200,
+	"flying": true,
+	"template": "ErekirUnitType",
+	"shadowElevation": 1,
+	"accel": 0.05,
+	"drag": 0.032,
+	"research": "战机组装厂",
+	"parts": [
+		{
+			"type": "HoverPart",
+			"mirror": false,
+			"x": 0,
+			"y": 1,
+			"radius": 32,
+			"phase": 90,
+			"stroke": 2,
+			"layerOffset": -0.001,
+			"color": "E28654"
+		}
+	],
+	"abilities": [
+		{
+			"type": "ShieldArcAbility",
+			"radius": 54,
+			"angle": 100,
+			"regen": 3,
+			"cooldown": 48,
+			"max": 900,
+			"width": 8
+		}
+	],
+	"weapons": [
+		{
+			"name": "点防",
+			"type": "PointDefenseWeapon",
+			"x": 0,
+			"y": 1,
+			"rotate": true,
+			"shootSound": "lasercharge2",
+			"recoil": 0,
+			"rotateSpeed": 9,
+			"reload": 40,
+			"targetInterval": 5,
+			"targetSwitchInterval": 5,
+			"bullet": {
+				"maxRange": 100,
+				"damage": 50
+			}
+		},
+		{
+			"name": "遣散散弹炮",
+			"x": 9.5,
+			"y": -8,
+			"rotate": true,
+			"reload": 40,
+			"shootSound": "malignShoot",
+			"bullet": {
+				"type": "BasicBulletType",
+				"lifetime": 20,
+				"speed": 8,
+				"damage": 24,
+				"splashDamageRadius": 12,
+				"splashDamage": 30,
+				"knockback": 12,
+				"frontColor": "FCF387FF",
+				"backColor": "FCF387FF",
+				"layer": 110,
+				"trailColor": "E8D174FF",
+				"trailWidth": 2,
+				"trailLength": 6,
+				"recoil": 1,
+				"hitEffect": {
+					"type": "ParticleEffect",
+					"interp": "pow10Out",
+					"sizeInterp": "pow10In",
+					"region": "mee-菱形",
+					"lifetime": 22,
+					"cone": 24,
+					"particles": 6,
+					"sizeFrom": 6,
+					"sizeTo": 0,
+					"baseLength": 0,
+					"length": 40,
+					"colorFrom": "FCF387",
+					"colorTo": "FCF387"
+				}
+			}
+		},
+		{
+			"x": 0,
+			"y": 3,
+			"rotate": true,
+			"reload": 100,
+			"shootSound": "malignShoot",
+			"shoot": {
+				"type": "ShootHelix",
+				"mag": 2,
+				"scl": 5
+			},
+			"bullet": {
+				"type": "BasicBulletType",
+				"lifetime": 40,
+				"speed": 6,
+				"damage": 128,
+				"splashDamageRadius": 100,
+				"splashDamage": 15,
+				"frontColor": "FCF387FF",
+				"backColor": "FCF387FF",
+				"trailColor": "E8D174FF",
+				"trailWidth": 2.1,
+				"trailLength": 200,
+				"despawnEffect": "bigShockwave",
+				"hitEffect": "bigShockwave",
+				"bulletInterval": 2.5,
+				"intervalBullets": 6,
+				"intervalSpread": 12,
+				"intervalBullet": {
+					"type": "LightningBulletType",
+					"damage": 20,
+					"lightningColor": "FCF387FF",
+					"hitColor": "FCF387FF",
+					"lightningLength": 5,
+					"hitEffect": "hitLancer",
+					"despawnEffect": "none"
+				}
+			}
+		},
+		{
+			"name": "遣散主武器",
+			"x": 0,
+			"y": 7,
+			"shootSound": "malignShoot",
+			"recoil": 12,
+			"reload": 180,
+			"bullet": {
+				"type": "LaserBulletType",
+				"lifetime": 50,
+				"lightningSpacing": 25,
+				"lightningLength": 5,
+				"lightningLengthRand": 1,
+				"lightningAngleRand": 8,
+				"lightningDamage": 15,
+				"width": 20,
+				"damage": 50,
+				"length": 200,
+				"colors": [
+					"FFCD66FF",
+					"E28654FF",
+					"D1BBE2",
+					"FFFFFF"
+				]
+			}
+		}
+	]
+}

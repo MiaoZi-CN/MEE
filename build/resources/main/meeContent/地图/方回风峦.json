@@ -1,0 +1,11 @@
+{
+"localizedName": "方回峰峦",
+"name": "方回峰峦",
+	"description": "这里资源丰富，是敌人钨矿的重要产地，这里山地地形限制了大部分单位，建造飞行单位摧毁这里的基地",
+	//"details":"",
+    "planet":"赫尔斯特"//母星名字。
+    "sector":28//区块坐标
+    "difficulty":4//难度1一5
+    "research": {
+		"parent": "龙岩裂谷",}
+}

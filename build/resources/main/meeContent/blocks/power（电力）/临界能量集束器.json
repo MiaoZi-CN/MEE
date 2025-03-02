@@ -1,0 +1,120 @@
+{
+  "type": "VariableReactor",
+  "name": "临界能量集束器",
+  "description": "由于临界流体同化列位流体并分解所产生的极度低温，我们利用埃里克尔极度的炽热环境和矿渣进行温差发电，极为有效地产出大量电能",
+  "details": "作为两种除瘤液跟水以外相克的流体，我们兴致勃勃地研究其两者的吞噬机理以及应用，并将其研究成果浓缩于此机器中...",
+  "health": 20000,
+  "size": 6,
+  "research": "赫尔斯特",
+  "hasLiquids": true,
+  "liquidCapacity": 1000,
+  "consumes": {
+    "liquids": {
+      "liquids": [
+        {
+          "liquid": "列位流体",
+          "amount": 0.5
+        },
+        {
+          "liquid": "临界流体",
+          "amount": 0.2
+        },
+        {
+          "liquid": "slag",
+          "amount": 0.7
+        }
+      ]
+    }
+  },
+  "category": "power",
+  "requirements": [
+    "beryllium/800",
+    "silicon/800",
+    "oxide/300",
+    "thorium/100",
+    "列位石/1000"
+  ],
+  "maxHeat": 60,
+  "powerProduction": 170,
+  "effectChance": 15,
+  "drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+      "DrawDefault",
+      {
+        "type": "DrawRegion",
+        "suffix": "-bottom"
+      },
+      {
+        "type": "DrawCrucibleFlame",
+        "flameColor": "FFF3D6FF",
+        "flameRadiusScl": 20,
+        "flameRadiusMag": 20,
+      },
+      {
+        "type": "DrawCrucibleFlame",
+        "flameColor": "b8fff940",
+        "flameRadiusScl": 20,
+        "flameRadiusMag": 20,
+      },
+      {
+        "type": "DrawLiquidRegion",
+        "drawLiquid": "列位流体"
+      },
+      {
+        "type": "DrawGlowRegion",
+        "color": "c4bdf3"
+      },
+      {
+        "type": "DrawPlasma",
+        "suffix": "-p-",
+        "plasma1": "b8fff940",
+        "plasma2": "9BDE7E7E"
+      },
+      "DrawDefault"
+    ]
+  },
+  "effect": {
+    "type": "MultiEffect",
+    "effects": [
+      {
+        "type": "ParticleEffect",
+        "baseLength": 100,
+        "length": 10,
+        "sizeFrom": 0,
+        "sizeTo": 2,
+        "cone": 360,
+        "lifetime": 70,
+        "particles": 1,
+        "colorFrom": "FFF3D6FF",
+        "colorTo": "FFF3D6FF"
+      },
+      {
+        "type": "ParticleEffect",
+        "baseLength": 0,
+        "length": 0,
+        "sizeFrom": 2,
+        "sizeTo": 2,
+        "cone": 360,
+        "lifetime": 20,
+        "particles": 1,
+        "colorFrom": "FFF3D6FF",
+        "colorTo": "FFF3D6FF"
+      },
+      {
+        "type": "ParticleEffect",
+        "line": true,
+        "lifetime": 30,
+        "baseLength": 30,
+        "length": 200,
+        "lenFrom": 30,
+        "lenTo": 0,
+        "strokeFrom": 2,
+        "strokeTo": 0,
+        "colorFrom": "b8fff940",
+        "colorTo": "b8fff940",
+        "interp": "pow5In"
+      }
+    ]
+  }
+}

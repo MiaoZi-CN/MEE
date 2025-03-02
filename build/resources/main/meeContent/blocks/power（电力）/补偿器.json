@@ -1,0 +1,16 @@
+{
+  "type": "VariableReactor",
+  "name": "补偿器",
+  "description": "将热量重新转化为电能，具有一定的损耗",
+  "health": 60,
+  "size": 1,
+  "maxHeat": 10,
+  "powerProduction": 1.2,
+  "effectChance" : 0,
+  "research" : "beam-node",
+  "category" : "power",
+  "requirements" : [
+    "beryllium/12",
+    "graphite/8"
+  ]
+}

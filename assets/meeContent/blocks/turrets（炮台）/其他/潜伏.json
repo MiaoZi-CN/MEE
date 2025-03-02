@@ -1,0 +1,25 @@
+{
+  "type":"powerTurret",
+  "name":"潜伏",
+  "description":"潜伏在地上的虫子",
+  "details": "你这虫子也太耐不住性子了吧！！！",
+  "size" : 2,
+  "health" : 1000,
+  "range": 50,
+  "hasShadow":false,
+  "underBullets": true,
+  "rebuildable": false,
+  "category":"turret",
+  "canOverdrive": false,
+"buildVisibility": "sandboxOnly",
+  "requirements":[
+    "beryllium/10",
+  ],
+  "shootType":{
+  "killShooter": true,
+	"hittable":false,
+	"absorbable":false,
+	"instantDisappear":true,
+	"spawnUnit": "小型吞噬者"
+	}
+	}

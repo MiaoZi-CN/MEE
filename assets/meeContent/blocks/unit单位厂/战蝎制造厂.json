@@ -1,0 +1,38 @@
+           {
+"type":"UnitFactory",
+"name":"战蝎制造厂",
+"size":3,
+"health":580,
+"squareSprite": false,
+"configurable":false,
+"consumes":{
+"power":2,
+           }
+"requirements":
+		    [
+"silicon/50",
+"beryllium/50",
+	      	]
+"research":
+	        {
+"parent":"tank-fabricator"
+"objectives":[
+			 {
+"type": "OnSector",
+"preset":"intersect"
+             }
+             ]
+             }
+"category":"units",
+"researchCostMultiplier":0.45
+"plans":[
+		{ "unit": "a-偿还",
+		"time": 2500,
+		"requirements":
+		[
+		"silicon/70",
+		"beryllium/50",
+		]
+		}
+		]
+        }

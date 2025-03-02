@@ -1,0 +1,9 @@
+{
+"requirements": [
+    "graphite/2000",
+    "beryllium/2000",
+    "oxide/2000",
+	"silicon/2000",
+	"tungsten/2000"
+  ],
+  }

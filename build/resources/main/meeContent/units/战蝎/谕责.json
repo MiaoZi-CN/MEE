@@ -1,0 +1,202 @@
+{
+  "type": "legs",
+  "name": "谕责",
+  "description": "战蝎单位，向敌人发射大型电磁弹与投掷炸弹。",
+  "speed": 0.8,
+  "hitSize": 32,
+  "health": 26500,
+  "armor": 20,
+  "research": "d-审判",
+  "template": "ErekirUnitType",
+  "parts": [
+    {
+      "type": "RegionPart",
+      "layer": 110,
+      "colorTo": "99F8FFFF",
+      "color": "000000FF",
+      "outline": false,
+      "suffix": "-glow"
+    }
+  ],
+  "legCount": 6,
+  //腿数
+  "legLength": 35,
+  //最大腿长
+  "legBaseOffset": 12,
+  //腿根部偏移
+  "legExtension": 10,
+  "allowLegStep": true,
+  "legContinuousMove": true,
+  "weapons": [
+    {
+      "shootSound": "laserblast",
+      "chargeSound": "lasercharge",
+      "reload": 500,
+      "name": "逾责武器",
+      "x": 0,
+      "y": 0,
+      "shoot": {
+        "firstShotDelay": 150
+      },
+      "bullet": {
+        "type": "BasicBulletType",
+        "sprite": "large-orb",
+        "width": 40,
+        "height": 40,
+        "speed": 10,
+        "splashDamagePierce": true,
+        "splashDamageRadius": 120,
+        "splashDamage": 1000,
+        "buildingDamageMultiplier": 0.3,
+        "lifetime": 200,
+        "shrinkY": 0,
+        "drag": 0.026,
+        "backColor": "99F8FFFFFF",
+        "hitColor": "99F8FFFFFF",
+        "despawnSound": "dullExplosion",
+        "pierce": true,
+        "collides": false,
+        "trailColor": "99F8FFFF",
+        "trailLength": 12,
+        "trailWidth": 3,
+        "chargeEffect": {
+          //蓄力effect（可以不要）
+          "type": "MultiEffect",
+          "effects": [
+            {
+              "type": "WaveEffect",
+              //波特效
+              "lifetime": 150,
+              //存在时间
+              "sizeFrom": 30,
+              //出现时大小
+              "sizeTo": 10,
+              //消失时大小
+              "strokeFrom": 1,
+              "strokeTo": 1,
+              "colorFrom": "ffffff",
+              "colorTo": "99F8FFFFFF"
+            },
+            {
+              "type": "WaveEffect",
+              "lifetime": 150,
+              "sizeFrom": 20,
+              "sizeTo": 5,
+              "strokeFrom": 1,
+              "strokeTo": 1,
+              "colorFrom": "ffffff",
+              "colorTo": "99F8FFFFFF"
+            },
+            {
+              "type": "ParticleEffect",
+              "lifetime": 150,
+              "baseLength": 0,
+              "length": 0,
+              "sizeFrom": 0,
+              "sizeTo": 20,
+              "colorFrom": "99F8FFFF",
+              "colorTo": "99F8FFFF"
+            }
+          ]
+        },
+        "intervalBullets": 8,
+        "intervalBullet": {
+          "lightningLength": 12,
+          "type": "LightningBulletType",
+          "damage": 30,
+          "lightningColor": "99F8FFFF",
+          "hitColor": "99F8FFFF",
+          "pierceArmor": true
+        },
+        "despawnEffect": {
+          "type": "MultiEffect",
+          "effects": [
+            {
+              "type": "WaveEffect",
+              "lifetime": 15,
+              "colorFrom": "99F8FFFFFF",
+              "colorTo": "99F8FFFFFF",
+              "sizeFrom": 0,
+              "sizeTo": 50,
+              "strokeFrom": 12,
+              "strokeTo": 0
+            },
+            {
+              "type": "ParticleEffect",
+              "interp": "pow10Out",
+              "sizeInterp": "pow10In",
+              "region": "mee-菱形",
+              "lifetime": 32,
+              "particles": 10,
+              "sizeFrom": 10,
+              "sizeTo": 0,
+              "baseLength": 0,
+              "length": 50,
+              "colorFrom": "99F8FFFF",
+              "colorTo": "99F8FFFF"
+            }
+          ]
+        },
+        "hitEffect": {
+          "type": "ParticleEffect",
+          "interp": "pow10Out",
+          "sizeInterp": "pow10In",
+          "region": "mee-菱形",
+          "lifetime": 32,
+          "particles": 10,
+          "sizeFrom": 10,
+          "sizeTo": 0,
+          "baseLength": 0,
+          "length": 50,
+          "colorFrom": "99F8FFFF",
+          "colorTo": "99F8FFFF"
+        }
+      }
+    },
+    {
+      "reload": 60,
+      "name": "审判副炮",
+      "x": 0,
+      "y": 0,
+      "shootSound": "largeCannon",
+      "bullet": {
+        "type": "ArtilleryBulletType",
+        "lifetime": 50,
+        "speed": 5,
+        "collides": false,
+        "splashDamage": 250,
+        "splashDamageRadius": 110,
+        "trailChance": 0.31,
+        "trailColor": "99F8FFFF",
+        "trailLength": 12,
+        "trailWidth": 2.4,
+        "despawnEffect": {
+          "type": "ParticleEffect",
+          "interp": "pow10Out",
+          "sizeInterp": "pow10In",
+          "lifetime": 55,
+          "baseLength": 0,
+          "length": 12,
+          "sizeFrom": 8,
+          "sizeTo": 0,
+          "colorFrom": "99F8FFFF",
+          "colorTo": "99F8FFFF"
+        },
+        "trailEffect": {
+          "randLength": false,
+          "type": "ParticleEffect",
+          "region": "mee-菱形",
+          "sizeFrom": 10,
+          "sizeTo": 0,
+          "length": 5,
+          "baseLength": 0,
+          "particles": 2,
+          "lifetime": 22,
+          "colorFrom": "99F8FFFF",
+          "colorTo": "99F8FFFF",
+          "cone": 10
+        }
+      }
+    }
+  ]
+}

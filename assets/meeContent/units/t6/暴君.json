@@ -1,0 +1,34 @@
+{
+  "type": "tank",
+  "name": "暴君",
+  "health": 49500,
+  "armor": 40,
+  "speed": 0.3,
+  "crushDamage": 6,
+  "rotateSpeed": 0.4,
+  "rotateMoveFirst": false,
+  "omniMovement": false,
+  "dpsEstimate": 0,
+  "squareShape": true,
+  "description": "终极坦克单位，掠取附近所有物体10%的血量并以80%的效能转化为武器的攻击力，其副武可以支持其在低血量下的高额回复",
+  "details": "[red]“暴君”——以残酷的的手段血洗这个世界，能毁灭暴君的只有它自己",
+  "research": {
+    "parent": "坦克构建终端",
+    "requirements": [
+      "thorium/7000",
+      "silicon/15000",
+      "oxide/6000",
+      "列位石/300"
+    ]
+  },
+  "hitSize": 80,
+  "treadPullOffset": 8,
+  "treadRects": [
+    {
+      "x": -116,
+      "y": -134,
+      "width": 56,
+      "height": 267
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "type": "ItemTurret",
+  "name": "定罪",
+  "description": "泰坦的t0级别，使用钨破片弹打击来袭的陆军",
+  "details": "被遗忘的炮台",
+  "category": "turret",
+  "health": 1700,
+  "size": 3,
+  "reload": 120,
+  "range": 250,
+  "shake": 5,
+  "rotateSpeed": 2,
+  "shootSound": "shootSmite",
+  "targetGround": true,
+  "targetAir": false,
+  "consumes": {
+    "liquid": {
+      "liquid": "hydrogen",
+      "amount": 0.05
+    }
+  },
+  "drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+      {
+        "type": "DrawTurret",
+        "parts": [
+          {
+            "type": "RegionPart",
+            "mirror": true,
+            "x": 0,
+            "y": 0,
+            "suffix": "-1",
+            "layer": 80,
+            "moveX": 0,
+            "moveY": 0,
+            "moveRot": -27,
+          },
+          {
+            "type": "RegionPart",
+            "mirror": false,
+            "x": 0,
+            "y": 0,
+            "suffix": "-back",
+            "layer": 80,
+            "moveX": 0,
+            "moveY": -3,
+            "moveRot": 0,
+            "progress": "recoil",
+            "heatProgress": "recoil",
+          }
+        ]
+      }
+    ]
+  },
+  "requirements": [
+    "oxide/80",
+    "tungsten/120",
+    "silicon/168"
+  ],
+  "research": {
+    "parent": "afflict",
+    "requirements": [
+      "surge-alloy/1000",
+      "tungsten/2000"
+    ]
+  },
+  "ammoTypes": {
+    "tungsten": {
+      "type": "ArtilleryBulletType",
+      "speed": 5,
+      "hitShake": 10,
+      "hitSound": "artillery",
+      "splashDamage": 93,
+      "splashDamageRadius": 70,
+      "width": 15,
+      "height": 28,
+      "trailColor": "EA8878FF",
+      "trailWidth": 5,
+      "trailLength": 37,
+      "fragBullets": 7,
+      "fragBullet": {
+        "type": "ArtilleryBulletType",
+        "splashDamage": 60,
+        "splashDamageRadius": 70,
+        "speed": 3,
+        "lifetime": 15,
+        "hitEffect": {
+          "type": "MultiEffect",
+          "effects": [
+            {
+              "type": "WaveEffect",
+              "lifetime": 40,
+              "colorFrom": "FEB380FF",
+              "colorTo": "EA8878C6",
+              "sizeFrom": 0,
+              "sizeTo": 10,
+              "strokeFrom": 10,
+              "strokeTo": 0
+            }
+          ]
+        }
+      },
+      "hitEffect": {
+        "type": "MultiEffect",
+        "effects": [
+          {
+            "type": "WaveEffect",
+            "lifetime": 30,
+            "colorFrom": "FEB380FF",
+            "colorTo": "EA8878C6",
+            "sizeFrom": 0,
+            "sizeTo": 28,
+            "strokeFrom": 10,
+            "strokeTo": 0
+          }
+        ]
+      }
+    }
+  }
+}

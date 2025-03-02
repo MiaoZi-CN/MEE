@@ -1,0 +1,30 @@
+{
+            "name":"氮气井"
+            "type":"ThermalGenerator"
+            "category": "power",
+            "attribute" :"steam"
+            "minEfficiency":7,
+            "displayEfficiencyScale":0.1111111111111
+            "displayEfficiency":false
+            "outputLiquid": { "liquid": "nitrogen", "amount": 0.04},
+            "group" : "liquids" 
+            "powerProduction" : 1
+            "drawer": {"type": "DrawMulti",
+	"drawers": [
+	"DrawDefault",
+		{"type": "DrawBlurSpin",
+		"suffix": "-rotator"
+		"rotateSpeed":0.5
+		},
+		]	}
+            "effectChance" :0.05
+            "generateEffect": "turbinegenerate"
+            "size" : 3
+            "ambientSound" : "hum"
+            "ambientSoundVolume" : 1
+            "requirements": [
+		    "beryllium/70",
+            "oxide/70"
+                            ],
+        "research":"turbine-condenser"
+}

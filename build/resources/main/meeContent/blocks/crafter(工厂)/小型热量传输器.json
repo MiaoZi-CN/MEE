@@ -1,0 +1,26 @@
+{
+  "name": "小型热量传输机",
+  "type": "HeatConductor",
+  "description": "传输热量，更小，更灵活",
+  "category": "crafting",
+  "size": 2,
+  "requirements": [
+    "graphite/20",
+    "tungsten/10",
+    "oxide/30"
+  ],
+  "research": "heat-redirector",
+  "drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+      "DrawDefault",
+      {
+        "type": "DrawHeatOutput"
+      },
+      {
+        "type": "DrawHeatInput",
+        "suffix": "-heat"
+      }
+    ]
+  }
+}

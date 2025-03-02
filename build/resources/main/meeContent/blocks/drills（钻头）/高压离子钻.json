@@ -1,0 +1,31 @@
+{"type": "BeamDrill",
+"name":"高压离子钻",
+"description": "利用高压的离子激光挖掘矿石，消耗量大",
+"tier":8
+"drillTime":125,
+"size":3
+"range": 5,
+"research": "large-plasma-bore",
+"requirements": [
+        "beryllium/90",
+        "graphite/70"
+        "tungsten/30"
+    ],
+"category": "production",
+"consumes": {
+    "power":2,
+"liquids": [
+{
+			"liquid": "water",
+			"amount": 0.1,
+		}
+		]
+          "liquid":
+          {
+          "liquid": "hydrogen",
+          "amount": 0.02
+          "optional": true
+          "booster":true
+          }
+		}
+		}

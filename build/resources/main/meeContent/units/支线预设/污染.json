@@ -1,0 +1,46 @@
+{
+	"type": "legs",
+	"name": "污染",
+	"health": 1000,
+	"hitSize": 10,
+	"rotateSpeed": 2,
+	"legCount": 0,
+	"speed": 2,
+	"drawBody":true
+	"omniMovement":true
+	"segments":3
+	"outlineColor": "2C2A35FF",
+	"abilities": [
+	{
+            "type": "LiquidExplodeAbility",
+            "liquid": "neoplasm",
+            "amount": 60,
+            "radAmountScale": 1,
+            "radScale": 1,
+            "noiseMag": 10,
+            "noiseScl": 5
+        },
+        {
+            "type": "LiquidRegenAbility",
+            "liquid": "neoplasm",
+            "slurpEffect": "neoplasmHeal"
+        }
+        ]
+        "weapons": [
+        {
+            "shootOnDeath": true,
+            "reload": 24,
+            "shootCone": 180,
+            "mirror": false,
+            "shootSound": "瘤液喷吐",
+            "bullet": {
+                "type": "BasicBulletType",
+                "collidesTiles": false,
+                "collides": false,
+                "speed":0
+                "lifetime":0
+                "killShooter": true,
+            }
+        }
+    ]
+}

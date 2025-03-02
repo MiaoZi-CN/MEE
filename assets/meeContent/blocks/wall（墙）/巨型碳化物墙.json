@@ -1,0 +1,16 @@
+{
+	"name":"巨型碳化物墙",
+	"description":"保护己方建筑，挡下敌方炮弹",
+	"type":"Wall",
+	"health":9720,
+	"armor":22
+	"size":3,
+	"group":"walls",
+	"research":"shielded-wall"
+	"requirements": [
+	"thorium/54",
+	"carbide/54"
+	
+	],
+	"category": "defense",
+}

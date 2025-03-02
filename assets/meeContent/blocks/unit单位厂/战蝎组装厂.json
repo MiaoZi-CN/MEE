@@ -1,0 +1,56 @@
+{
+  "type": "UnitAssembler",
+  "name": "战蝎组装厂",
+  "description": "利用输入的方块组装大型战蝎单位，可以通过添加基本装配场模块来增加输出等级",
+  "health": 2800,
+  "size": 5,
+  "squareSprite": false,
+  "requirements": [
+    "thorium/300",
+    "silicon/500",
+    "oxide/100",
+    "carbide/30"
+  ],
+  "consumes": {
+    "power": 4,
+    "liquid": {
+      "liquid": "cyanogen",
+      "amount": 0.13
+    }
+  },
+  "areaSize": 13,
+  "plans": [
+    {
+      "unit": "d-审判",
+      "time": 3000,
+      "requirements": [
+        "mee-a-偿还/4",
+        "tungsten-wall-large/10"
+      ]
+    },
+    {
+      "unit": "谕责",
+      "time": 12000,
+      "requirements": [
+        "mee-b-罪责/4",
+        "carbide-wall-large/15"
+      ]
+    }
+  ],
+  "category": "units",
+  "research": {
+    "parent": "tank-assembler",
+    "requirements": [
+      "thorium/300",
+      "silicon/500",
+      "oxide/100",
+      "carbide/30"
+    ],
+    "objectives": [
+      {
+        "type": "OnSector",
+        "preset": "crossroads"
+      }
+    ]
+  }
+}

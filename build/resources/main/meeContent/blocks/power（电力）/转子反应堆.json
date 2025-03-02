@@ -1,0 +1,59 @@
+	{
+	"type": "ImpactReactor",
+	"name": "转子反应堆",
+	"description": "利用多个高速旋转的转子发出的摩擦力发电。尽管只需要相对少量的电力启动，但需要大量石墨以及水进行润滑散温，[red]同时大量的石墨粉会加大爆燃事故的危险性",
+	"health": 2000,
+	"size": 4,
+	"consumes": {
+	"power":7,
+		"liquid": {
+			"liquid": "water",
+			"amount": 1.35
+		}
+		"items": {
+	 "items": [
+	    { "item": "graphite", "amount": 6}
+	]
+  }
+	},
+	"requirements": [
+	"silicon/445"
+	"graphite/245"
+	"oxide/95"
+	],
+	"category": "power",
+	"research": "转子发电机",
+	"placeableLiquid":true,
+	"warmupSpeed":0.002,
+	"liquidCapacity":1000, //液体容量
+	"explosionRadius":159, //爆炸半径
+	"explosionDamage":3000, //爆炸伤害
+	"itemCapacity":50,
+	"powerProduction":40.3
+	"drawer": {
+		"type": "DrawMulti",
+		"drawers": [
+			{
+				"type": "DrawRegion",
+				"suffix": "-bottom"
+			},
+			{
+				"type": "DrawLiquidRegion",
+				"drawLiquid": "water"
+			},
+			        {
+		        "type":"DrawPlasma"
+		        "suffix":"-plasma-"
+		    }
+			{
+				"type":"DrawRegion",
+				"suffix":"-转"
+				"rotateSpeed":0.8
+				"spinSprite": true,
+			},
+			"DrawDefault",
+			
+		]
+	},
+}
+	

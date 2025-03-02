@@ -1,0 +1,35 @@
+{
+  "type": "BeamNode",
+  //类型
+  "category": "power",
+  //菜单栏
+  "name": "列位能量节点",
+  //名字
+  "description": "利用列位传输能量，具有超远距离和巨大电容",
+  //介绍
+  "consumes": {
+    "powerBuffered": 300000//电力容量
+  },
+  "requirements": [
+    "beryllium/12",
+    "silicon/10",
+    "列位石/5"
+  ],
+  "size": 3,
+  //平方大小
+  "health": 300,
+  //血量
+  "range": 40,
+  //范围
+  "fogRadius": 3,
+  //战争迷雾范围
+  "hasPower": true,
+  //有电
+  "outputsPower": true,
+  //输出电力
+  "laserColor2": "FFF3D6FF",
+  //激光颜色
+  "research": "列位传送带"
+}
+
+//懒b维生素懒得查源码

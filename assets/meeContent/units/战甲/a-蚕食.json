@@ -1,0 +1,43 @@
+{
+  "type": "mech",
+  "name": "蚕食",
+  "template": "ErekirUnitType",
+  "hitSize": 12,
+  "armor": 5,
+  "speed": 1,
+  "description": "战甲单位，使用速射机枪进攻敌人，拥有高血量",
+  "health": 1130,
+  "research": {
+    "parent": "战甲制造厂",
+    "requirements": [
+      "beryllium/30"
+    ]
+  },
+  "weapons": [
+    {
+      "name": "蚕食武器",
+      "mirror": true,
+      "x": 5.7,
+      "y": -1,
+      "reload": 8,
+      "recoil": 0.016,
+      "top": false,
+      //上部图层
+      "layerOffset": -0.001,
+      //图层偏移
+      "rotate": true,
+      //旋转
+      "rotationLimit": 45,
+      //旋转限制
+      "shootSound": "bigshot",
+      "inaccuracy": 1,
+      "bullet": {
+        "type": "BasicBulletType",
+        "damage": 6,
+        "lifetime": 15,
+        "speed": 10,
+        "pierceArmor": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "type": "flying",
+  "name": "围城",
+  "description": "战略型空中单位，可以使用中口径大炮与分裂子母弹来进攻敌人",
+  "speed": 2.2,
+  "hitSize": 18,
+  "health": 2000,
+  "flying": true,
+  "template": "ErekirUnitType",
+  "shadowElevation": 1,
+  "accel": 0.05,
+  "drag": 0.032,
+  "research": "prime-refabricator",
+  "parts": [
+    {
+      "type": "HoverPart",
+      //悬浮动画块
+      "mirror": false,
+      //是否镜像显示
+      "x": 0,
+      "y": 0,
+      //平面坐标位置
+      "radius": 7,
+      //半径
+      "phase": 90,
+      //
+      "stroke": 2,
+      //
+      "layerOffset": -0.001,
+      //图层
+      "color": "DEEDFFFF"
+      //颜色
+    }
+  ],
+  "weapons": [
+    {
+      "name": "围城大炮2",
+      "x": 4,
+      "y": -3.5,
+      "rotate": true,
+      "reload": 70,
+      "mirror": true,
+      "shootCone": 80,
+      "bullet": {
+        "type": "BasicBulletType",
+        "width": 0,
+        "pierceCap": 3,
+        "pierce": true,
+        "trailWidth": 3,
+        "trailLength": 20,
+        "speed": 7,
+        "damage": 10,
+        "lifetime": 40,
+        "height": 400,
+        "homingPower": 0.2,
+        "homingDelay": 3
+      }
+    },
+    {
+      "name": "遣散散弹炮",
+      "x": 5,
+      "y": -3,
+      "rotate": true,
+      "reload": 70,
+      "mirror": true,
+      "shootCone": 80,
+      "shoot": {
+        "type": "ShootHelix",
+        "mag": 2,
+        "scl": 2
+      },
+      "bullet": {
+        "type": "BasicBulletType",
+        "width": 0,
+        "pierceCap": 3,
+        "pierce": true,
+        "trailWidth": 3,
+        "trailLength": 20,
+        "speed": 7,
+        "damage": 20,
+        "lifetime": 40,
+        "height": 400,
+        "homingPower": 0.2,
+        "homingDelay": 3
+      }
+    },
+    {
+      "name": "围城子母炮",
+      "x": 3,
+      "y": -1.5,
+      "rotate": false,
+      "reload": 30,
+      "mirror": true,
+      "shootCone": 180,
+      "shoot": {
+        "type": "ShootHelix",
+        "mag": 3,
+        "scl": 3
+      },
+      "bullet": {
+        "type": "BasicBulletType",
+        "homingPower": 0.35,
+        "homingDelay": 4,
+        "damage": 8,
+        "trailWidth": 2,
+        "lifetime": 60,
+        "speed": 3,
+        "trailLength": 5,
+        "fragOnHit": true,
+        "fragRandomSpread": 0,
+        "fragSpread": 15,
+        "fragBullets": 10,
+        "fragVelocityMin": 1,
+        "fragBullet": {
+          "type": "BasicBulletType",
+          "lifetime": 10,
+          "speed": 9,
+          "damage": 20,
+          "trailWidth": 2.1,
+          "trailLength": 15
+        }
+      }
+    }
+  ]
+}

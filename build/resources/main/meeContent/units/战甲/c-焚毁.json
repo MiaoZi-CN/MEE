@@ -1,0 +1,106 @@
+{
+  "type": "mech",
+  "name": "焚毁",
+  "template": "ErekirUnitType",
+  "hitSize": 22,
+  "armor": 8,
+  "research": "prime-refabricator",
+  "speed": 0.67,
+  "description": "战甲单位，射出超高温等离子焰和爆炸弹",
+  "health": 3130,
+  "weapons": [
+    {
+      "name": "焚毁武器",
+      "shootSound": "shotgun",
+      "reload": 80,
+      "x": 12,
+      "y": 0,
+      "rotate": true,
+      //旋转
+      "rotationLimit": 45,
+      //旋转限制,
+      "top": false,
+      //上部图层
+      "layerOffset": -0.001,
+      //图层偏移
+      "shoot": {
+        "type": "ShootAlternate",
+        "shots": 4,
+        "shotDelay": 6
+      },
+      "bullet": {
+        "type": "ShrapnelBulletType",
+        "damage": 35,
+        "pierceArmor": true,
+        "lifetime": 10,
+        "fromColor": "ffffff",
+        "toColor": "9E172CFF",
+        "width": 12,
+        "length": 100
+      }
+    },
+    {
+      "name": "焚毁武器1",
+      "reload": 5,
+      "x": 0,
+      "y": 0,
+      "rotate": true,
+      //旋转
+      "rotationLimit": 45,
+      //旋转限制,
+      "inaccuracy": 1,
+      "shootSound": "flame",
+      "ejectEffect": "none",
+      "shoot": {
+        "type": "ShootSpread",
+        "shots": 4,
+        "spread": 5
+      },
+      "bullet": {
+        "type": "BasicBulletType",
+        "lifetime": 20,
+        "width": 5,
+        "height": 5,
+        "shrinkY": 0.04,
+        "shrinkX": 0.04,
+        "collides": true,
+        "pierce": true,
+        "damage": 10,
+        "pierceArmor": true,
+        "speed": 3.2,
+        "despawnEffect": "none",
+        "statusDuration": 150,
+        "status": "burning",
+        "smokeEffect": {
+          "type": "ParticleEffect",
+          "particles": 6,
+          "line": true,
+          "strokeFrom": 2,
+          "strokeTo": 1,
+          "lenFrom": 26,
+          "lenTo": 5,
+          "length": 80,
+          "baseLength": 2,
+          "lifetime": 30,
+          "colorFrom": "FFFFFF",
+          "colorTo": "9E172CFF",
+          "cone": 15
+        },
+        "hitEffect": {
+          "type": "ParticleEffect",
+          "particles": 4,
+          "strokeFrom": 2,
+          "strokeTo": 1,
+          "lenFrom": 26,
+          "lenTo": 5,
+          "length": 20,
+          "baseLength": 2,
+          "lifetime": 30,
+          "colorFrom": "FFFFFF",
+          "colorTo": "9E172CFF",
+          "cone": 360
+        }
+      }
+    }
+  ]
+}

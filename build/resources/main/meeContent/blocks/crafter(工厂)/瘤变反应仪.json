@@ -1,0 +1,50 @@
+{
+	"type": "GenericCrafter",
+	"name": "瘤变反应仪",
+	"description": "使水瘤化为瘤液，请务必保护好此工厂",
+	"details":"要不试试给瘤液导瘤变里？"
+	"outputLiquid":"neoplasm/0.4"
+	"hasLiquids": true,
+		"health": 825,
+	"size": 3,
+	"hasPower": true,
+	"hasLiquids": true,
+		"drawer":{
+	    "type":"DrawMulti",
+	    "drawers":[
+	    {
+	    "type":"DrawRegion",
+	    "suffix":"-bottom"
+	    },
+	    {
+	       "type":"DrawLiquidRegion",
+	    "drawLiquid":"neoplasm"
+	    },
+	    {
+				"type":"DrawRegion",
+				"suffix":"-转"
+				"rotateSpeed":5
+			}
+	    "DrawDefault"
+	]},
+	"craftTime": 120,
+    "liquidCapacity": 60,
+	"consumes": {
+    "power":1,
+    "items": {
+	"items": [
+	{ "item": "thorium", "amount": 2 }
+	]
+	}
+    "liquid":
+{"liquid": "water", "amount": 0.3 }
+    }
+"requirements": [
+    "thorium/90"
+    "beryllium/35"
+	"oxide/20",
+	],
+	"category": "crafting",
+	"research":"electrolyzer"
+	
+}

@@ -1,0 +1,46 @@
+{
+  "type": "missile",
+  "template": "MissileUnitType",
+
+  "name": "疮痍碳化物导弹",
+  "maxRange": 30,
+  "speed": 3.8,
+  "rotateSpeed": 4,
+  "lifetime": 280,
+  "health": 50,
+  "armor":8,
+  "fogRadius": 6,
+
+  "abilities": [
+    {
+      "type": "MoveEffectAbility",
+      "effect": "missileTrailSmoke",
+      "rotation": 80,
+      "color": "FEB38080"
+    }
+  ],
+
+  "weapons": [
+    {
+      "shootCone": 360,
+      "mirror": false,
+      "shake": 15,
+      "shootOnDeath": true,
+      "shootSound": "plasmaboom",
+
+      "bullet": {
+        "type": "ExplosionBulletType",
+        "buildingDamageMultiplier": 0.3,
+        "shootEffect": {
+          "type": "MultiEffect",
+          "effects": [
+            "titanExplosion"
+          ]
+        },
+
+        "splashDamage": 700,
+        "splashDamageRadius": 80
+      }
+    }
+  ]
+}

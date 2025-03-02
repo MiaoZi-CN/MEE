@@ -1,0 +1,19 @@
+{
+  "type": "LongPowerNode",
+  "name": "万向节点",
+  "description": "激光链接器level up版",
+  "size": 3,
+  "maxNodes": 2,
+  "drawRange": true,
+  "laserRange": 100,
+  "autolink": false,
+  "laserColor2": "ffd9c2",
+  "laserScale": 0.8,
+  "scaledHealth": 130,
+  "requirements": [
+    "carbide/30",
+    "oxide/20"
+  ],
+  "category": "power",
+  "research": "chemical-combustion-chamber"
+}

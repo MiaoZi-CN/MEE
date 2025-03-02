@@ -1,0 +1,294 @@
+//贴图来自@MrT屑
+{
+  "type": "ItemTurret",
+  "name": "碾碎",
+  "description": "发射三联中口径破甲弹，有效杀伤中型目标，需要氢气输入爆燃以增加额外动能"
+  "health": 4250
+  "canOverdrive": false,
+  "size": 4
+  "category": "turret",
+  "research": "厄难",
+  "reload": 47,
+  "range": 256,
+  "shootY": -1
+  "shootSound": "release"
+  "targetGround": true
+  "targetAir": true
+
+  "maxAmmo": 24,
+  "ammoPerShot": 3,
+  "minWarmup": 0.85,
+  "shootWarmupSpeed": 0.07,
+  "shake": 4,
+  "shoot": {
+    "shots": 3,
+    "shotDelay": 10 
+  }
+  "consumes": {
+    "liquids":[
+      "hydrogen/0.02"
+    ]
+  },
+  "drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+      {
+        "type": "DrawTurret",
+        "parts": [
+          {
+            "type": "RegionPart",
+            "mirror": true,
+            "x": 1,
+            "y": -0.3,
+            "suffix": "-1",
+            "moveX": 2,
+            "moveY": -2,
+            "moveRot": 2
+          },
+          {
+            "type": "RegionPart",
+            "mirror": false,
+            "x": 0,
+            "y": 2.5,
+            "suffix": "-back",
+            "moveX": 0,
+            "moveY": -3,
+            "moveRot": 0
+            "progress": "recoil"
+            "heatProgress": "recoil",
+            "heatColor": "FF705580",
+          },
+        ]
+      }
+    ]
+  }
+
+  "requirements": [
+    "beryllium/500",
+    "tungsten/250"
+    "silicon/250"
+    "thorium/100"
+  ],
+
+  "ammoTypes": {
+  "beryllium": {
+      "type": "BasicBulletType",
+      "lifetime": 20,
+      "speed": 14,
+
+      "sprite": "mee-碾碎bullet",
+      "width": 12,
+      "height": 64,
+      "frontColor": "92DD7EFF",
+
+      "trailColor": "92DD7EFF",
+      "trailLength": 8,
+      "trailWidth": 2,
+      "trailRotation": true,
+      "trailChance": 1,
+      "trailEffect": {
+        "type": "MultiEffect",
+        "effects": [
+          {
+            "type": "ParticleEffect",
+            "interp": "circleOut",
+            "sizeInterp": "pow10In",
+            "lifetime": 20,
+            "cone": 24,
+            "particles": 3,
+
+            "baseLength": 0.1,
+            "length": -12,
+            "sizeFrom": 2.4,
+            "sizeTo": 0,
+            "colorFrom": "92DD7EFF",
+            "colorTo": "92DD7EFF"
+          }
+        ]
+      },
+
+      "buildingDamageMultiplier": 0.3,
+      "pierceCap": 1,
+      "pierceArmor": true,
+      "pierceBuilding": true,
+      "damage": 68,
+
+      "smokeEffect": {
+        "type": "ParticleEffect",
+        "particles": 5,
+        "line": true,
+        "strokeFrom": 1,
+        "strokeTo": 1,
+        "lenFrom": 26,
+        "lenTo": 5,
+        "length": 60,
+        "baseLength": 2,
+        "lifetime": 22,
+        "colorFrom": "92DD7EFF",
+        "colorTo": "92DD7EFF",
+        "cone": 16
+      },
+      "hitEffect": {
+        "type": "ParticleEffect",
+        "interp": "circleOut",
+        "sizeInterp": "pow5In",
+        "particles": 5,
+        "lifetime": 22,
+
+        "length": 80,
+        "baseLength": 0,
+        "colorFrom": "92DD7EFF",
+        "colorTo": "92DD7EFF",
+        "sizeFrom": 3,
+        "sizeTo": 0,
+        "cone": 16
+      }
+    },
+    "tungsten": {
+      "type": "BasicBulletType",
+      "lifetime": 20,
+      "speed": 14,
+
+      "sprite": "mee-碾碎bullet",
+      "width": 12,
+      "height": 64,
+      "frontColor": "A0B0C8",
+
+      "trailColor": "A0B0C8",
+      "trailLength": 8,
+      "trailWidth": 2,
+      "trailRotation": true,
+      "trailChance": 1,
+      "trailEffect": {
+        "type": "MultiEffect",
+        "effects": [
+          {
+            "type": "ParticleEffect",
+            "interp": "circleOut",
+            "sizeInterp": "pow10In",
+            "lifetime": 20,
+            "cone": 24,
+            "particles": 3,
+
+            "baseLength": 0.1,
+            "length": -12,
+            "sizeFrom": 2.4,
+            "sizeTo": 0,
+            "colorFrom": "A0B0C8",
+            "colorTo": "A0B0C8"
+          }
+        ]
+      },
+
+      "buildingDamageMultiplier": 0.3,
+      "pierceCap": 3,
+      "pierceArmor": true,
+      "pierceBuilding": true,
+      "damage": 88,
+
+      "smokeEffect": {
+        "type": "ParticleEffect",
+        "particles": 5,
+        "line": true,
+        "strokeFrom": 1,
+        "strokeTo": 1,
+        "lenFrom": 26,
+        "lenTo": 5,
+        "length": 60,
+        "baseLength": 2,
+        "lifetime": 22,
+        "colorFrom": "A0B0C8",
+        "colorTo": "A0B0C8",
+        "cone": 16
+      },
+      "hitEffect": {
+        "type": "ParticleEffect",
+        "interp": "circleOut",
+        "sizeInterp": "pow5In",
+        "particles": 5,
+        "lifetime": 22,
+
+        "length": 80,
+        "baseLength": 0,
+        "colorFrom": "A0B0C8",
+        "colorTo": "A0B0C8",
+        "sizeFrom": 3,
+        "sizeTo": 0,
+        "cone": 16
+      }
+    },
+    "thorium": {
+      "type": "BasicBulletType",
+      "lifetime": 20,
+      "speed": 14,
+
+      "sprite": "mee-碾碎bullet",
+      "width": 12,
+      "height": 64,
+      "frontColor": "F9A3C7",
+
+      "trailColor": "F9A3C7",
+      "trailLength": 8,
+      "trailWidth": 2,
+      "trailRotation": true,
+      "trailChance": 1,
+      "trailEffect": {
+        "type": "MultiEffect",
+        "effects": [
+          {
+            "type": "ParticleEffect",
+            "interp": "circleOut",
+            "sizeInterp": "pow10In",
+            "lifetime": 20,
+            "cone": 24,
+            "particles": 3,
+
+            "baseLength": 0.1,
+            "length": -12,
+            "sizeFrom": 2.4,
+            "sizeTo": 0,
+            "colorFrom": "F9A3C7",
+            "colorTo": "F9A3C7"
+          }
+        ]
+      },
+
+      "buildingDamageMultiplier": 0.3,
+      "pierceCap": 3,
+      "pierceArmor": true,
+      "pierceBuilding": true,
+      "damage": 168,
+
+      "smokeEffect": {
+        "type": "ParticleEffect",
+        "particles": 5,
+        "line": true,
+        "strokeFrom": 1,
+        "strokeTo": 1,
+        "lenFrom": 26,
+        "lenTo": 5,
+        "length": 60,
+        "baseLength": 2,
+        "lifetime": 22,
+        "colorFrom": "F9A3C7",
+        "colorTo": "F9A3C7",
+        "cone": 16
+      },
+      "hitEffect": {
+        "type": "ParticleEffect",
+        "interp": "circleOut",
+        "sizeInterp": "pow5In",
+        "particles": 5,
+        "lifetime": 22,
+
+        "length": 80,
+        "baseLength": 0,
+        "colorFrom": "F9A3C7",
+        "colorTo": "F9A3C7",
+        "sizeFrom": 3,
+        "sizeTo": 0,
+        "cone": 16
+      }
+    }
+  }
+}

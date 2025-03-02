@@ -1,0 +1,84 @@
+{
+  "type": "ImpactReactor",
+  "name": "转子发电机",
+  "description": "利用高速旋转的转子发出的摩擦力发电，摧毁后会导致爆炸。需要电力启动",
+  "health": 300,
+  "size": 2,
+  
+  "explodeEffect": {
+		"type": "MultiEffect",
+		"effects": [
+		{
+				"type": "ParticleEffect",
+				"particles": 5,
+				"strokeFrom": 5,
+				"strokeTo": 0,
+				"length": 30,
+				"baseLength": 5,
+				"lifetime": 70,
+				"colorFrom": "ffffff",
+				"colorTo": "ffa665"
+			}
+		{
+					"type": "WaveEffect",
+					"lifetime": 60,
+					"sizeFrom": 0,
+					"sizeTo": 60,
+					"strokeFrom": 9,
+					"strokeTo": 0,
+					"colorFrom": "ffffff",
+					"colorTo": "ffa665"
+					"interp" : "pow10Out"
+				},
+		]
+		}
+  
+  "consumes": {
+    "power": 1.5,
+    "liquid": {
+      "liquid": "water",
+      "amount": 0.25
+    }
+    "items": {
+      "items": [
+        { "item": "graphite", "amount": 1}
+      ]
+    }
+  },
+  "powerProduction":6.35
+  "itemDuration": 60,
+
+  "requirements": [
+    "beryllium/60"
+    "silicon/40"
+    "graphite/25"
+  ],
+  "category": "power",
+  "research": "turbine-condenser",
+  "placeableLiquid":true,
+  "warmupSpeed":0.08,
+  "liquidCapacity":100, //液体容量
+  "explosionRadius":10, //爆炸半径
+  "explosionDamage":400, //爆炸伤害
+  "itemCapacity":20,
+  "drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+      {
+        "type": "DrawRegion",
+        "suffix": "-bottom"
+      },
+      {
+        "type": "DrawLiquidRegion",
+        "drawLiquid": "water"
+      },
+      {
+        "type":"DrawRegion",
+        "suffix":"-rotator"
+        "rotateSpeed":50
+      },
+      "DrawDefault",			
+    ]
+  },
+}
+	

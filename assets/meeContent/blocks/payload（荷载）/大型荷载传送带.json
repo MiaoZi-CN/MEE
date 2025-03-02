@@ -1,0 +1,9 @@
+{"name":"大型荷载传送带","description":"大型的荷载传送带，可以运输更大的荷载",
+"category":"units",
+"type":"PayloadConveyor",
+"health":1000,
+"size":5,
+"underBullets":true,
+"canOverdrive":false,
+"payloadLimit":6
+"requirements":["graphite/65""silicon/90""thorium/35"],"research":"reinforced-payload-conveyor"}

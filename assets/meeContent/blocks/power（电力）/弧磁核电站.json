@@ -1,0 +1,72 @@
+{
+  "type": "NuclearReactor",
+  "name": "弧磁核电站",
+  "description": "通过破坏合金使其放电并捕捉电弧来发电，需要水冷却，缺水时自毁，放出电弧摧毁周围的方块与单位",
+  "health": 1000,
+  "size": 4,
+  "explodeEffect":"none"
+  "fuelItem": "surge-alloy",
+  "canOverdrive": false,
+  "heating":0.0045
+  "hasLiquids": true,
+  "hasItems": true,
+  "category": "power",
+  "lightColor": "ffffff",
+  "explosionRadius":0, //爆炸半径
+  "destroyBullet": 
+  {
+  "type"  : "BasicBulletType",
+  "lifetime" :0,
+  "speed" :0,
+  "fragBullets" : 30,
+  "fragBullet" : {
+  "type" : "LightningBulletType",
+  "damage" : 2000,
+  "pierceArmor" : true,
+  "lightningColor" : "E8D174",
+  "lightningLength" : 20,
+}
+}
+	"explosionShakeDuration": 50
+	"explodeSound": "explosionbig",
+  "requirements": [
+    "tungsten/200"
+    "thorium/300"
+    "carbide/100"
+    "surge-alloy/100"
+  ],
+  "consumes": {
+		"liquid": {
+			"liquid": "water",
+			"amount": 1.5
+		}
+		"items": {
+      "items": [
+        {
+          "item": "surge-alloy",
+          "amount": 3,
+        }
+      ]
+	},
+	}
+	"drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+      {
+        "type": "DrawRegion",
+        "suffix": "-bottom"
+      },
+      "DrawDefault",
+      {
+        "type": "DrawHeatInput",
+        "suffix": "-heat"
+      }
+      {
+        "type": "DrawGlowRegion",
+        "color": "FFF399FF"
+      },
+    ]
+  },
+  "research": "热能发电机",
+  "powerProduction": 76,
+}

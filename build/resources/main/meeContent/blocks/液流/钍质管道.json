@@ -1,0 +1,14 @@
+{
+"name":"钍质管道"
+"category": "liquid",
+"health":150
+"liquidCapacity":25
+"type":"Conduit"
+"liquidPressure":1.5
+"requirements": [
+    "thorium/2"
+    "beryllium/2"
+    ]
+    "bridgeReplacement": "reinforced-liquid-junction"
+"research":"reinforced-conduit"
+}

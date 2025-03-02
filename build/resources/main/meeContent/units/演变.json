@@ -1,0 +1,20 @@
+{
+	"type": "tether",
+	"name": "演变",
+	"description": "自动挖掘地表的铍，钨，并放入核心，不会被攻击",
+	"speed":3,
+	"flying":true,	
+	"fogRadius":0,//迷雾揭示范围
+"targetable":false,//可被选为目标
+"hittable":false,//可被击中
+	"rotateSpeed":5,
+	"hitSize":20, 
+	"armor":3,
+	"template":"ErekirUnitType",
+	"mineSpeed":10,
+	"defaultController":"MinerAI",
+	"mineTier":6,
+	"itemCapacity":100,
+	"mineItems":["beryllium","tungsten"],
+	"research":"矿机终端"
+}

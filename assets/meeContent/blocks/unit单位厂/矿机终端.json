@@ -1,0 +1,25 @@
+{
+  "type": "UnitCargoLoader",
+  "name": "矿机终端",
+  "squareSprite": false,
+  "description": "建造一架矿机单位",
+  "health": 620,
+  "size": 3,
+  "hasItems": true,
+  "itemCapacity": 100,
+  "category": "units",
+  "unitType": "演变",
+  "consumes": {
+    "power": 1.9,
+    "liquid": {
+      "liquid": "cyanogen",
+      "amount": 0.3
+    }
+  },
+  "requirements": [
+    "carbide/35",
+    "silicon/90",
+    "thorium/100"
+  ],
+  "research": "unit-cargo-loader"
+}

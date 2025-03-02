@@ -1,0 +1,94 @@
+{
+	"type": "missile",
+	"template": "MissileUnitType",
+	"name": "悬浮体",
+	"homingDelay": 50,
+	"speed": 8,
+	"lifetime": 160,
+	"rotateSpeed": 3,
+	"loopSoundVolume": 0.03,
+	"deathSound": "explosionbig",
+	"hidden": true,
+	"drawCell": false,
+	"missileAccelTime": 50,
+	"hitSize": 12,
+	"health": 400,
+	"armor": 8,
+	"fogRadius": 8,
+	"engineColor": "9e172c",
+	"trailColor": "9e172c60",
+	"trailLength": 35,
+	"engineLayer": 110,
+	"engineOffset": 8,
+	"engineSize": 4,
+	"maxRange": 30,
+	"weapons": [
+		{
+			"x": 0,
+			"y": 0,
+			"reload": 1,
+			"mirror": false,
+			"rotate": true,
+			"shake": 10,
+			"shootSound": "none",
+			"shootOnDeath": true,
+			"shootCone": 360,
+			"bullet": {
+				"collides":false,
+				"instantDisappear": true,
+				"ammoMultiplier": 1,
+				"hitSound": "titanExplosion",
+				"hitSoundVolume": 4,
+				"killShooter": true,
+				"splashDamageRadius": 48,
+				"splashDamage": 680,
+				"hitShake": 8,
+				"shootEffect":  {
+					"type": "MultiEffect",
+					"effects": [
+						{
+							"type":"WrapEffect",
+							"effect":"massiveExplosion",
+							"color":"9e172c"
+						},
+						{
+							"type":"WrapEffect",
+							"effect":"scatheExplosion",
+							"color":"9e172c"
+						}
+					]},
+				"smokeEffect": "none",
+				"despawnEffect": "none",
+				"hitEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						{
+							"type": "ParticleEffect",
+							"particles": 12,
+							"sizeFrom": 8,
+							"sizeTo": 0,
+							"length": 36,
+							"baseLength": 6,
+							"interp": "pow10Out",
+							"sizeInterp": "pow10Out",
+							"lifetime": 22,
+							"colorFrom": "9e172c",
+							"colorTo": "9e172c00"
+						},
+						{
+							"type": "WaveEffect",
+							"lifetime": 20,
+							"interp": "circleOut",
+							"sizeFrom": 0,
+							"sizeTo": 48,
+							"strokeFrom": 4,
+							"strokeTo": 0,
+							"colorFrom": "9e172c",
+							"colorTo": "9e172c"
+						}
+					]
+				}
+			}
+		}
+	]
+}

@@ -1,0 +1,54 @@
+{
+  "type": "HeatCrafter",
+  "name": "大型碳化坩埚",
+  "description": "在原型机的基础上,更快速的生产碳化物",
+  "health": 3680,
+  "itemCapacity": 60,
+  "outputItem": {
+    "item": "carbide",
+    "amount": 2
+  },
+  "size": 5,
+  "hasPower": true,
+  "hasItems": true,
+  "craftTime": 120,
+  "heatRequirement": 20,
+  "drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+      {
+        "type": "DrawRegion",
+        "suffix": "-bottom"
+      },
+      "DrawDefault",
+      {
+        "type": "DrawHeatInput",
+        "suffix": "-heat"
+      },
+      "DrawHeatInput",
+      "DrawCrucibleFlame"
+    ]
+  },
+  "consumes": {
+    "power": 2,
+    "items": {
+      "items": [
+        {
+          "item": "graphite",
+          "amount": 5
+        },
+        {
+          "item": "tungsten",
+          "amount": 3
+        }
+      ]
+    }
+  },
+  "requirements": [
+    "carbide/30",
+    "thorium/130",
+    "tungsten/100"
+  ],
+  "category": "crafting",
+  "research": "carbide-crucible",
+}

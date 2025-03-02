@@ -1,0 +1,44 @@
+{
+  "type": "RegenProjector",
+  "name": "多核修复投影仪",
+  "description": "随着战争的发展，敌人日益增长和强大，前线的破损越来越严重，\n修复器几近崩溃，所以——我们制造了它，用于维修残破的防线",
+  "hasLiquids": true,
+  "drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+      {
+        "type": "DrawRegion",
+        "suffix": "-bottom"
+      },
+      "DrawDefault",
+      {
+        "type": "DrawLiquidRegion",
+        "drawLiquid": "hydrogen"
+      },
+      {
+        "type": "DrawGlowRegion",
+        "color": "D1EFFFFF"
+      }
+    ]
+  },
+  "size": 4,
+  "requirements": [
+    "beryllium/150",
+    "tungsten/90",
+    "silicon/100",
+    "thorium/80"
+  ],
+  "research": "列位超速器",
+  "category": "effect",
+  "baseColor": "6569C9FF",
+  "health": 1500,
+  "range": 60,
+  "healPercent": 0.8,
+  "consumes": {
+    "power": 2.5,
+    "liquid": {
+      "liquid": "hydrogen",
+      "amount": "1"
+    }
+  }
+}

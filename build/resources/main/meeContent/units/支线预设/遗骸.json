@@ -1,0 +1,70 @@
+{
+	"type": "legs",
+	"name": "遗骸",
+	"health": 7000,
+	"hitSize": 21,
+	"rotateSpeed": 0.5,
+	"hovering": true,
+	"allowLegStep": true,
+	"speed": 0.6,
+	"legExtension": -9,
+	"legBaseOffset": 10,
+	"stepShake": 1.2,
+	"legCount": 10,
+	"legLength": 20,
+	"legMoveSpace": 2.5,
+	"rippleScale": 3
+	"outlineColor": "2C2A35FF",
+	"weapons": [
+        {
+            "shootOnDeath": true,
+            "reload": 24,
+            "shootCone": 180,
+            "mirror": false,
+            "shootSound": "瘤液喷吐",
+            "bullet": {
+                "type": "BasicBulletType",
+                "collidesTiles": false,
+                "collides": false,
+                "speed":0
+                "killShooter": true,
+                "type": "ExplosionBulletType",
+				"hitColor": "CD6240FF",
+				"shootEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						"titanExplosion",
+						"titanSmoke"
+					]
+				},
+				"splashDamage": 650,
+				"splashDamageRadius": 120,
+				"despawnShake": 3,
+				"fragVelocityMin": 1
+			}
+        }
+    ]
+	"abilities": [
+	{
+            "type": "LiquidExplodeAbility",
+            "liquid": "neoplasm",
+            "amount": 90,
+            "radAmountScale": 1,
+            "radScale": 1,
+            "noiseMag": 10,
+            "noiseScl": 5
+        },
+        {
+            "type": "LiquidRegenAbility",
+            "liquid": "neoplasm",
+            "slurpEffect": "neoplasmHeal"
+        }
+        {
+			"type": "SpawnDeathAbility",
+			"unit": "mee-污染",
+			"amount": 4,
+			"spread": 10
+		}
+        ]
+        
+}

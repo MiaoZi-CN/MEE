@@ -1,0 +1,128 @@
+{
+  "type": "ImpactReactor",
+  "name": "聚变反应堆",
+  "description": "将氢置于高温高压的情况下进行核聚变反应，其放出的热能由比热容极高的临界流体进行缓冲，极为有效地将热量转化为电能；美中不足的是需要大量电力启动，并且...甲方并没有要求做防辐射......",
+  "details": "[red]欢迎来到M E N（nuke）（更多埃里克尔核弹）",
+  "health": 10000,
+  "size": 6,
+  "warmupSpeed": 0.04,
+  "explosionRadius": 350,
+  "canOverdrive": false,
+  "destroyBullet": {
+    "type": "BasicBulletType",
+    "lifetime": 0,
+    "speed": 0,
+    "splashDamage": 1,
+    "splashDamageRadius": 1000,
+    "status": "裂解",
+    "statusDuration": 2000,
+    "fragBullets": 1,
+    "despawnEffect": {
+      "type": "MultiEffect",
+      "effects": [
+        {
+          "type": "ParticleEffect",
+          "region": "circle",
+          "lifetime": 300,
+          "particles": 1,
+          "sizeFrom": 400,
+          "sizeTo": 0,
+          "baseLength": 0,
+          "length": 0,
+          "colorFrom": "92DD7EFF",
+          "colorTo": "92DD7EFF",
+          "layer": 110
+        }
+      ]
+    },
+    "fragBullet": {
+      "fragBullets": 5,
+      "type": "LightningBulletType",
+      "damage": 2000,
+      "pierceArmor": true,
+      "lifetime": 1,
+      "lightningColor": "92DD7EFF",
+      "lightningLength": 30,
+      "fragBullet": {
+        "type": "BasicBulletType",
+        "damage": 2,
+        "lifetime": 1,
+        "splashDamage": 2050,
+        "splashDamageRadius": 350,
+        "pierceArmor": true,
+        "fragBullet": {
+          "type": "LightningBulletType",
+          "damage": 2000,
+          "pierceArmor": true,
+          "lifetime": 1,
+          "lightningColor": "92DD7EFF",
+          "lightningLength": 30
+        }
+      }
+    }
+  },
+  "hasItems": true,
+  "hasLiquids": true,
+  "itemCapacity": 120,
+  "liquidCapacity": 120,
+  "consumes": {
+    "power": 10,
+    "items": [
+      "graphite/10"
+    ],
+    "liquids": {
+      "liquids": [
+        {
+          "liquid": "hydrogen",
+          "amount": 1
+        },
+        {
+          "liquid": "临界流体",
+          "amount": 0.3
+        }
+      ]
+    }
+  },
+  "explosionPuddleLiquid": "核废水",
+  "explosionPuddles": 300,
+  "powerProduction": 220,
+  "drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+      {
+        "type": "DrawRegion",
+        "suffix": "-bottom"
+      },
+      {
+        "type": "DrawCrucibleFlame",
+        "flameColor": "9BDE7E7E",
+        "flameRadiusScl": 9,
+        "flameRadiusMag": 10,
+      },
+      {
+        "type": "DrawLiquidRegion",
+        "drawLiquid": "临界流体"
+      },
+      {
+        "type": "DrawPlasma",
+        "suffix": "-p-",
+        "plasma1": "84F490FF",
+        "plasma2": "5AA161FF"
+      },
+      "DrawDefault",
+      {
+        "type": "DrawGlowRegion",
+        "color": "84F490FF"
+      }
+    ]
+  },
+  "category": "power",
+  "requirements": [
+    "beryllium/700",
+    "silicon/700",
+    "oxide/400",
+    "thorium/700",
+    "泰特希合金/100"
+  ],
+  "research": "核裂变堆"
+}

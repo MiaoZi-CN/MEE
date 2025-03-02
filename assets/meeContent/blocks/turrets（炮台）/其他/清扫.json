@@ -1,0 +1,46 @@
+//主意来自铧金工业:[毒雾]
+{
+  "name": "清扫",
+  "type": "PowerTurret",
+  "reload": 120,
+  "health": 2000,
+  "targetHealing": true,
+  "rotateSpeed": 0,
+  "shootCone": 360,
+  "range": 200,
+  "shootY": 0,
+  "category": "turret",
+  "description": "发射一道震荡波，造成少量伤害",
+  "shootEffect": "none",
+  "research": "afflict",
+  "size": 3,
+  "shoot": {
+    "type": "ShootSpread",
+    "spread": 2,
+    "shots": 300,
+  },
+  "consumes": {
+    "power": 0.3,
+    "liquid": {
+      "liquid": "water",
+      "amount": 0.1
+    }
+  },
+  "requirements": [
+    "oxide/70",
+    "silicon/100"
+  ],
+  "shootType": {
+    "damage": 60,
+    "pierce": true,
+    "lifetime": 21,
+    "knockback": 8,
+    "width": 20,
+    "shootEffect": "none",
+    "hitEffect": "none",
+    "despawnEffect": "none",
+    "sprite": "mee-震荡波",
+    "pierceBuilding": true,
+    "speed": 10
+  }
+}

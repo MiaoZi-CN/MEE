@@ -1,0 +1,33 @@
+{
+	"type": "HeatProducer",
+	"name": "大型电热机",
+	"description": "更高效的利用电来发热，但需要大量氧化物支持建造",
+	"health": 620,
+	"size": 3,
+	"hasPower": true,
+	"hasItems": false,
+	"craftTime": 20,
+	"heatOutput":10
+	"drawer": {
+		"type": "DrawMulti",
+		"drawers": [
+			"DrawDefault",
+			"DrawHeatOutput"
+		]
+	}
+	"consumes": {
+	"power":5.4
+	}
+"requirements": [
+    "silicon/100"
+    "tungsten/80"
+	"oxide/80",
+	],
+	"category": "crafting",
+"research": {
+	"parent": "electric-heater"//科技树前置
+	"requirements": [//研究花费
+	"oxide/50"
+	"tungsten/70",
+	]	},
+}

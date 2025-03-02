@@ -1,0 +1,8 @@
+displayName: 埃里克尔更多设备
+name: mee
+author: "维生素X：美术&代码\n维生素&山猫：地图制作\n嗷嗷怪：BUG&代码\n920：代码\nwherev10_:代码&地图制作\n2H₂O₂:代码&地图制作\nAlon:java代码"
+description: "MEE群号：679814125，快来和别人一起体验快乐的E星罢\n维生素卸任了，现在由我wherev10_接手，bug会比维生素时期多，我估摸着我不会长时间留任的\n特别鸣谢alon帮忙修改错误\n维生素TM回来了！"
+version: 3.0.3
+minGameVersion: 146
+java: true
+main: mee.MEE

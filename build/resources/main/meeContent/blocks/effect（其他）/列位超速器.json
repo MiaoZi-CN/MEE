@@ -1,0 +1,28 @@
+{
+  "name": "列位超速器",
+  "description": "利用裂位的力量加速方块",
+  "type": "OverdriveProjector",
+  "health": 21000,
+  "size": 4,
+  "range": 220,
+  "speedBoost": 3,
+  "hasLiquids": true,
+  "consumes": {
+    "power": 3,
+    "items": {
+      "item": "phase-fabric",
+      "amount:": "1"
+    },
+    "liquid": {
+      "liquid": "列位流体",
+      "amount": "0.4"
+    }
+  },
+  "category": "effect",
+  "research": "赫尔斯特",
+  "requirements": [
+    "泰特希合金/35",
+    "列位石/90",
+    "thorium/135"
+  ]
+}

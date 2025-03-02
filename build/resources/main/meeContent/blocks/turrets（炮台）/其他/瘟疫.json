@@ -1,0 +1,415 @@
+{
+  "type": "ItemTurret",
+  "name": "瘟疫",
+  "description": "高级炮台之一。支持发射多种追踪火箭弹打击敌人",
+  "health": 7350,
+  "maxAmmo": 90,
+  "shootSound": "missile",
+  "size": 6,
+  "category": "turret",
+  "canOverdrive": false,
+  "requirements": [
+    "thorium/100",
+    "silicon/100",
+    "oxide/200",
+    "phase-fabric/20",
+    "列位石/150"
+  ],
+  "shoot": {
+    "type": "ShootAlternate",
+    "barrels": 3,
+    "spread": 15
+  },
+  "shootEffect": "shootSmokeMissile",
+  "reload": 20,
+  "range": 570,
+  "targetGround": true,
+  "targetAir": true,
+  "ammoTypes": {
+    "列位石": {
+      "type": "MissileBulletType",
+      "sprite": "mee-导弹",
+      "buildingDamageMultiplier": 0.3,
+      "homingPower": 0.5,
+      "damage": 400,
+      "lifetime": 100,
+      "width": 30,
+      "trailWidth": 2,
+      "trailLength": 5,
+      "hitColor": "FFF3D6FF",
+      "trailColor": "FFF3D6FF",
+      "speed": 6,
+      "despawnEffect": {
+        "type": "MultiEffect",
+        "effects": [
+          {
+            "type": "ParticleEffect",
+            "region": "mee-菱形1",
+            "particles": 10,
+            "strokeFrom": 10,
+            "strokeTo": 1,
+            "lenFrom": 36,
+            "lenTo": 20,
+            "length": 40,
+            "baseLength": 10,
+            "lifetime": 90,
+            "colorFrom": "FFFFFF",
+            "colorTo": "FFF3D6FF",
+            "cone": 360
+          },
+          {
+            "type": "ParticleEffect",
+            "particles": 12,
+            "line": true,
+            "strokeFrom": 8,
+            "strokeTo": 0,
+            "lenFrom": 20,
+            "lenTo": 5,
+            "length": 120,
+            "baseLength": 5,
+            "lifetime": 70,
+            "colorFrom": "ffffff",
+            "colorTo": "FFF3D6FF"
+          },
+          {
+            "type": "ParticleEffect",
+            "particles": 1,
+            "length": 0,
+            "sizeFrom": 20,
+            "sizeTo": 0,
+            "baseLength": 0,
+            "lifetime": 100,
+            "colorFrom": "ffffff",
+            "colorTo": "FFF3D6FF"
+          },
+          {
+            "type": "ParticleEffect",
+            "particles": 12,
+            "strokeFrom": 8,
+            "strokeTo": 0,
+            "length": 30,
+            "baseLength": 5,
+            "lifetime": 70,
+            "colorFrom": "ffffff",
+            "colorTo": "FFF3D6FF"
+          },
+          {
+            "type": "WaveEffect",
+            "lifetime": 90,
+            "sizeFrom": 0,
+            "sizeTo": 90,
+            "strokeFrom": 9,
+            "strokeTo": 0,
+            "colorFrom": "ffffff",
+            "colorTo": "FFF3D6FF",
+            "interp": "pow10Out"
+          }
+        ]
+      },
+      "hitEffect": {
+        "type": "MultiEffect",
+        "effects": [
+          {
+            "type": "ParticleEffect",
+            "region": "mee-菱形1",
+            "particles": 10,
+            "strokeFrom": 10,
+            "strokeTo": 1,
+            "lenFrom": 36,
+            "lenTo": 20,
+            "length": 40,
+            "baseLength": 10,
+            "lifetime": 90,
+            "colorFrom": "FFFFFF",
+            "colorTo": "FFF3D6FF",
+            "cone": 360
+          },
+          {
+            "type": "ParticleEffect",
+            "particles": 12,
+            "line": true,
+            "strokeFrom": 8,
+            "strokeTo": 0,
+            "lenFrom": 20,
+            "lenTo": 5,
+            "length": 120,
+            "baseLength": 5,
+            "lifetime": 70,
+            "colorFrom": "ffffff",
+            "colorTo": "FFF3D6FF"
+          },
+          {
+            "type": "ParticleEffect",
+            "particles": 1,
+            "length": 0,
+            "sizeFrom": 20,
+            "sizeTo": 0,
+            "baseLength": 0,
+            "lifetime": 100,
+            "colorFrom": "ffffff",
+            "colorTo": "FFF3D6FF"
+          },
+          {
+            "type": "ParticleEffect",
+            "particles": 12,
+            "strokeFrom": 8,
+            "strokeTo": 0,
+            "length": 30,
+            "baseLength": 5,
+            "lifetime": 70,
+            "colorFrom": "ffffff",
+            "colorTo": "FFF3D6FF"
+          },
+          {
+            "type": "WaveEffect",
+            "lifetime": 90,
+            "sizeFrom": 0,
+            "sizeTo": 90,
+            "strokeFrom": 9,
+            "strokeTo": 0,
+            "colorFrom": "ffffff",
+            "colorTo": "FFF3D6FF",
+            "interp": "pow10Out"
+          }
+        ]
+      }
+    },
+    "thorium": {
+      "despawnEffect": {
+        "type": "MultiEffect",
+        "effects": [
+          {
+            "type": "ParticleEffect",
+            "region": "mee-菱形1",
+            "particles": 10,
+            "strokeFrom": 10,
+            "strokeTo": 1,
+            "lenFrom": 36,
+            "lenTo": 20,
+            "baseLength": 10,
+            "lifetime": 90,
+            "colorFrom": "FFFFFF",
+            "colorTo": "F9A3C7FF",
+            "cone": 360
+          },
+          {
+            "type": "ParticleEffect",
+            "particles": 12,
+            "line": true,
+            "strokeFrom": 8,
+            "strokeTo": 0,
+            "lenFrom": 20,
+            "lenTo": 5,
+            "length": 120,
+            "baseLength": 5,
+            "lifetime": 70,
+            "colorFrom": "ffffff",
+            "colorTo": "F9A3C7FF"
+          },
+          {
+            "type": "ParticleEffect",
+            "particles": 1,
+            "length": 0,
+            "sizeFrom": 20,
+            "sizeTo": 0,
+            "baseLength": 0,
+            "lifetime": 100,
+            "colorFrom": "ffffff",
+            "colorTo": "F9A3C7FF"
+          },
+          {
+            "type": "ParticleEffect",
+            "particles": 12,
+            "strokeFrom": 8,
+            "strokeTo": 0,
+            "length": 30,
+            "baseLength": 5,
+            "lifetime": 70,
+            "colorFrom": "ffffff",
+            "colorTo": "F9A3C7FF"
+          },
+          {
+            "type": "WaveEffect",
+            "lifetime": 90,
+            "sizeFrom": 0,
+            "sizeTo": 90,
+            "strokeFrom": 9,
+            "strokeTo": 0,
+            "colorFrom": "ffffff",
+            "colorTo": "F9A3C7FF",
+            "interp": "pow10Out"
+          }
+        ]
+      },
+      "sprite": "mee-导弹",
+      "buildingDamageMultiplier": 0.3,
+      "type": "MissileBulletType",
+      "homingPower": 0.2,
+      "damage": 350,
+      "lifetime": 100,
+      "speed": 6,
+      "width": 30,
+      "trailWidth": 2,
+      "trailLength": 5,
+      "hitColor": "F9A3C7FF",
+      "trailColor": "F9A3C7FF",
+      "hitEffect": {
+        "type": "MultiEffect",
+        "effects": [
+          {
+            "type": "ParticleEffect",
+            "region": "mee-菱形1",
+            "particles": 10,
+            "strokeFrom": 10,
+            "strokeTo": 1,
+            "lenFrom": 36,
+            "lenTo": 20,
+            "length": 40,
+            "baseLength": 10,
+            "lifetime": 90,
+            "colorFrom": "FFFFFF",
+            "colorTo": "F9A3C7FF",
+            "cone": 360
+          },
+          {
+            "type": "ParticleEffect",
+            "particles": 12,
+            "line": true,
+            "strokeFrom": 8,
+            "strokeTo": 0,
+            "lenFrom": 20,
+            "lenTo": 5,
+            "length": 120,
+            "baseLength": 5,
+            "lifetime": 70,
+            "colorFrom": "ffffff",
+            "colorTo": "F9A3C7FF"
+          },
+          {
+            "type": "ParticleEffect",
+            "particles": 1,
+            "length": 0,
+            "sizeFrom": 20,
+            "sizeTo": 0,
+            "baseLength": 0,
+            "lifetime": 100,
+            "colorFrom": "ffffff",
+            "colorTo": "F9A3C7FF"
+          },
+          {
+            "type": "ParticleEffect",
+            "particles": 12,
+            "strokeFrom": 8,
+            "strokeTo": 0,
+            "length": 30,
+            "baseLength": 5,
+            "lifetime": 70,
+            "colorFrom": "ffffff",
+            "colorTo": "F9A3C7FF"
+          },
+          {
+            "type": "WaveEffect",
+            "lifetime": 90,
+            "sizeFrom": 0,
+            "sizeTo": 90,
+            "strokeFrom": 9,
+            "strokeTo": 0,
+            "colorFrom": "ffffff",
+            "colorTo": "F9A3C7FF",
+            "interp": "pow10Out"
+          }
+        ]
+      }
+    },
+    "surge-alloy": {
+      "sprite": "mee-导弹",
+      "buildingDamageMultiplier": 0.3,
+      "fragBullets": 5,
+      "fragBullet": {
+        "type": "LightningBulletType",
+        "homingRange": 100,
+        "pierceArmor": true,
+        "damage": 50,
+        "lightningColor": "E8D174",
+        "lightningLength": 15
+      },
+      "type": "MissileBulletType",
+      "homingPower": 0.2,
+      "damage": 450,
+      "lifetime": 100,
+      "speed": 6,
+      "width": 30,
+      "trailWidth": 2,
+      "trailLength": 5,
+      "hitColor": "E8D174",
+      "trailColor": "E8D174",
+      "hitEffect": {
+        "type": "MultiEffect",
+        "effects": [
+          {
+            "type": "ParticleEffect",
+            "region": "mee-菱形1",
+            "particles": 10,
+            "strokeFrom": 10,
+            "strokeTo": 1,
+            "lenFrom": 36,
+            "lenTo": 20,
+            "length": 40,
+            "baseLength": 10,
+            "lifetime": 90,
+            "colorFrom": "FFFFFF",
+            "colorTo": "E8D174",
+            "cone": 360
+          },
+          {
+            "type": "ParticleEffect",
+            "particles": 12,
+            "line": true,
+            "strokeFrom": 8,
+            "strokeTo": 0,
+            "lenFrom": 20,
+            "lenTo": 5,
+            "length": 120,
+            "baseLength": 5,
+            "lifetime": 70,
+            "colorFrom": "ffffff",
+            "colorTo": "E8D174"
+          },
+          {
+            "type": "ParticleEffect",
+            "particles": 1,
+            "length": 0,
+            "sizeFrom": 20,
+            "sizeTo": 0,
+            "baseLength": 0,
+            "lifetime": 100,
+            "colorFrom": "ffffff",
+            "colorTo": "E8D174"
+          },
+          {
+            "type": "ParticleEffect",
+            "particles": 12,
+            "strokeFrom": 8,
+            "strokeTo": 0,
+            "length": 30,
+            "baseLength": 5,
+            "lifetime": 70,
+            "colorFrom": "ffffff",
+            "colorTo": "E8D174"
+          },
+          {
+            "type": "WaveEffect",
+            "lifetime": 90,
+            "sizeFrom": 0,
+            "sizeTo": 90,
+            "strokeFrom": 9,
+            "strokeTo": 0,
+            "colorFrom": "ffffff",
+            "colorTo": "E8D174",
+            "interp": "pow10Out"
+          }
+        ]
+      }
+    }
+  }
+}

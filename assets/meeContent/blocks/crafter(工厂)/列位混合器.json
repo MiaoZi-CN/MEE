@@ -1,0 +1,43 @@
+{
+	"type": "GenericCrafter",
+	"name": "列位混合器",
+	"description": "混合列位流体，请务必尽量让此仪器远离瘤液有关生产线，以免造成巨大损失",
+	"outputLiquid":"列位流体/0.2",
+		"health": 1000,
+	"size": 3,
+	"hasPower": true,
+	"hasLiquids": true,
+		"drawer":{
+	    "type":"DrawMulti",
+	    "drawers":[
+	    {
+	    "type":"DrawRegion",
+	    "suffix":"-bottom"
+	    },
+	    {
+	       "type":"DrawLiquidRegion",
+	    "drawLiquid":"列位流体"
+	    },
+	    "DrawDefault"
+	]},
+	"craftTime": 120,
+    "liquidCapacity": 60,
+	"consumes": {
+    "power":3,
+    "items": {
+	"items": [
+	{ "item": "列位石", "amount": 2 }
+	]
+	},
+    "liquid":
+{"liquid": "water", "amount": 0.3 }
+    },
+"requirements": [
+    "thorium/690",
+    "列位石/135",
+	"泰特希合金/10"
+	],
+	"category": "crafting",
+	"research":"相位互化器"
+	
+}

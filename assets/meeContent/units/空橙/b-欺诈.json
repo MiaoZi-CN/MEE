@@ -1,0 +1,114 @@
+{
+  "type": "flying",
+  "name": "欺诈",
+  "description": "战略型空中单位，可以使用低制导导弹与中口径主炮来进攻敌人",
+  "speed": 2.2,
+  "hitSize": 15,
+  "health": 800,
+  "flying": true,
+  "template": "ErekirUnitType",
+  "shadowElevation": 1,
+  "accel": 0.05,
+  "drag": 0.032,
+  "parts": [
+    {
+      "type": "HoverPart",
+      //悬浮动画块
+      "mirror": false,
+      //是否镜像显示
+      "x": 0,
+      "y": 0,
+      //平面坐标位置
+      "radius": 6,
+      //半径
+      "phase": 90,
+      //
+      "stroke": 2,
+      //
+      "layerOffset": -0.001,
+      //图层
+      "color": "DEEDFFFF"
+      //颜色
+    }
+  ],
+  //来自@Cheems
+
+  "research": "战机重构厂",
+  "weapons": [
+    {
+      "name": "欺诈导弹",
+      "x": 3,
+      "y": -1.5,
+      "rotate": false,
+      "reload": 30,
+      "mirror": true,
+      "shootCone": 180,
+      "shoot": {
+        "type": "ShootSpread",
+        "spread": 250,
+        "shots": 4
+      },
+      "bullet": {
+        "type": "BasicBulletType",
+        "homingPower": 0.3,
+        "homingDelay": 3,
+        "damage": 10,
+        "trailWidth": 2,
+        "lifetime": 30,
+        "speed": 7,
+        "trailLength": 8
+      }
+    },
+    {
+      "name": "欺诈主炮2",
+      "x": 0,
+      "y": -1.5,
+      "rotate": true,
+      "reload": 70,
+      "mirror": false,
+      "shootCone": 80,
+      "bullet": {
+        "type": "BasicBulletType",
+        "width": 0,
+        "pierceCap": 3,
+        "pierce": true,
+        "trailWidth": 3,
+        "trailLength": 20,
+        "speed": 5,
+        "damage": 15,
+        "lifetime": 35,
+        "height": 400,
+        "homingPower": 0.2,
+        "homingDelay": 3
+      }
+    },
+    {
+      "name": "欺诈主炮",
+      "x": 0,
+      "y": -1.5,
+      "rotate": true,
+      "reload": 70,
+      "mirror": false,
+      "shootCone": 80,
+      "shoot": {
+        "type": "ShootHelix",
+        "mag": 1,
+        "scl": 4
+      },
+      "bullet": {
+        "type": "BasicBulletType",
+        "width": 0,
+        "pierceCap": 3,
+        "pierce": true,
+        "trailWidth": 3,
+        "trailLength": 20,
+        "speed": 5,
+        "damage": 20,
+        "lifetime": 35,
+        "height": 400,
+        "homingPower": 0.2,
+        "homingDelay": 3
+      }
+    }
+  ]
+}

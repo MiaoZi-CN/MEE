@@ -1,0 +1,499 @@
+{
+  "type": "legs",
+  "name": "惩戒",
+  "description": "终极战蝎单位，利用大量穿透武器对建筑造成大量伤害，拥有极其厚实的装甲，但这也成为了一种负担......",
+  "speed": 0.35,
+  "hitSize": 60,
+  "health": 38000,
+  "armor": 35,
+  "template": "ErekirUnitType",
+  "legCount": 8,
+  "legLength": 40,
+  "legBaseOffset": 18,
+  "legExtension": 0,
+  "legStraightness": 0.4,
+  "baseLegStraightness": 0.35,
+  "parts": [
+    {
+      "type": "RegionPart",
+      "layer": 110,
+      "colorTo": "99F8FFFF",
+      "color": "000000FF",
+      "mirror": false,
+      "progress": "warmup",
+      "growProgress": "warmup",
+      "outline": false,
+      "suffix": "-glow"
+    }
+  ],
+  "research": {
+    "parent": "战蝎构建终端",
+    "requirements": [
+      "thorium/7000",
+      "silicon/15000",
+      "oxide/6000",
+      "列位石/300"
+    ]
+  },
+  "weapons": [
+    {
+      "name": "惩戒解裂",
+      "type": "PointDefenseWeapon",
+      "x": 0,
+      "y": 1,
+      "rotate": true,
+      "shootSound": "lasercharge2",
+      "recoil": 0,
+      "rotateSpeed": 9,
+      "reload": 10,
+      "targetInterval": 5,
+      "targetSwitchInterval": 5,
+      "bullet": {
+        "maxRange": 100,
+        "damage": 50
+      }
+    },
+    {
+      "name": "惩戒解裂",
+      "type": "PointDefenseWeapon",
+      "x": 0,
+      "y": 1,
+      "rotate": true,
+      "shootSound": "lasercharge2",
+      "recoil": 0,
+      "rotateSpeed": 9,
+      "reload": 10,
+      "targetInterval": 5,
+      "targetSwitchInterval": 5,
+      "bullet": {
+        "maxRange": 100,
+        "damage": 50
+      }
+    },
+    {
+      "name": "惩戒解裂",
+      "type": "PointDefenseWeapon",
+      "x": 0,
+      "y": 1,
+      "rotate": true,
+      "shootSound": "lasercharge2",
+      "recoil": 0,
+      "rotateSpeed": 9,
+      "reload": 10,
+      "targetInterval": 5,
+      "targetSwitchInterval": 5,
+      "bullet": {
+        "maxRange": 100,
+        "damage": 50
+      }
+    },
+    {
+      "type": "RepairBeamWeapon",
+      "name": "惩戒光束",
+      "healColor": "99F8FFFF",
+      "laserColor": "99F8FFFF",
+      "x": 15,
+      "y": -4
+    },
+    {
+      "type": "RepairBeamWeapon",
+      "name": "惩戒光束",
+      "healColor": "99F8FFFF",
+      "laserColor": "99F8FFFF",
+      "x": 20,
+      "y": -6
+    },
+    {
+      "type": "RepairBeamWeapon",
+      "name": "惩戒光束",
+      "healColor": "99F8FFFF",
+      "laserColor": "99F8FFFF",
+      "x": 25,
+      "y": -8
+    },
+    {
+      "type": "RepairBeamWeapon",
+      "name": "惩戒光束",
+      "healColor": "99F8FFFF",
+      "laserColor": "99F8FFFF",
+      "x": 30,
+      "y": -10
+    },
+    {
+      "shootStatusDuration": 10,
+      //效果持续时间
+      "shootStatus": "unmoving",
+      //射击时给予效果
+      "rotate": true,
+      //可不可以旋转
+      "rotationLimit": 30,
+      //旋转限制
+      "x": 0,
+      //武器存在的x轴
+      "y": -5,
+      "shootSound": "malignShoot",
+      "chargeSound": "lasercharge2",
+      "reload": 90,
+      "shoot": {
+        //shoot
+        "shots": 4,
+        "shotDelay": 10,
+        "firstShotDelay": 20
+      },
+      "bullet": {
+        //子弹
+        "chargeEffect": {
+          //蓄力effect（可以不要）
+          "type": "MultiEffect",
+          "effects": [
+            {
+              "type": "WaveEffect",
+              //波特效
+              "lifetime": 70,
+              //存在时间
+              "sizeFrom": 20,
+              //出现时大小
+              "sizeTo": 5,
+              //消失时大小
+              "strokeFrom": 1,
+              "strokeTo": 1,
+              "colorFrom": "ffffff",
+              "colorTo": "99F8FFFF"
+            },
+            {
+              "type": "WaveEffect",
+              "lifetime": 70,
+              "sizeFrom": 10,
+              "sizeTo": 5,
+              "strokeFrom": 1,
+              "strokeTo": 1,
+              "colorFrom": "ffffff",
+              "colorTo": "99F8FFFF"
+            }
+          ]
+        },
+        "type": "LaserBulletType",
+        "lifetime": 50,
+        "width": 40,
+        "damage": 700,
+        "length": 180,
+        "lightningSpacing": 25,
+        "lightningLength": 5,
+        "lightningLengthRand": 1,
+        "lightningAngleRand": 8,
+        "lightningDamage": 15,
+        //来自SF的兰瑟
+        "colors": [
+          "74A1E3FF",
+          "99F8FFFF",
+          "99F8FFFF",
+          "FFFFFF"
+        ]
+        //激光颜色
+      }
+    },
+    {
+      "x": 22,
+      "y": -18,
+      "name": "惩戒武器2",
+      "reload": 50,
+      "rotate": true,
+      "rotateSpeed": 2.4,
+      "shootSound": "spark",
+      "bullet": {
+        "hitEffect": {
+          "type": "MultiEffect",
+          "effects": [
+            {
+              "type": "ParticleEffect",
+              "lifetime": 70,
+              "region": "mee-星",
+              "particles": 1,
+              "sizeFrom": 20,
+              "sizeTo": 10,
+              "colorFrom": "99F8FFFF",
+              "colorTo": "99F8FFFF",
+              "baseLength": 0,
+              "length": 0
+            },
+            {
+              "type": "WaveEffect",
+              "lifetime": 70,
+              "sizeFrom": 30,
+              "sizeTo": 30,
+              "strokeFrom": 1,
+              "strokeTo": 1,
+              "colorFrom": "99F8FFFF",
+              "colorTo": "3B8F6560"
+            }
+          ]
+        },
+        "type": "PointBulletType",
+        "trailEffect": {
+          "type": "ParticleEffect",
+          "randLength": false,
+          "line": true,
+          "lenFrom": 12,
+          "lenTo": 12,
+          "strokeFrom": 7,
+          "strokeTo": 0,
+          "length": 0,
+          "baseLength": 1,
+          "lifetime": 22,
+          "colorFrom": "99F8FFFF",
+          "colorTo": "99F8FFFF",
+          "cone": 0
+        },
+        "fragBullets": 1,
+        "speed": 3,
+        "lifetime": 150,
+        "fragOnHit": false,
+        "fragBullet": {
+          "type": "EmpBulletType",
+          "instantDisappear": true,
+          "damage": 100,
+          "splashDamage": 150,
+          "splashDamageRadius": 90,
+          "buildingDamageMultiplier": 0.15,
+          "radius": 90,
+          "timeIncrease": 0,
+          "powerSclDecrease": 0,
+          "timeDuration": 70
+        }
+      }
+    },
+    {
+      "name": "惩戒主炮",
+      "x": 0,
+      "y": 0,
+      "shootSound": "laserblast",
+      "chargeSound": "lasercharge",
+      "mirror": false,
+      "reload": 400,
+      "shoot": {
+        "firstShotDelay": 150
+      },
+      "bullet": {
+        "type": "BasicBulletType",
+        "fragBullets": 20,
+        "fragOnHit": false,
+        "fragBullet": {
+          "lightningLength": 22,
+          "type": "LightningBulletType",
+          "damage": 90,
+          "lightningColor": "99F8FFFF",
+          "hitColor": "99F8FFFF"
+        },
+        "sprite": "mee-星",
+        "spin": 0.5,
+        "width": 90,
+        "height": 90,
+        "speed": 6,
+        "damage": 1000,
+        "lifetime": 100,
+        "drag": 0.02,
+        "frontColor": "99F8FFFF",
+        "backColor": "99F8FFFF",
+        "hitColor": "99F8FFFF",
+        "despawnSound": "dullExplosion",
+        "intervalDelay": 1,
+        "pierce": true,
+        "trailColor": "99F8FFFF",
+        "trailWidth": 10,
+        "trailLength": 20,
+        "trailChance": 50,
+        "shrinkY": 0,
+        "chargeEffect": {
+          "type": "MultiEffect",
+          "effects": [
+            {
+              "type": "ParticleEffect",
+              "particles": 1,
+              "sizeFrom": 1,
+              "sizeTo": 11,
+              "length": 5,
+              "lifetime": 149,
+              "baseLength": 0,
+              "colorFrom": "FFFFFF",
+              "colorTo": "99F8FFFF"
+            },
+            {
+              "type": "WaveEffect",
+              "lifetime": 149,
+              "sizeFrom": 5,
+              "sizeTo": 0,
+              "strokeFrom": 1,
+              "strokeTo": 1,
+              "colorFrom": "ffffff",
+              "colorTo": "99F8FFFF"
+            },
+            {
+              "type": "WaveEffect",
+              "lifetime": 149,
+              "sizeFrom": 30,
+              "sizeTo": 5,
+              "strokeFrom": 1,
+              "strokeTo": 1,
+              "colorFrom": "ffffff",
+              "colorTo": "99F8FFFF"
+            },
+            {
+              "type": "WaveEffect",
+              "lifetime": 149,
+              "sizeFrom": 10,
+              "sizeTo": 5,
+              "strokeFrom": 1,
+              "strokeTo": 1,
+              "colorFrom": "ffffff",
+              "colorTo": "99F8FFFF"
+            },
+            {
+              "type": "ParticleEffect",
+              "particles": 11,
+              "sizeFrom": 6,
+              "sizeTo": 6,
+              "length": -20,
+              "lifetime": 90,
+              "baseLength": 20,
+              "colorFrom": "FFFFFF",
+              "colorTo": "99F8FFFF"
+            }
+          ]
+        },
+        "intervalBullets": 3,
+        "intervalBullet": {
+          "statusDuration": 0,
+          "type": "SapBulletType",
+          "damage": 0,
+          "knockback": -20,
+          "length": 100,
+          "color": "99F8FFFF"
+        },
+        "despawnEffect": {
+          "type": "MultiEffect",
+          "effects": [
+            {
+              "type": "WaveEffect",
+              "lifetime": 15,
+              "colorFrom": "99F8FFFF",
+              "colorTo": "99F8FFFF",
+              "sizeFrom": 0,
+              "sizeTo": 50,
+              "strokeFrom": 12,
+              "strokeTo": 0
+            }
+          ]
+        },
+        "hitEffect": {
+          "type": "MultiEffect",
+          "effects": [
+            {
+              "type": "WaveEffect",
+              "lifetime": 15,
+              "colorFrom": "99F8FFFF",
+              "colorTo": "99F8FFFF",
+              "sizeFrom": 0,
+              "sizeTo": 50,
+              "strokeFrom": 12,
+              "strokeTo": 0
+            }
+          ]
+        },
+        "trailEffect": {
+          "type": "ParticleEffect",
+          "particles": 5,
+          "sizeFrom": 4,
+          "sizeTo": 0,
+          "length": 0,
+          "lifetime": 55,
+          "colorFrom": "99F8FFFF",
+          "colorTo": "99F8FFFF"
+        },
+        "pierceBuilding": true
+      },
+      "parts": [
+        {
+          "type": "ShapePart",
+          "hollow": true,
+          "sides": 4,
+          "x": 0,
+          "y": -32,
+          "radius": 3,
+          "radiusTo": 20,
+          "stroke": 0,
+          "strokeTo": 2,
+          "color": "99F8FFFF",
+          "rotateSpeed": 0.8,
+          "layer": 110
+        },
+        {
+          "type": "HaloPart",
+          "shapes": 4,
+          "tri": true,
+          "y": -32,
+          "haloRotation": 180,
+          "radius": 0,
+          "radiusTo": 5,
+          "triLength": 4,
+          "triLengthTo": 4,
+          "haloRadius": 32,
+          "haloRadiusTo": 10,
+          "haloRotateSpeed": 2.4,
+          "color": "99F8FFFF",
+          "layer": 110,
+          "colorTo": "99F8FFFF",
+          "progress": "warmup"
+        },
+        {
+          "type": "ShapePart",
+          "y": -32,
+          "circle": true,
+          "hollow": true,
+          "radius": 0,
+          "radiusTo": 10,
+          "stroke": 0,
+          "strokeTo": 1,
+          "layer": 110,
+          "color": "99F8FFFF"
+        },
+        {
+          "type": "HaloPart",
+          "shapes": 2,
+          "tri": true,
+          "y": -32,
+          "radius": 0,
+          "radiusTo": 8,
+          "triLength": 18,
+          "triLengthTo": 10,
+          "haloRadius": 20,
+          "haloRadiusTo": 40,
+          "haloRotation": 90,
+          "haloRotateSpeed": 0,
+          "color": "99F8FFFF",
+          "colorTo": "99F8FFFF",
+          "layer": 110,
+          "progress": "warmup"
+        },
+        {
+          "type": "HaloPart",
+          "shapes": 2,
+          "tri": true,
+          "y": -32,
+          "radius": 0,
+          "radiusTo": 8,
+          "triLength": 10,
+          "triLengthTo": 2,
+          "haloRadius": 20,
+          "haloRadiusTo": 40,
+          "haloRotation": 90,
+          "shapeRotation": 180,
+          "haloRotateSpeed": 0,
+          "color": "99F8FFFF",
+          "colorTo": "99F8FFFF",
+          "layer": 110,
+          "progress": "warmup"
+        }
+      ]
+    }
+  ]
+}

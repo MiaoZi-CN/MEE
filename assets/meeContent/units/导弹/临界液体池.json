@@ -1,0 +1,20 @@
+{
+  "type": "missile",
+  "template": "MissileUnitType",
+
+  "name": "临界液体池",
+  "maxRange": 6,
+  "speed": 3,
+  "rotateSpeed": 0.5,
+  "lifetime": 0,
+  "health": 250,
+
+  "abilities": [
+    {
+      "type": "LiquidExplodeAbility",
+      "liquid": "临界流体",
+      "radAmountScale": 6,
+      "radScale": 4
+    }
+  ]
+}

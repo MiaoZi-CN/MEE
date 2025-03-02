@@ -1,0 +1,13 @@
+{"type": "BeamDrill",
+"name":"小型离子钻",
+"description": "使用离子光束挖掘矿石",
+"tier":3
+"drillTime":210,
+"size":1
+"range": 4,
+"alwaysUnlocked":true,//科技树默认解锁
+"requirements": [
+        "beryllium/7",
+    ],
+"category": "production",
+    }

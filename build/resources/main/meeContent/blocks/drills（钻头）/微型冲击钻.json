@@ -1,0 +1,24 @@
+{"type": "BurstDrill",
+"name":"微型冲击钻",
+"description": "放置在矿石上时，以低速输出无限物品，需要电力。"
+"tier":6
+"drillTime":340,
+"blockedItem":"thorium",
+"arrowSpacing":0
+"itemCapacity":100
+"hardnessDrillMultiplier": 50,
+"fogRadius":20
+"shake":1.5
+"arrowOffset":0
+"alwaysUnlocked":true,
+"size":3
+"category":"production",
+"consumes": { "power": 1
+		}
+		"arrows":1
+"requirements": [
+        "beryllium/50",
+        "graphite/35",
+        "silicon/25"
+    ],
+    }

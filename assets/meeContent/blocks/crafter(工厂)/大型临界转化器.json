@@ -1,0 +1,58 @@
+{
+  "type": "GenericCrafter",
+  "name": "大型临界转化器",
+  "description": "化合氮气与氢气，更高速，更有效率",
+  "outputLiquid": "临界流体/0.55",
+  "health": 560,
+  "size": 3,
+  "hasPower": true,
+  "hasLiquids": true,
+  "drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+      {
+        "type": "DrawRegion",
+        "suffix": "-bottom"
+      },
+      {
+        "type": "DrawLiquidRegion",
+        "drawLiquid": "临界流体"
+      },
+      "DrawDefault"
+    ]
+  },
+  "craftTime": 120,
+  "liquidCapacity": 60,
+  "consumes": {
+    "power": 3,
+    "items": {
+      "items": [
+        {
+          "item": "thorium",
+          "amount": 6
+        }
+      ]
+    },
+    "liquids": {
+      "liquids": [
+        {
+          "liquid": "nitrogen",
+          "amount": 0.15
+        },
+        {
+          "liquid": "hydrogen",
+          "amount": 0.15
+        }
+      ]
+    }
+  },
+  "requirements": [
+    "beryllium/135",
+    "thorium/60",
+    "oxide/95",
+    "carbide/25"
+  ],
+  "category": "crafting",
+  "research": "临界转化器"
+
+}

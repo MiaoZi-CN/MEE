@@ -1,0 +1,25 @@
+{
+  "type": "UnitCargoLoader",
+  "name": "建造机终端",
+  "description": "建造一架建造单位",
+  "health": 620,
+  "squareSprite": false,
+  "category": "units",
+  "size": 3,
+  "hasItems": true,
+  "itemCapacity": 100,
+  "unitType": "曙光",
+  "consumes": {
+    "power": 1.9,
+    "liquid": {
+      "liquid": "cyanogen",
+      "amount": 0.3
+    }
+  },
+  "requirements": [
+    "carbide/25",
+    "silicon/90",
+    "thorium/35"
+  ],
+  "research": "unit-cargo-loader"
+}

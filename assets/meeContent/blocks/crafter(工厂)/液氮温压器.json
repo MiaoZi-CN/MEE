@@ -1,0 +1,38 @@
+{
+	"type": "GenericCrafter",
+	"name": "液氮温压器",
+	"description": "对内部环境进行电力热交换并释以高压，使氮气在低温急速液化",
+	"outputLiquid":"液氮/0.28"
+	"hasLiquids": true,
+	"health": 600,
+	"size": 3,
+	"hasPower": true,
+	"hasLiquids": true,
+		"drawer":{
+	    "type":"DrawMulti",
+	    "drawers":[
+	    {
+	    "type":"DrawRegion",
+	    "suffix":"-bottom"
+	    },
+	    {
+	       "type":"DrawLiquidRegion",
+	    "drawLiquid":"液氮"
+	    },
+	    "DrawDefault"
+	]},
+	"craftTime": 120,
+	"liquidCapacity": 60,
+	"consumes": {
+		"power":4,
+		"liquid": {"liquid": "nitrogen", "amount": 0.3}	
+	}
+	"requirements": [	
+	"thorium/80",	
+	"silicon/80",	
+	"oxide/20",
+	],
+	"category": "crafting",
+	"research":"atmospheric-concentrator"
+	
+}

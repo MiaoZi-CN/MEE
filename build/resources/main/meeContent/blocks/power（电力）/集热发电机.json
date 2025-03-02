@@ -1,0 +1,45 @@
+{
+  "type": "VariableReactor",
+  "name": "集热发电机",
+  "description": "以将热转化为电能，低效",
+  "details" : "我知道你想干什么...但你看看这该死的占地"
+  "health": 1200,
+  "size": 3,
+  "research": "热能发电机",
+  "category": "power",
+  "requirements": [
+    "beryllium/200"
+    "tungsten/300"
+    "oxide/30"
+  ],
+  "maxHeat": 30,
+  "powerProduction": 10,
+  "effectChance": 1,
+  "drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+    "DrawDefault",
+    {
+        "type": "DrawHeatInput",
+        "suffix": "-heat"
+      }
+    ]
+  },
+  "effect": {
+    "type": "MultiEffect",
+    "effects": [
+      {
+        "type": "ParticleEffect",
+        "baseLength": 10,
+        "length": -8,
+        "sizeFrom": 0,
+        "sizeTo": 2,
+        "cone": 360,
+        "lifetime": 60,
+        "particles": 1,
+        "colorFrom": "ffa665",
+        "colorTo": "ffa665"
+      }
+    ]
+  }
+}

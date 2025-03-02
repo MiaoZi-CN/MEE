@@ -1,0 +1,63 @@
+{
+  "type": "BurstDrill",
+  "name": "电弧钻井",
+  "description": "产生电弧轰炸矿石，需要臭氧",
+  "tier": 8,
+  "drillTime": 345,
+  "arrowSpacing": 3,
+  "itemCapacity": 50,
+  "fogRadius": 20,
+  "shake": 8,
+  "arrowOffset": 2,
+  "glowColor": "F7E97EFF",
+  "size": 5,
+  "research": "large-plasma-bore",
+  "category": "production",
+  "consumes": {
+    "power": 3.6,
+    "liquid": {
+      "liquid": "ozone",
+      "amount": 0.13
+    }
+  },
+  "requirements": [
+    "beryllium/180",
+    "graphite/180",
+    "tungsten/60",
+    "surge-alloy/30"
+  ],
+  "drillEffect": {
+    "type": "MultiEffect",
+    "effects": [
+      {
+        "type": "ParticleEffect",
+        "region": "mee-菱形1",
+        "particles": 5,
+        "strokeFrom": 10,
+        "sizeFrom": 25,
+        "sizeTo": 0,
+        "strokeTo": 20,
+        "lenFrom": 5,
+        "lenTo": 20,
+        "length": 40,
+        "baseLength": 10,
+        "lifetime": 90,
+        "colorFrom": "FFFFFF",
+        "colorTo": "F7E97EFF",
+        "cone": 360,
+        "interp": "pow10Out"
+      },
+      {
+        "type": "WaveEffect",
+        "lifetime": 80,
+        "sizeFrom": 4,
+        "sizeTo": 120,
+        "strokeFrom": 4,
+        "strokeTo": 0,
+        "colorFrom": "F7E97EFF",
+        "colorTo": "F7E97EFF",
+        "interp": "pow5Out"
+      }
+    ]
+  }
+}

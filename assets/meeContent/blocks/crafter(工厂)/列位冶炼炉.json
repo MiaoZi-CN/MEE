@@ -1,0 +1,62 @@
+{
+  "type": "HeatCrafter",
+  "name": "列位冶炼炉",
+  "description": "在列位石的重整下利用液氮替代矿渣，利用更高的温度高效合成巨浪合金",
+  "health": 8050,
+  "itemCapacity": 60,
+  "outputItem": {
+    "item": "surge-alloy",
+    "amount": 4
+  },
+  "size": 5,
+  "hasPower": true,
+  "hasItems": true,
+  "craftTime": 100,
+  "craftEffect": "none",
+  "drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+      {
+        "type": "DrawRegion",
+        "suffix": "-bottom"
+      },
+      {
+        "type": "DrawLiquidTile",
+        "drawLiquid": "液氮"
+      },
+      {
+        "type": "DrawCrucibleFlame",
+        "particleRad": 12
+      },
+      "DrawDefault"
+    ]
+  },
+  "consumes": {
+    "power": 1.7,
+    "items": {
+      "items": [
+        {
+          "item": "silicon",
+          "amount": 12
+        },
+        {
+          "item": "列位石",
+          "amount": 4
+        }
+      ]
+    },
+    "liquid": {
+      "liquid": "液氮",
+      "amount": 0.15
+    }
+  },
+  "requirements": [
+    "surge-alloy/120",
+    "carbide/120",
+    "列位石/300",
+    "silicon/400",
+    "tungsten/800"
+  ],
+  "category": "crafting",
+  "research": "列位混合器"
+}

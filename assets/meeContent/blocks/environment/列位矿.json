@@ -1,0 +1,14 @@
+{
+"type":"OreBlock",
+//type，不能动
+"name":"列位矿",
+//name，随意
+"itemDrop":"列位石",
+//挖出来什么东西，如果type是ore就只能是物品(固体)
+"mapColor":"FFF3D6FF",
+//地图上的颜色
+"oreDefault":true,
+//我不到啊
+"oreScale":16
+//矿物分散
+}

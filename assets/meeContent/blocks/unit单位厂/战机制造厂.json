@@ -1,0 +1,37 @@
+           {
+"type":"UnitFactory",
+"name":"战机制造厂",
+"size":3,
+"health":580,
+"configurable":false,
+"consumes":{
+"power":2,
+           }
+"requirements":
+		    [
+"silicon/50",
+"beryllium/50",
+	      	]
+"research":
+	        {
+"parent":"tank-fabricator"
+"objectives":[
+			 {
+"type": "OnSector",
+"preset":"lake"
+             }
+             ]
+             }
+"category":"units",
+"researchCostMultiplier":0.45
+"plans":[
+		{ "unit": "a-突袭",
+		"time": 1000,
+		"requirements":
+		[
+		"silicon/50",
+		"beryllium/50",
+		]
+		}
+		]
+        }

@@ -1,0 +1,42 @@
+{
+  "type": "HeaterGenerator",
+  "name": "衰变热机",
+  "description": "将衰变产生的中子反射以加快衰变速度，小部分转化为电能并将热能集中释放",
+  "health": 1200,
+  "size": 3,
+  "itemCapacity": 14,
+  "consumes": {
+    "items": [
+      "thorium/4"
+    ]
+  },
+  "itemDuration": 120,
+  "powerProduction": 3,
+  "heatOutput": 13,
+  "drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+      {
+        "type": "DrawRegion",
+        "suffix": "-bottom"
+      },
+      {
+        "type": "DrawCrucibleFlame",
+        "flameColor": "3A8F64FF"
+      },
+      "DrawDefault",
+      {
+        "type": "DrawRegion",
+        "suffix": "-玻璃"
+      },
+      "DrawHeatOutput"
+    ]
+  },
+  "category": "power",
+  "requirements": [
+    "beryllium/120",
+    "silicon/120",
+    "oxide/80"
+  ],
+  "research": "集热发电机"
+}

@@ -1,0 +1,64 @@
+{
+	"type": "GenericCrafter",
+	"name": "列位合金炉",
+	"description": "利用列位的力量高速生产泰特希合金",
+	"details":"好贵"
+	"health": 5000,
+	"itemCapacity":50,
+	"hasLiquids": true,
+	"size": 6,
+	"outputItem": {"item": "泰特希合金","amount":25},
+	"hasPower": true,
+		"drawer":{
+		"type":"DrawMulti",
+		"drawers":[
+			{
+				"type": "DrawRegion",
+				"suffix": "-bottom"
+			},
+	        {
+	       "type":"DrawLiquidRegion",
+	    "drawLiquid":"neoplasm"
+	    },
+			"DrawDefault"
+		{
+	    "type":"DrawGlowRegion"
+	    "color":"FFF3D6FF"
+	     }
+			]
+	},
+	"craftTime": 600,
+	"consumes": {
+    "power":10
+    "liquids": {
+    "liquids":[
+	{"liquid": "neoplasm", "amount": 2.5 }
+	{"liquid": "列位流体", "amount": 1.5 }
+	]
+	}
+    "items": {
+	"items": [
+	{ "item": "surge-alloy", "amount": 25 }
+	{ "item": "thorium", "amount": 10 }
+    { "item": "列位石", "amount": 10 }
+	]},
+	}
+"requirements": [
+    "phase-fabric/200"
+    "carbide/250"
+	"oxide/300",
+	"列位石/300",
+	],
+	"category": "crafting",
+	"research":
+	{
+	"requirements": [
+    "phase-fabric/9000"
+    "carbide/2500"
+	"oxide/1000",
+	"列位石/1000"
+	],
+				"parent":"列位超速器"
+    }
+	
+}

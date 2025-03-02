@@ -1,0 +1,16 @@
+{
+	"type": "SolarGenerator",
+	"name": "热能发电机",
+	"description": "利用埃里克尔的炎热气候来发电",
+	"size":2,
+	"health":300,
+	"drawLiquidLight":true,
+    "lightColor":"1173EB75",
+	"powerProduction":1.3,
+	"requirements": [
+		"beryllium/100",
+     	"oxide/60",
+        ],
+        "category": "power",
+        "research":"chemical-combustion-chamber"
+}

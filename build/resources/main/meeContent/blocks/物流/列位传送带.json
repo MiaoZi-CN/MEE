@@ -1,0 +1,15 @@
+{
+  "type": "StackConveyor",
+  "name": "列位传送带",
+  "description": "打包定向输送物品，有更大的容量与速度",
+  "health": 200,
+  "insulated": true,
+  "requirements": [
+    "列位石/1",
+    "thorium/3"
+  ],
+  "category": "distribution",
+  "research": "赫尔斯特",
+  "speed": 0.1,
+  "itemCapacity": 30
+}

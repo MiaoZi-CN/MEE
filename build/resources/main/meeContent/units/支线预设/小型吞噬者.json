@@ -1,0 +1,113 @@
+{
+  "type": "flying",
+  "name": "小型吞噬者",
+  "description": "潜伏的隐秘单位，会躲在瘤化地形的角落等待猎物或听从主巢的指引行动",
+  "speed": 1,
+  "hitSize": 7,
+  "health": 1000,
+  "template": "ErekirUnitType",
+  "flying": true,
+  "shadowElevation": 1,
+  "engineSize": 0,
+  "abilities": [
+    {
+      "type": "RepairFieldAbility",
+      "range": 1,
+      "reload": 60,
+      "amount": 100
+    }
+  ],
+  "weapons": [
+    {
+      "name": "小吞武器",
+      "reload": 60,
+      "shootCone": 360,
+      "shootSound": "瘤液喷吐",
+      "shoot": {
+        "shots": 3,
+        "shotDelay": 4
+      },
+      "bullet": {
+        "type": "BasicBulletType",
+        "weaveScale": 3,
+        "weaveMag": 3,
+        "lifetime": 100,
+        "speed": 1.4,
+        "layer": 110,
+        "height": 12,
+        "width": 18,
+        "shrinkY": 0,
+        "shrinkX": 0,
+        "frontColor": "CD6240FF",
+        "backColor": "CD6240FF",
+        "trailLength": 0,
+        "trailWidth": 0,
+        "trailChance": 1,
+        "trailInterval": 8,
+        "trailEffect": {
+          "type": "ParticleEffect",
+          "particles": 1,
+          "sizeFrom": 2,
+          "sizeTo": 0,
+          "length": 10,
+          "lifetime": 50,
+          "layer": 109,
+          "colorFrom": "77252BFF",
+          "colorTo": "77252BFF"
+        },
+        "shootEffect": {
+          "type": "multiEffect",
+          "layer": 109,
+          "effects": [
+            {
+              "type": "ParticleEffect",
+              "particles": 1,
+              "sizeFrom": 2,
+              "sizeTo": 3,
+              "length": 30,
+              "lifetime": 50,
+              "lightColor": "CD6240FF",
+              "colorFrom": "CD6240FF",
+              "colorTo": "CD6240FF",
+              "cone": 50,
+              "interp": "pow3Out"
+            }
+          ]
+        },
+        "despawnEffect": {
+          "type": "MultiEffect",
+          "effects": [
+            {
+              "type": "ParticleEffect",
+              "particles": 10,
+              "length": 10,
+              "baseLength": 1,
+              "lifetime": 90,
+              "colorFrom": "CD6240FF",
+              "colorTo": "CD6240FF",
+              "cone": 360,
+              "interp": "pow3Out"
+            }
+          ]
+        },
+        "hitEffect": {
+          "type": "MultiEffect",
+          "effects": [
+            {
+              "type": "ParticleEffect",
+              "particles": 10,
+              "length": 10,
+              "baseLength": 1,
+              "lifetime": 90,
+              "colorFrom": "CD6240FF",
+              "colorTo": "CD6240FF",
+              "cone": 360,
+              "interp": "pow3Out"
+            }
+          ]
+        },
+        "damage": 84
+      }
+    }
+  ]
+}

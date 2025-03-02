@@ -1,0 +1,38 @@
+{
+        "type": "missile",
+	"template": "MissileUnitType",
+	
+	"name":"音效"
+	"maxRange": 0
+	"speed":0
+	"rotateSpeed": 1
+	"lifetime":1
+	"health":0.1
+		
+		"weapons":[{
+		"shootCone": 360,
+		"mirror": false,
+		"shake": 1,
+		"shootOnDeath": true,
+		"shootSound": "虫亡",
+		
+		"bullet":{
+		"fragBullet": {
+"pierce": true,
+"pierceBuilding": true,
+"type": "LiquidBulletType",
+"liquid": "neoplasm",
+"lifetime": 30,
+"speed": 5,
+"puddleSize": 5,
+"orbSize": 5,
+"damage": 0
+                }
+		"type": "ExplosionBulletType",
+		"buildingDamageMultiplier":0.7,
+		"splashDamage": 50,
+		"splashDamageRadius": 60,
+			}
+			}
+			]
+			}

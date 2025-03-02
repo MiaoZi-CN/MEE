@@ -1,0 +1,22 @@
+{
+	"type": "DirectionLiquidBridge",
+	"name": "碳化流体带桥",
+	"description": "更高效的传送液体，有7格的长度，输入电力提高运输效率",
+	"health": 620,
+	"category": "liquid",
+	"size": 1,
+	"squareSprite": false,
+	"hasPower": true,
+	"hasLiquids": true,
+	"underBullets":true
+	"range":7
+	"requirements":
+	[
+	"tungsten/10"
+	"carbide/1"
+	]
+	"research": "reinforced-bridge-conduit",
+	"consumes": {
+    "power":0.1,
+    }
+    }

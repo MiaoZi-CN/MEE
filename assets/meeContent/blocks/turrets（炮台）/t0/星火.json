@@ -1,0 +1,76 @@
+//感谢@余明和@嗷嗷怪的提示与提醒
+{
+  "type":"PowerTurret",
+  "name": "星火",
+  "description": "小型激光发生器，定向快速发射大量激光",
+  "details": "：我嘞个全自动蓝瑟啊"
+  "size": 3,
+  "shootY": 1
+  "health": 2700,
+  "category": "turret",
+  "shootSound": "none"
+  "research": "厄难"
+  "unitSort": "strongest"//优先攻击血量高单位
+  "range": 150,
+  "targetAir":true,
+  "targetGround":true,
+  "rotateSpeed": 0.8,
+  "drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+      {
+        "type": "DrawTurret",
+        "parts": [
+          {
+            "type":"RegionPart",
+            "mirror":true,
+            "x":0,"y":0,
+            "suffix":"-2",
+            "layer":50,
+            "moveX":0,
+            "moveY":-3,
+            "moveRot":-9
+          },
+          {
+            "type":"RegionPart",
+            "mirror":false,
+            "x":0,"y":0,
+            "suffix":"-1",
+            "layer":50,
+            "moveX":0,
+            "moveY":-4
+            "moveRot":0
+          },
+        ]
+      }
+    ]
+  }
+  "consumes":{
+    "power":1.2
+    "liquid": {"liquid": "water", "amount": 0.2 }
+  },
+
+  "reload": 10,
+  "shootCone": 12,
+  "shootType":{
+    "type":"LaserBulletType"
+
+    "colors": ["869cbe","b8c5d9","ffffff"],
+
+    "length": 150,
+    "width": 10,
+
+    "damage": 46,
+
+    "lightningColor": "b8c5d9",
+    "lightningDamage": 16,
+    "lightningSpacing": 12,
+    "lightningAngleRand": 60,
+  }
+  "requirements":[
+    "thorium/50",
+    "tungsten/60"
+    "silicon/50",
+    "graphite/60"
+  ],
+}

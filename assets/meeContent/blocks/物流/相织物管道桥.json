@@ -1,0 +1,22 @@
+{
+	"type": "DuctBridge",
+	"name": "相织物管道桥",
+	"description": "更高效的传送物体，有10格的距离",
+	"health": 620,
+	"size": 1,
+	"hasPower": true,
+	"underBullets":true,
+	"itemCapacity":50,
+	"range":10,
+	"speed":0.3,
+	"squareSprite": false,
+	"requirements":
+	[
+	"tungsten/10",
+	"phase-fabric/1"
+	],
+	"research": "duct-bridge",
+	"consumes": {
+    "power":0.1,
+    }
+    }

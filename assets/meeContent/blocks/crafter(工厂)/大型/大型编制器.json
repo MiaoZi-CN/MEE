@@ -1,0 +1,65 @@
+
+{
+  "type": "HeatCrafter",
+  "name": "大型编制器",
+  "description": "更加高效的编制相织物",
+  "details":"将埃里克尔的沙子挖干净吧！"
+  "health": 3680,
+  "itemCapacity": 80,
+  "liquidCapacity":10
+  "outputItem": {
+    "item": "phase-fabric"
+    "amount": 4
+  },
+  "size": 4,
+  "hasPower": true,
+  "hasItems": true,
+  "craftTime": 120,
+  "heatRequirement": 15,
+  "drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+      {
+        "type": "DrawRegion",
+        "suffix": "-bottom"
+      },
+      "DrawGlowRegion",
+      {
+        "type": "DrawMultiWeave",
+        "glowColor": "FC8F4BBA"
+      },
+      "DrawDefault",
+      {
+        "type": "DrawHeatInput",
+        "suffix": "-heat"
+      }
+    ]
+  },
+  "consumes": {
+    "power": 10,
+    "liquid": {
+      "liquid": "ozone",
+      "amount": 0.15
+    },
+    "items": {
+      "items": [
+        {
+          "item": "sand",
+          "amount": 20
+        },
+        {
+          "item": "thorium",
+          "amount": 4
+        }
+      ]
+    }
+  },
+  "requirements": [
+    "silicon/120",
+    "carbide/120",
+    "thorium/200",
+    "phase-fabric/60"
+  ],
+  "category": "crafting",
+  "research": "phase-synthesizer",
+}

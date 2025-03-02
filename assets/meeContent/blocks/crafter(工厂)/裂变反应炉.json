@@ -1,0 +1,54 @@
+{
+  "type": "HeatProducer",
+  "name": "裂变反应炉",
+  "description": "利用铍反射中子的特性对钍进行裂变处理，释放大量热的同时输出裂变产物",
+  "health": 880,
+  "itemCapacity": 12,
+  "outputItem": {
+    "item": "fissile-matter",
+    "amount": 2
+  },
+  "size": 4,
+  "hasPower": true,
+  "hasItems": true,
+  "craftTime": 80,
+  "heatOutput": 15,
+  "drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+      {
+        "type": "DrawRegion",
+        "suffix": "-bottom"
+      },
+      {
+        "type": "DrawCrucibleFlame",
+        "flameColor": "3A8F64FF",
+        "flameRadiusScl": 8,
+        "flameRadiusMag": 8
+      },
+      "DrawDefault",
+      {
+        "type": "DrawRegion",
+        "suffix": "-玻璃"
+      },
+      "DrawHeatOutput"
+    ]
+  },
+  "consumes": {
+    "power": 2,
+    "items": {
+      "items": [
+        "beryllium/3",
+        "thorium/1"
+      ]
+    }
+  },
+  "requirements": [
+    "graphite/120",
+    "silicon/120",
+    "carbide/40",
+    "oxide/40"
+  ],
+  "category": "crafting",
+  "research": "carbide-crucible"
+}

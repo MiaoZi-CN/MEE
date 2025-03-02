@@ -1,0 +1,149 @@
+{
+  "type": "legs",
+  "name": "斥遣",
+  "description": "战蝎单位，向敌人发射爆破电磁弹，使用治疗光束修复友军",
+  "speed": 0.7,
+  "hitSize": 25,
+  "health": 2250,
+  "armor": 4,
+  "research": "prime-refabricator",
+  "template": "ErekirUnitType",
+  "legCount": 6,
+  "legLength": 13,
+  "lockLegBase": false,
+  "legContinuousMove": true,
+  "legExtension": 6,
+  "allowLegStep": true,
+  "legBaseOffset": 5,
+  "legMaxLength": 1.65,
+  "legMinLength": 1.5,
+  "legMoveSpace": 1.5,
+  //来自AP的鳄龟
+  "weapons": [
+    {
+      "type": "RepairBeamWeapon",
+      "name": "蜉蝣光束",
+      "healColor": "99F8FFFF",
+      "laserColor": "99F8FFFF",
+      "x": 5,
+      "y": 0
+    },
+    {
+      "type": "RepairBeamWeapon",
+      "name": "蜉蝣光束",
+      "x": 3,
+      "y": 0
+    },
+    {
+      "reload": 90,
+      "name": "斥遣武器",
+      "x": 0,
+      "y": 0,
+      "mirror": false,
+      "minWarmup": 0.9,
+      "shootWarmupSpeed": 0.02,
+      "inaccuracy": 50,
+      "shoot": {
+        "shots": 10,
+        "shotDelay": 4.5
+      },
+      "parts": [
+        {
+          "type": "ShapePart",
+          "hollow": true,
+          "sides": 4,
+          "x": 0,
+          "y": 0,
+          "radius": 0,
+          "radiusTo": 3,
+          "stroke": 0,
+          "strokeTo": 2,
+          "color": "99F8FFFF",
+          "rotateSpeed": 1,
+          "layer": 110
+        },
+        {
+          "type": "ShapePart",
+          "hollow": true,
+          "sides": 4,
+          "x": 0,
+          "y": 0,
+          "radius": 0,
+          "radiusTo": 3,
+          "stroke": 0,
+          "strokeTo": 2,
+          "color": "99F8FFFF",
+          "rotateSpeed": 0.5,
+          "layer": 110
+        },
+        {
+          "type": "HaloPart",
+          "shapes": 6,
+          "tri": true,
+          "y": 0,
+          "haloRotation": 180,
+          "radius": 0,
+          "radiusTo": 3,
+          "triLength": 4,
+          "triLengthTo": 4,
+          "haloRadius": 16,
+          "haloRadiusTo": 5,
+          "haloRotateSpeed": 2.4,
+          "color": "99F8FFFF",
+          "layer": 110,
+          "colorTo": "99F8FFFF",
+          "progress": "warmup"
+        },
+        {
+          "type": "ShapePart",
+          "y": 0,
+          "circle": true,
+          "hollow": true,
+          "radius": 0,
+          "radiusTo": 3,
+          "stroke": 0,
+          "strokeTo": 1,
+          "layer": 110,
+          "color": "99F8FFFF"
+        }
+      ],
+      "bullet": {
+        "type": "BasicBulletType",
+        "sprite": "missile-large",
+        "lifetime": 24,
+        "speed": 10,
+        "width": 6,
+        "height": 16,
+        "frontColor": "FFFFFF",
+        "backColor": "99F8FFFF",
+        "trailColor": "99F8FFFF",
+        "trailWidth": 2.4,
+        "trailLength": 8,
+        "shootEffect": "none",
+        "smokeEffect": "none",
+        "hitEffect": {
+          "type": "ExplosionEffect",
+          "waveColor": "99F8FFFF",
+          "sparkColor": "99F8FFFF",
+          "smokeColor": "99F8FFFF",
+          "waveRad": 18
+        },
+        "despawnEffect": {
+          "type": "ExplosionEffect",
+          "waveColor": "99F8FFFF",
+          "sparkColor": "99F8FFFF",
+          "smokeColor": "99F8FFFF",
+          "waveRad": 18
+        },
+        "damage": 20,
+        "buildingDamageMultiplier": 1.2,
+        "pierceBuilding": true,
+        "homingPower": 0.35,
+        "homingRange": 60,
+        "homingDelay": 9,
+        "splashDamage": 15,
+        "splashDamageRadius": 25
+      }
+    }
+  ]
+}

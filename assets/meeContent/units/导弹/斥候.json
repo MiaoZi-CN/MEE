@@ -1,0 +1,40 @@
+{
+  "type": "missile",
+  "template": "MissileUnitType",
+  "name": "斥候",
+  "description": "瘤虫的辅助，给附近的单位超频效果并使用立场保护他们",
+  "speed": 0,
+  "flying": true,
+  "rotateSpeed": 0,
+  "hitSize": 15,
+  "health": 10,
+  "armor": 3,
+  "lifetime": 30,
+  "abilities": [
+    {
+      "type": "ForceFieldAbility",
+      "max": 600,
+      "sides": 3
+    },
+    {
+      "type": "SpawnDeathAbility",
+      "unit": "音效",
+      "amount": 1,
+      "randAmount": 0
+    },
+    {
+      "type": "StatusFieldAbility",
+      "duration": 200,
+      "reload": 300,
+      "range": 100,
+      "applyEffect": "none",
+      "effect": "overclock"
+    },
+    {
+      "type": "RepairFieldAbility",
+      "amount": 300,
+      "range": 150,
+      "reload": 300
+    }
+  ]
+}

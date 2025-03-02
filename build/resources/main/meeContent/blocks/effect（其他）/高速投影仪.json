@@ -1,0 +1,23 @@
+{
+  "name": "高速投影仪",
+  "description": "给方块提供加速",
+  "type": "OverdriveProjector",
+  "health": 1000,
+  "size": 3,
+  "range": 120,
+  "speedBoost": 1.4,
+  "consumes": {
+    "power": 2,
+    "liquid": {
+      "liquid": "nitrogen",
+      "amount": "0.2"
+    }
+  },
+  "category": "effect",
+  "research": "unit-cargo-loader",
+  "requirements": [
+    "graphite/65",
+    "beryllium/90",
+    "thorium/35"
+  ]
+}

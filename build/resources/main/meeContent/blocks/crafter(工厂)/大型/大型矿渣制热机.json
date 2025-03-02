@@ -1,0 +1,53 @@
+{
+  "type": "HeatProducer",
+  "name": "大型矿渣制热机",
+  "description": "高效的利用矿渣制热",
+  "health": 1020,
+  "size": 4,
+  "hasPower": false,
+  "hasLiquids": true,
+  "hasItems": false,
+  "craftTime": 120,
+  "liquidCapacity": 234,
+  "heatOutput": 24,
+  "drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+      {
+        "type": "DrawRegion",
+        "suffix": "-bottom"
+      },
+      {
+        "type": "DrawLiquidTile",
+        "drawLiquid": "slag"
+      },
+      {
+        "type": "DrawDefault"
+      },
+      {
+        "type": "DrawHeatOutput"
+      }
+    ]
+  },
+  "consumes": {
+    "liquid": {
+      "liquid": "slag",
+      "amount": 1.95
+    }
+  },
+  "requirements": [
+    "silicon/170",
+    "thorium/100",
+    "carbide/100"
+  ],
+  "category": "crafting",
+  "research": {
+    "parent": "大型电热机",
+    //科技树前置
+    "requirements": [
+      //研究花费
+      "carbide/50",
+      "tungsten/70"
+    ]
+  }
+}

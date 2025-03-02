@@ -1,0 +1,12 @@
+{
+"requirements": [
+    "graphite/3000",
+    "beryllium/3000",
+    "oxide/3000",
+	"silicon/3000",
+	"tungsten/3000",
+	"thorium/3000",
+	"carbide/3000",
+	"phase-fabric/300"
+  ],
+  }

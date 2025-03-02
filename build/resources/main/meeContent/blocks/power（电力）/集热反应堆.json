@@ -1,0 +1,124 @@
+{
+  "type": "VariableReactor",
+  "name": "集热反应堆",
+  "description": "通过热解芳油进行大量发电\n[red]如果芳油不足，急速攀升的温度很可能会导致内部气体膨胀引发反应堆剧烈爆炸",
+  "health": 13600,
+  "size": 5,
+  "hasLiquids": true,
+  "canOverdrive": false,
+  "research": "核裂变堆",
+  "liquidCapacity":10000
+  "hasItems": true,
+  
+  "category": "power",
+  "lightColor": "ffffff",
+  "explosionRadius":40, //爆炸半径
+	"explosionDamage":1000, //爆炸伤害
+	"explosionShakeDuration": 10,
+	"explodeSound": "explosionbig",
+	"explodeEffect": {
+		"type": "MultiEffect",
+		"effects": [
+		{
+				"type": "ParticleEffect",
+				"particles": 12,
+				"line": true,
+				"strokeFrom": 8,
+				"strokeTo": 0,
+				"lenFrom": 20,
+				"lenTo": 5,
+				"length": 120,
+				"baseLength": 5,
+				"lifetime": 70,
+				"colorFrom": "ffffff",
+				"colorTo": "ffa665"
+			}
+			{
+				"type": "ParticleEffect",
+				"particles": 1,
+				"length": 0,
+				"sizeFrom": 20,
+				"sizeTo": 0,
+				"baseLength": 0,
+				"lifetime": 100,
+				"colorFrom": "ffffff",
+				"colorTo": "ffa665"
+			}
+			{
+				"type": "ParticleEffect",
+				"particles": 12,
+				"strokeFrom": 8,
+				"strokeTo": 0,
+				"length": 30,
+				"baseLength": 5,
+				"lifetime": 70,
+				"colorFrom": "ffffff",
+				"colorTo": "ffa665"
+			}
+		{
+					"type": "WaveEffect",
+					"lifetime": 90,
+					"sizeFrom": 0,
+					"sizeTo": 90,
+					"strokeFrom": 9,
+					"strokeTo": 0,
+					"colorFrom": "ffffff",
+					"colorTo": "ffa665"
+					"interp" : "pow10Out"
+				},
+		]
+		}
+  "requirements": [
+    "silicon/600"
+    "oxide/200"
+    "thorium/400"
+  ],
+  "consumes": {
+		"liquid": {
+			"liquid": "arkycite",
+			"amount": 6
+		}
+	},
+	"drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+      {
+        "type": "DrawRegion",
+        "suffix": "-bottom"
+      },
+      {
+        "type": "DrawLiquidRegion",
+        "drawLiquid": "arkycite"
+      },
+      "DrawDefault",
+      {
+        "type": "DrawHeatInput",
+        "suffix": "-heat"
+      }
+      {
+        "type": "DrawGlowRegion",
+        "color": "FC8E6DFF"
+      },
+    ]
+  },
+  "maxHeat": 50,
+  "powerProduction": 90,
+  "effectChance": 1,
+  "effect": {
+    "type": "MultiEffect",
+    "effects": [
+      {
+        "type": "ParticleEffect",
+        "baseLength": 40,
+        "length": -38,
+        "sizeFrom": 0,
+        "sizeTo": 3,
+        "cone": 360,
+        "lifetime": 120,
+        "particles": 1,
+        "colorFrom": "ffa665",
+        "colorTo": "ffa665"
+      }
+    ]
+  }
+}

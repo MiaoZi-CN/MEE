@@ -1,0 +1,163 @@
+{
+  "type": "flying",
+  "name": "大型吞噬者",
+  "description": "虫族中的中级单位，发射瘤液导弹打击敌人",
+  "speed": 0.8,
+  "hitSize": 10,
+  "health": 3750,
+  "flying": true,
+  "shadowElevation": 1,
+  "engineSize": 0,
+  "template": "ErekirUnitType",
+  "armor": 10,
+  "lowAltitude": true,
+  "abilities": [
+    {
+      "type": "MoveEffectAbility",
+      "interval": 3,
+      "y": -8,
+      "color": "77252BFF",
+      "effect": {
+        "type": "ParticleEffect",
+        "particles": 5,
+        "sizeFrom": 2,
+        "sizeTo": 0,
+        "length": 0,
+        "lifetime": 60,
+        "layer": 110,
+        "colorFrom": "77252BFF",
+        "colorTo": "8EAD44FF"
+      }
+    }
+  ],
+  "weapons": [
+    {
+      "name": "大型吞噬者头",
+      "y": 0.5,
+      "x": 0,
+      "top": false,
+      //上部图层
+      "layerOffset": -0.001,
+      //图层偏移
+      "rotate": true,
+      //旋转
+      "rotationLimit": 70,
+      //旋转限制
+      "mirror": false,
+      "reload": 200,
+      "shootSound": "瘤液喷吐",
+      "shootY": 13,
+      "shoot": {
+        "type": "ShootAlternate",
+        "barrels": 60,
+        "spread": 0.1,
+        "shots": 60,
+        "shotDelay": 1.5
+      },
+      "bullet": {
+        "type": "SapBulletType",
+        "damage": 40,
+        "length": 45,
+        "sapStrength": 1,
+        "color": "D06B53FF"
+      }
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "rotate": false,
+      "mirror": false,
+      "reload": 15,
+      "shootCone": 360,
+      "inaccuracy": 360,
+      "bullet": {
+        "type": "BasicBulletType",
+        "sprite": "circle",
+        "lifetime": 100,
+        "speed": 0.8,
+        "drag": -0.03,
+        "homingRange": 999,
+        "homingPower": 0.08,
+        "shrinkY": 0,
+        "shrinkX": 0,
+        "width": 3,
+        "height": 3,
+        "damage": 100,
+        "splashDamage": 100,
+        "splashDamageRadius": 40,
+        "shootEffect": {
+          "type": "ParticleEffect",
+          "particles": 8,
+          "sizeFrom": 3,
+          "sizeTo": 0,
+          "length": 80,
+          "baseLength": 3,
+          "lifetime": 60,
+          "colorFrom": "FF5353FF",
+          "colorTo": "FF535300",
+          "cone": 10
+        },
+        "smokeEffect": "none",
+        "frontColor": "FFAC93FF",
+        "backColor": "FFAC93FF",
+        "trailWidth": 1.5,
+        "trailLength": 10,
+        "trailColor": "FF5353FF",
+        "hitEffect": "flakExplosion"
+      }
+    }
+  ],
+  "parts": [
+    {
+      "type": "RegionPart",
+      "mirror": true,
+      "x": 0,
+      "y": 0,
+      "layer": 56,
+      "suffix": "-侧",
+      "moveX": 0,
+      "moveY": 0,
+      "moveRot": 10,
+      "progress": {
+        "type": "smoothReload",
+        "op": "absin",
+        "scl": 20,
+        "mag": 1
+      }
+    },
+    {
+      "type": "RegionPart",
+      "mirror": true,
+      "x": -1,
+      "y": -5,
+      "layer": 55,
+      "suffix": "-侧",
+      "moveX": 0,
+      "moveY": 0,
+      "moveRot": 10,
+      "progress": {
+        "type": "smoothReload",
+        "op": "absin",
+        "scl": 20,
+        "mag": 1
+      }
+    },
+    {
+      "type": "RegionPart",
+      "mirror": false,
+      "x": -2,
+      "y": -5,
+      "layer": 56,
+      "suffix": "-尾巴1",
+      "moveX": 0,
+      "moveY": 0,
+      "moveRot": 30,
+      "progress": {
+        "type": "smoothReload",
+        "op": "absin",
+        "scl": 20,
+        "mag": 1
+      }
+    }
+  ]
+}

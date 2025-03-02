@@ -1,0 +1,42 @@
+{
+"type": "GenericCrafter",
+"name":"大型矿渣提取机" ,
+"description":"高速提取地下的矿渣",
+"details":"晶石要塞用上合金了，太恐怖啦"
+"health": 1400,
+"size": 4,
+"floating":true,
+"hasPower": true,
+"hasLiquids": true,
+"liquidCapacity": 160,
+	"drawer":{
+		"type":"DrawMulti",
+		"drawers":[
+		"DrawDefault",
+		 {
+	       "type":"DrawLiquidRegion",
+	    "drawLiquid":"slag"
+	    },
+	        {
+				"type":"DrawRegion",
+				"suffix":"-转"
+				"rotateSpeed":3
+				"spinSprite": true,
+			}
+					]
+	},
+	"requirements": [
+	    {"item": "beryllium", "amount": 250},
+	    {"item": "tungsten", "amount": 70},
+		{"item": "thorium", "amount": 200}
+],
+"consumes": { "power": 3.35
+ "items": {
+	"items": [
+	{ "item": "thorium", "amount": 3 }
+	]
+	}},
+"outputLiquid": {"liquid": "slag", "amount": 0.4},
+"category": "production",
+"research": "离子轰击钻"
+}

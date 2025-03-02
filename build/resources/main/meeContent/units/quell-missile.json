@@ -1,0 +1,5 @@
+{
+"fogRadius":7,//迷雾揭示范围
+"targetable":false,//可被选为目标
+"hittable":false,//可被击中
+}

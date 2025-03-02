@@ -1,0 +1,35 @@
+           {
+"type":"UnitFactory",
+"name":"战甲制造厂",
+"size":3,
+"health":580,
+"configurable":false,
+"consumes":{
+"power":2,
+           }
+"requirements":
+		    [
+"silicon/150",
+"graphite/50",
+	      	]
+"research":
+	        {
+"parent":"tank-fabricator"
+"requirements":
+		    [
+"beryllium/30",
+	      	]
+             }
+"category":"units",
+"researchCostMultiplier":0.45
+"plans":[
+		{ "unit": "a-蚕食",
+		"time": 2200,
+		"requirements":
+		[
+		"silicon/50",
+		"graphite/50",
+		]
+		}
+		]
+        }

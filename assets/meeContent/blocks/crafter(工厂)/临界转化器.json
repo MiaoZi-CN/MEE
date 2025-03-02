@@ -1,0 +1,57 @@
+{
+  "type": "GenericCrafter",
+  "name": "临界转化器",
+  "description": "化合氮气与氢气，请务必远离列位流体生产线！",
+  "outputLiquid": "临界流体/0.15",
+  "health": 560,
+  "size": 2,
+  "hasPower": true,
+  "hasLiquids": true,
+  "drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+      {
+        "type": "DrawRegion",
+        "suffix": "-bottom"
+      },
+      {
+        "type": "DrawLiquidRegion",
+        "drawLiquid": "临界流体"
+      },
+      "DrawDefault"
+    ]
+  },
+  "craftTime": 120,
+  "liquidCapacity": 60,
+  "consumes": {
+    "power": 1,
+    "items": {
+      "items": [
+        {
+          "item": "thorium",
+          "amount": 2
+        }
+      ]
+    },
+    "liquids": {
+      "liquids": [
+        {
+          "liquid": "nitrogen",
+          "amount": 0.05
+        },
+        {
+          "liquid": "hydrogen",
+          "amount": 0.05
+        }
+      ]
+    }
+  },
+  "requirements": [
+    "beryllium/85",
+    "oxide/35",
+    "carbide/10"
+  ],
+  "category": "crafting",
+  "research": "大型编制器"
+
+}

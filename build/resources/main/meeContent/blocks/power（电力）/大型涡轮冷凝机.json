@@ -1,0 +1,31 @@
+{
+            "name":"大型涡轮冷凝机"
+            "type":"ThermalGenerator"
+            "category": "power",
+            "attribute" :"steam"
+            "minEfficiency":8,
+            "canOverdrive": false,
+            "displayEfficiencyScale":0.1111111111111
+            "displayEfficiency":false
+            "outputLiquid": { "liquid": "water", "amount": 0.035},
+            "group" : "liquids" 
+            "powerProduction" : 1.2
+            "drawer": {"type": "DrawMulti",
+	"drawers": [
+	"DrawDefault",
+		{"type": "DrawBlurSpin",
+		"suffix": "-转"
+		"rotateSpeed":6
+		},
+		]	}
+            "effectChance" :0.05
+            "generateEffect":"turbinegenerate"
+            "size" : 4
+            "ambientSound" : "hum"
+            "ambientSoundVolume" : 1
+            "requirements": [
+		    "beryllium/100",
+            "oxide/50"
+                            ],
+        "research":"turbine-condenser"
+}

@@ -1,0 +1,87 @@
+{
+  "type": "flying",
+  "template": "MissileUnitType",
+
+  "name": "血色环",
+  "maxRange": 6,
+  "speed": 0,
+  "rotateSpeed": 0,
+  "lifetime": 160,
+  "health": 6000,
+  "armor": 800,
+  "fogRadius": 16,
+  "engineSize": 0,
+
+  "createScorch": false,
+  "playerControllable": false,
+  "logicControllable": false,
+  "drawCell":false,
+
+  "abilities": [
+    {
+      "type": "EnergyFieldAbility",
+      "targetAir": false,
+      "x": 0,
+      "y": 0,
+      "damage": 450,
+      "reload": 4,
+      "range": 240,
+      "healPercent": 0,
+      "effectRadius": 12,
+      "sectors": 6,
+      "sectorRad": 0.11,
+      "hitEffect": {
+        "type": "ParticleEffect",
+        "particles": 1,
+        "sizeFrom": 4,
+        "sizeTo": 9,
+        "baseLength": 0,
+        "lifetime": 15,
+        "colorFrom": "ac3232",
+        "colorTo": "ac323200",
+        "cone": 360
+      },
+      "damageEffect": "chainLightning",
+      "shootSound": "none",
+      "maxTargets": 1,
+      "color": "ac3232"
+    },
+    {
+      "type": "StatusFieldAbility",
+      "effect": "血色环计时器",
+      "reload": 20,
+      "duration": 40,
+      "range": 1
+    }
+  ],
+
+  "parts": [
+    {
+      "type": "HaloPart",
+      "tri": true,
+
+      "radius": 6,
+      "radiusTo": 6,
+      "triLength": 12,
+      "triLengthTo": 12,
+      "color": "ac3232",
+      "colorTo": "ac3232",
+      "haloRotateSpeed": 0.8,
+      "haloRotation": 180,
+      "layer": 110
+    },
+    {
+      "type": "HaloPart",
+      "tri": true,
+
+      "radius": 6,
+      "radiusTo": 6,
+      "triLength": 36,
+      "triLengthTo": 36,
+      "color": "ac3232",
+      "colorTo": "ac3232",
+      "haloRotateSpeed": 0.8,
+      "layer": 110
+    }
+  ]
+}

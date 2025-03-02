@@ -1,0 +1,65 @@
+{
+  "type": "GenericCrafter",
+  "name": "化合硅炉",
+  "description": "在氢气流中还原沙子，极大地节约了电力成本",
+  "outputItem": {
+    "item": "silicon",
+    "amount": 8
+  },
+  "hasLiquids": true,
+  "health": 1250,
+  "size": 4,
+  "itemCapacity": 48,
+  "hasPower": true,
+  "drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+      {
+        "type": "DrawRegion",
+        "suffix": "-bottom"
+      },
+      {
+        "type": "DrawLiquidRegion",
+        "drawLiquid": "hydrogen"
+      },
+      {
+        "type": "DrawDefault"
+      },
+      {
+        "type": "DrawGlowRegion",
+        "color": "D1EFFFFF"
+      },
+      {
+        "type": "DrawCrucibleFlame",
+        "flameColor": "D1EFFFFF"
+      }
+    ]
+  },
+  "craftTime": 80,
+  "consumes": {
+    "power": 2,
+    "items": {
+      "items": [
+        {
+          "item": "sand",
+          "amount": 10
+        }
+      ]
+    },
+    "liquids": {
+      "liquids": [
+        {
+          "liquid": "hydrogen",
+          "amount": 0.1
+        }
+      ]
+    }
+  },
+  "requirements": [
+    "beryllium/60",
+    "tungsten/40",
+    "silicon/40"
+  ],
+  "category": "crafting",
+  "research": "silicon-arc-furnace"
+}

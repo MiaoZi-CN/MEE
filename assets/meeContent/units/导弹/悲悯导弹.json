@@ -1,0 +1,124 @@
+{
+  "type": "missile",
+  "template": "MissileUnitType",
+  "name": "悲悯导弹",
+  "maxRange": 6,
+  "speed": 6,
+  "rotateSpeed": 0.4,
+  "lifetime": 80,
+  "health": 850,
+  "armor": 20,
+  "lowAltitude": true,
+  "parts": [
+    {
+      "type": "FlarePart",
+      "progress": {
+        "type": "life",
+        "op": "curve",
+        "interp": "pow3Out"
+      },
+      "color1": "BF92F9FF",
+      "stroke": 9,
+      //三角形宽
+      "radius": 0,
+      //三角形长
+      "radiusTo": 30//三角形最大长度
+    }
+  ],
+  "weapons": [
+    {
+      "shootCone": 360,
+      "reload": 80,
+      "alwaysShooting": true,
+      "shootOnDeath": true,
+      "bullet": {
+        "instantDisappear": true,
+        "lifetime": 0,
+        "damage": 500,
+        "splashDamage": 400,
+        "splashDamageRadius": 50,
+        "pierce": true,
+        "pierceArmor": true,
+        "pierceBuilding": true,
+        "frontColor": "bf92f9",
+        "backColor": "665c9f",
+        "trailColor": "665c9f",
+        "height": 16,
+        "width": 16,
+        "trailLength": 12,
+        "trailWidth": 4,
+        "fragBullets": 4,
+        "fragRandomSpread": 360,
+        "fragBullet": {
+          "type": "PointBulletType",
+          "speed": 6,
+          "lifetime": 40,
+          "fragBullets": 6,
+          "fragRandomSpread": 360,
+          "fragBullet": {
+            "type": "LightningBulletType",
+            "damage": 100,
+            "pierceArmor": true,
+            "lightningColor": "BF92F9FF",
+            "lightningLength": 15
+          },
+          "trailSpacing": 8,
+          "trailEffect": {
+            "type": "MultiEffect",
+            "effects": [
+              {
+                "type": "ParticleEffect",
+                "randLength": false,
+                "line": true,
+                "lenFrom": 12,
+                "lenTo": 12,
+                "strokeFrom": 7,
+                "strokeTo": 0,
+                "length": 0,
+                "baseLength": 1,
+                "lifetime": 40,
+                "colorFrom": "BF92F9FF",
+                "colorTo": "BF92F9FF",
+                "cone": 0
+              }
+            ]
+          },
+          "hitShake": 18,
+          "damage": 100,
+          "splashDamage": 500,
+          "splashDamageRadius": 60
+        }
+      }
+    }
+  ],
+  "abilities": [
+    {
+      "type": "EnergyFieldAbility",
+      "damage": 80,
+      "reload": 6,
+      "range": 75,
+      "healPercent": 0.45,
+      "effectRadius": 3,
+      "sectors": 6,
+      "sectorRad": 0.11,
+      "hitEffect": {
+        "type": "ParticleEffect",
+        "particles": 5,
+        "sizeFrom": 2,
+        "sizeTo": 10,
+        "baseLength": 0,
+        "length": 20,
+        "lifetime": 15,
+        "colorFrom": "bf92f9",
+        "colorTo": "bf92f900",
+        "cone": 360
+      },
+      "damageEffect": "chainLightning",
+      "shootSound": "悲悯-能量场",
+      "x": 0,
+      "y": 0,
+      "maxTargets": 12,
+      "color": "bf92f9"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+	"type": "HeatCrafter",
+	"name": "氮气富集器",
+	"description": "富集大气中的氮气并进行密度分离，拥有更高的效能",
+	"health": 3680,
+	"hasLiquids":true,
+	"itemCapacity":5,
+	"outputLiquid":"nitrogen/0.25",
+	"size":4,
+	"hasPower": true,
+	"hasItems": false,
+	"heatRequirement":12,
+	"drawer": {
+		"type": "DrawMulti",
+		"drawers": [
+		    {
+	    "type":"DrawRegion",
+	    "suffix":"-bottom"
+	        },
+	        {
+	       "type":"DrawLiquidTile",
+	    "drawLiquid":"nitrogen"
+	    },
+	    {
+	    "type":"DrawParticles",
+	    "color":"CDCDCDFF"
+	    },
+	    "DrawDefault",
+	    {
+    "type": "DrawHeatInput",
+    "suffix": "-heat"
+    },
+              ]
+		      },
+"consumes": {
+"power":1.4
+		},
+		"requirements": [
+		"surge-alloy/10",
+     	"silicon/120",
+     	"tungsten/120"
+        ],
+	"category": "crafting",
+	"research": "atmospheric-concentrator",
+ }

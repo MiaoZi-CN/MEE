@@ -1,0 +1,122 @@
+{
+	"type": "missile",
+	"template": "MissileUnitType",
+	"name": "疮痍合金导弹",
+	"speed": 7.2,
+	"lifetime": 290,
+	"rotateSpeed": 0.96,
+	"loopSoundVolume": 0.03,
+	"deathSound": "explosionbig",
+	"hidden": true,
+	"missileAccelTime": 100,
+	"hitSize": 18,
+	"health": 150,
+	"armor": 15,
+	"fogRadius": 16,
+	"engineColor": "9e172c",
+	"trailColor": "9e172c60",
+	"trailLength": 35,
+	"engineLayer": 110,
+	"engineOffset": 8,
+	"engineSize": 4,
+	"maxRange": 30,
+	"abilities": [
+		{
+			"type": "MoveEffectAbility",
+			"effect": {
+				"type": "ParticleEffect",
+				"sizeFrom": 3,
+				"sizeTo": 10,
+				"length": 32,
+				"baseLength": 0,
+				"lifetime": 50,
+				"colorFrom": "9e172c",
+				"colorTo": "9e172c00",
+				"cone": 24
+			},
+			"interval": 3,
+			"rotateEffect": true,
+			"y": -8,
+			"color": "9e172c"
+		},
+		{
+			"type": "SpawnDeathAbility",
+			"unit": "血色环",
+			"amount": 1
+		},
+		{
+			"type": "LiquidExplodeAbility",
+			"liquid": "neoplasm",
+			"radAmountScale": 1,
+			"radScale": 6,
+		}
+	],
+	"weapons": [
+		{
+			"x": 0,
+			"y": 0,
+			"reload": 1,
+			"mirror": false,
+			"rotate": true,
+			"shake": 10,
+			"shootSound": "none",
+			"shootOnDeath": true,
+			"shootCone": 360,
+			"bullet": {
+				"collides":false,
+				"instantDisappear": true,
+				"ammoMultiplier": 1,
+				"hitSound": "titanExplosion",
+				"hitSoundVolume": 6,
+				"killShooter": true,
+				"splashDamageRadius": 160,
+				"splashDamage": 7650,
+				"splashDamagePierce": true,
+				"buildingDamageMultiplier": 0.05,
+
+				"hitShake": 15,
+				"shootEffect":  {
+					"type": "MultiEffect",
+					"effects": [
+						"massiveExplosion",
+						{
+							"type":"WrapEffect",
+							"effect":"scatheExplosion",
+							"color":"9e172c"
+						}
+					]},
+				"smokeEffect": "none",
+				"despawnEffect": "none",
+				"hitEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						{
+							"type": "ParticleEffect",
+							"particles": 26,
+							"sizeFrom": 24,
+							"sizeTo": 0,
+							"length": 96,
+							"baseLength": 10,
+							"interp": "pow10Out",
+							"sizeInterp": "pow10Out",
+							"lifetime": 50,
+							"colorFrom": "9e172c",
+							"colorTo": "9e172c00"
+						},
+						{
+							"type": "WaveEffect",
+							"lifetime": 22,
+							"interp": "circleOut",
+							"sizeFrom": 0,
+							"sizeTo": 180,
+							"strokeFrom": 10,
+							"strokeTo": 0,
+							"colorFrom": "9e172c",
+							"colorTo": "9e172c"
+						}
+					]
+				}
+			}
+		}
+	]
+}

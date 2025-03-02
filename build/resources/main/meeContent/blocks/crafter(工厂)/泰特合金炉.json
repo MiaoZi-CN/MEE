@@ -1,0 +1,73 @@
+{
+  "type": "GenericCrafter",
+  "name": "泰特合金炉",
+  "description": "再次加工巨浪合金，增加了硬度，反之是变得更加危险，易爆",
+  "details": "好慢",
+  "health": 3000,
+  "itemCapacity": 20,
+  "hasLiquids": true,
+  "size": 5,
+  "outputItem": {
+    "item": "泰特希合金",
+    "amount": 3
+  },
+  "hasPower": true,
+  "drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+      {
+        "type": "DrawRegion",
+        "suffix": "-bottom"
+      },
+      {
+        "type": "DrawCrucibleFlame"
+      },
+      {
+        "type": "DrawArcSmelt"
+      },
+      {
+        "type": "DrawLiquidRegion",
+        "drawLiquid": "neoplasm"
+      },
+      "DrawDefault",
+      {
+        "type": "DrawGlowRegion",
+        "color": "F7E97EFF"
+      }
+    ]
+  },
+  "craftTime": 400,
+  "consumes": {
+    "power": 4,
+    "liquid": {
+      "liquid": "neoplasm",
+      "amount": 1
+    },
+    "items": {
+      "items": [
+        {
+          "item": "surge-alloy",
+          "amount": 5
+        },
+        {
+          "item": "thorium",
+          "amount": 5
+        }
+      ]
+    }
+  },
+  "requirements": [
+    "phase-fabric/90",
+    "carbide/25",
+    "oxide/100"
+  ],
+  "category": "crafting",
+  "research": {
+    "requirements": [
+      "phase-fabric/90",
+      "carbide/25",
+      "oxide/100"
+    ],
+    "parent": "大型碳化坩埚"
+  }
+}

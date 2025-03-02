@@ -1,0 +1,61 @@
+{
+  "type": "HeatProducer",
+  "name": "导热氧化室",
+  "description": "利用电能对产生的热量进行转移，从而更高效的产出氧化物",
+  "health": 5680,
+  "itemCapacity": 40,
+  "outputItem": {
+    "item": "oxide",
+    "amount": 3
+  },
+  "size": 4,
+  "hasPower": true,
+  "hasItems": true,
+  "craftTime": 60,
+  "heatOutput": 18,
+  "drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+      {
+        "type": "DrawRegion",
+        "suffix": "-bottom"
+      },
+      {
+        "type": "DrawLiquidTile",
+        "drawLiquid": "ozone"
+      },
+      {
+        type: "DrawDefault"
+      },
+      {
+        "type": "DrawHeatInput",
+        "suffix": "-heat"
+      },
+      {
+        "type": "DrawHeatOutput"
+      }
+    ]
+  },
+  "consumes": {
+    "power": 1.5,
+    "items": {
+      "items": [
+        {
+          "item": "beryllium",
+          "amount": 3
+        }
+      ]
+    },
+    "liquid": {
+      "liquid": "ozone",
+      "amount": 0.1
+    }
+  },
+  "requirements": [
+    "beryllium/240",
+    "oxide/65",
+    "tungsten/180"
+  ],
+  "category": "crafting",
+  "research": "oxidation-chamber"
+}

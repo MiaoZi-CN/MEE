@@ -1,0 +1,43 @@
+{
+  "name": "大型排气冷凝机",
+  "type": "AttributeCrafter",
+  "attribute": "steam",
+  "category": "production",
+  "minEfficiency": 8,
+  "displayEfficiencyScale": 0.1111111111111,
+  "boostScale": 0.11111111111111111,
+  "liquidCapacity": 500,
+  "floating": false,
+  //不稳定
+  "baseEfficiency": 0,
+  "displayEfficiency": false,
+  "outputLiquid": {
+    "liquid": "water",
+    "amount": 2.2
+  },
+  "group": "liquids",
+  "drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+      {
+        "type": "DrawRegion",
+        "suffix": "-bottom"
+      },
+      {
+        "type": "DrawBlurSpin",
+        "suffix": "-转",
+        "rotateSpeed": 3
+      },
+      "DrawDefault"
+    ]
+  },
+  "size": 4,
+  "consumes": {
+    "power": 2
+  },
+  "requirements": [
+    "beryllium/150",
+    "oxide/40"
+  ],
+  "research": "vent-condenser"
+}

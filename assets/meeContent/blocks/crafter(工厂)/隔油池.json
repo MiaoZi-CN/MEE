@@ -1,0 +1,40 @@
+{
+	"type": "GenericCrafter",
+	"name": "隔油池",
+	"description": "离心芳油，并利用密度差分离出水",
+	"details": "我他妈耋耋耋耋耋",
+	"outputLiquid": { "liquid": "water", "amount": 0.2},
+	"health": 620,
+	"size": 2,
+	"hasPower": true,
+	"hasLiquids": true,
+	"hasItems": true,
+	"craftTime": 60,
+	"itemCapacity": 10,
+	"liquidCapacity": 60,
+	"drawer":{
+	"type":"DrawMulti",
+	"drawers":[
+	{
+	"type":"DrawRegion",
+	"suffix":"-bottom"
+	},
+	{
+	"type":"DrawLiquidRegion",
+	"drawLiquid":"arkycite"
+	},
+	"DrawDefault"
+	]}
+	"consumes": {
+		"power":0.5,
+		"liquid": {"liquid": "arkycite", "amount": 0.22}
+	}
+"requirements": [
+	"beryllium/80",
+	"silicon/40",
+	"oxide/10"
+	],
+	"category": "crafting",
+	"research":"vent-condenser"
+	
+}

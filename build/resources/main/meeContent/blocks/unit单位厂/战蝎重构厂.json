@@ -1,0 +1,41 @@
+{
+	"type": "Reconstructor",
+	"name": "战蝎重构厂",
+	"description": "将输入的战蝎升级重构成更加强力的t2",
+    "health":1000,
+    "squareSprite": false,
+	"size":3,
+	"liquidCapacity":180,
+	"consumes":{
+		"power":2.7,
+		"items": {
+		"items": [
+	{"item":"silicon","amount":50}
+	{"item":"tungsten","amount":50}
+	]
+	}
+	"liquid":
+	{"liquid":"hydrogen", "amount": 0.1 }
+	},
+	"upgrades":[
+        ["a-偿还","b-罪责"]
+	],
+	"constructTime":2700
+	"requirements": [
+"tungsten/30"
+"beryllium/30"
+"graphite/100"
+"silicon/50"
+	],
+	"category":"units",
+	"research":
+	{
+	"objectives":[
+	{
+				"type": "OnSector",
+				"preset": "basin"
+	}
+	]
+				"parent":"战机制造厂"
+    }
+}

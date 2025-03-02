@@ -1,0 +1,133 @@
+{
+  "type": "ContinuousLiquidTurret",
+  "name": "祸端",
+  "description": "大型穿甲火焰束发射器，对范围内目标造成严重毁伤",
+  "size": 5,
+  "health": 6000,
+  "category": "turret",
+  "research": "sublimate",
+  "loopSound": "torch",
+  "loopSoundVolume": 1,
+  "shootSound": "none",
+  "range": 150,
+  "targetAir": true,
+  //攻击天空
+  "targetGround": true,
+  "rotateSpeed": 2,
+  "shootY": -0.1,
+  "shootWarmupSpeed": 0.03,
+  "minWarmup": 0.88,
+  "liquidCapacity": 56,
+  "ammoPerShot": 20,
+  "shoot": {
+    "type": "ShootSpread",
+    "shots": 3,
+    "spread": 10
+  },
+  "drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+      {
+        "type": "DrawTurret",
+        "parts": [
+          {
+            "type": "RegionPart",
+            "mirror": true,
+            "x": 0,
+            "y": 0,
+            "suffix": "-前",
+            "layer": 50,
+            "under": true,
+            "moveX": 2,
+            "moveY": -5,
+            "moveRot": -5,
+            "heatColor": "fa2859"
+          },
+          {
+            "type": "RegionPart",
+            "mirror": true,
+            "x": 0,
+            "y": 0,
+            "suffix": "-中",
+            "layer": 50,
+            "under": true,
+            "moveX": 3,
+            "moveY": -4,
+            "moveRot": 10,
+            "heatColor": "fa2859"
+          },
+          {
+            "type": "RegionPart",
+            "mirror": true,
+            "x": 0,
+            "y": 0,
+            "suffix": "-后",
+            "layer": 50,
+            "under": true,
+            "moveX": 0,
+            "moveY": -2,
+            "moveRot": 10,
+            "heatColor": "fa2859"
+          },
+          {
+            "type": "RegionPart",
+            "mirror": true,
+            "x": 0,
+            "y": 0,
+            "suffix": "-侧",
+            "layer": 50,
+            "under": true,
+            "moveX": 0,
+            "moveY": 0,
+            "moveRot": -10,
+            "heatColor": "fa2859"
+          }
+        ]
+      }
+    ]
+  },
+  "ammoTypes": {
+    "ozone": {
+      "type": "ContinuousFlameBulletType",
+      "pierceArmor": true,
+      "damage": 80,
+      "knockback": 2.4,
+      "width": 4,
+      "range": 200,
+      "length": 184,
+    },
+    "cyanogen": {
+      "type": "ContinuousFlameBulletType",
+      "buildingDamageMultiplier": 0.3,
+      "flareColor": "89e8b6",
+      "pierceArmor": true,
+      "damage": 140,
+      "knockback": 4,
+      "width": 3.2,
+      "rangeChange": 50,
+      "length": 240,
+      "colors": [
+        "5EC1BFFF",
+        "5EC1BFFF",
+        "89e8b6",
+        "FFFFFF"
+      ],
+      "hitEffect": {
+        "type": "ParticleEffect",
+        "lifetime": 30,
+        "sizeFrom": 5,
+        "sizeTo": 0,
+        "baseLength": 0,
+        "length": 12,
+        "colorFrom": "89e8b6",
+        "colorTo": "5EC1BF"
+      }
+    }
+  },
+  "requirements": [
+    "oxide/900",
+    "silicon/1000",
+    "surge-alloy/100",
+    "thorium/800"
+  ]
+}

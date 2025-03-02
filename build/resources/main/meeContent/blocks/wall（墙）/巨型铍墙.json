@@ -1,0 +1,16 @@
+{
+	"name":"巨型铍墙",
+	"description":"保护己方建筑，挡下敌方炮弹",
+	"type":"Wall",
+	"health":4680,
+	"size":3,
+	"armor":3
+	"group":"walls",
+"research":
+	{
+"requirements": ["beryllium/640",],
+				"parent":"beryllium-wall-large"
+    }
+	"requirements": ["beryllium/54",],
+	"category": "defense",
+}

@@ -1,0 +1,16 @@
+{
+  "type": "StackRouter",
+  "health": 610,
+  "name": "列位路由器",
+  "description": "打包定向分配物品，有更大的容量与速度不需要电力",
+  "size": 1,
+  "itemCapacity": 60,
+  "insulated": true,
+  "hasPower": false,
+  "underBullets": true,
+  "research": "列位传送带",
+  "requirements": [
+    "列位石/10",
+    "thorium/20"
+  ]
+}

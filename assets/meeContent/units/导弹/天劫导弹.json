@@ -1,0 +1,67 @@
+{
+  "type": "missile",
+  "template": "MissileUnitType",
+  "hitSize": 4,
+  "name": "天劫导弹",
+  "maxRange": 6,
+  "speed": 6,
+  "rotateSpeed": 4.5,
+  "trailLength": 12,
+  "trailColor": "8ca9e8",
+  "lifetime": 80,
+  "health": 1250,
+  "weapons": [
+    {
+      "shootCone": 360,
+      "mirror": false,
+      "shake": 6,
+      "shootOnDeath": true,
+      "shootSound": "天劫导弹-boom",
+      "bullet": {
+        "type": "ExplosionBulletType",
+        "buildingDamageMultiplier": 0.65,
+        "splashDamage": 720,
+        "splashDamageRadius": 100,
+        "collidesGround": true,
+		"collidesAir": true,
+        "shootEffect": {
+          "type": "MultiEffect",
+          "effects": [
+            {
+              "type": "WaveEffect",
+              "lifetime": 22,
+              "sizeFrom": 120,
+              "sizeTo": 3,
+              "strokeFrom": 0,
+              "strokeTo": 3,
+              "colorFrom": "8ca9e8",
+              "colorTo": "8ca9e8"
+            },
+            {
+              "type": "ParticleEffect",
+              "lifetime": 60,
+              "region": "circle",
+              "baseLength": 0,
+              "length": 0,
+              "sizeFrom": 50,
+              "sizeTo": 50,
+              "colorFrom": "8ca9e820",
+              "colorTo": "8ca9e800"
+            }
+          ]
+        },
+        "fragBullets": 6,
+        "fragRandomSpread": 360,
+        "fragBullet": {
+          "type": "FlakBulletType",
+          "frontColor": "8ca9e8",
+          "lightningDamage": 12,
+          "lightning": 3,
+          "lightningColor": "8ca9e8",
+          "lightningLength": 4,
+          "lightningLengthRand": 6
+        }
+      }
+    }
+  ]
+}

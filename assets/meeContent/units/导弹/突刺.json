@@ -1,0 +1,19 @@
+{
+"type": "missile",
+"template": "MissileUnitType",
+"name":"突刺",
+"description":"母巢召唤的单位之一，通过自爆向四周喷洒瘤液，务必小心含水建筑",
+"speed": 5,
+"hitSize":7,
+"maxRange": 6,
+"lifetime":100
+"health":200,
+"abilities": [
+		{
+	"type": "SpawnDeathAbility",
+			"unit": "音效",
+			"amount": 1,
+			"randAmount":0
+	}
+    ]
+    }

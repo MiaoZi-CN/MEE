@@ -1,0 +1,18 @@
+{
+    "type": "Floor",
+    "name": "列位流体池",
+    "speedMultiplier":0.8,
+    //移动速率
+    "variants":0,
+    "cacheLayer": "water",
+    "albedo": 0.9,
+    //反照率
+    "shallow":false,//浅水
+    "cacheLayer":"water",
+    "isLiquid": true,
+    "liquidDrop": "列位流体",
+    "liquidMultiplier": 1,
+    "placeableOn":true,
+    //是否能放置方块
+    "supportsOverlay":true
+}

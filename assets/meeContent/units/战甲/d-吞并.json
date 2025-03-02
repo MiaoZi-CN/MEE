@@ -1,0 +1,143 @@
+{
+  "type": "mech",
+  "name": "吞并",
+  "template": "ErekirUnitType",
+  "hitSize": 25,
+  "armor": 12,
+  "speed": 0.5,
+  "research": "战甲组装厂",
+  "description": "战甲单位，发射穿透性子弹并使用轨道武器对前方敌人造成有效毁伤",
+  "health": 12000,
+  "weapons": [
+    {
+      "name": "吞并武器1",
+      "rotate": true,
+      //旋转
+      "rotationLimit": 45,
+      //旋转限制,
+      "x": 15,
+      "y": 0,
+      "reload": 40,
+      "shootY": 10,
+      "shootSound": "railgun",
+      "top": false,
+      //上部图层
+      "layerOffset": -0.001,
+      //图层偏移
+      "shoot": {
+        "type": "ShootAlternate",
+        "shots": 3,
+        "shotDelay": 10
+      },
+      "bullet": {
+        "type": "RailBulletType",
+        "damage": 57,
+        "pierce": true,
+        "pierceBuilding": true,
+        "pierceEffect": "none",
+        "pointEffect": {
+          "type": "ParticleEffect",
+          "line": true,
+          "particles": 1,
+          "randLength": false,
+          "lenFrom": 20,
+          "lenTo": 20,
+          "strokeFrom": 2,
+          "strokeTo": 0,
+          "length": 0,
+          "baseLength": 1,
+          "lifetime": 6,
+          "colorFrom": "ffffff",
+          "colorTo": "9E172C",
+          "cone": 0
+        },
+        "hitEffect": "hitBulletColor",
+        "endEffect": {
+          "type": "MultiEffect",
+          "effects": [
+            {
+              "type": "ParticleEffect",
+              "lifetime": 70,
+              "region": "mee-星",
+              "particles": 1,
+              "sizeFrom": 20,
+              "sizeTo": 10,
+              "colorFrom": "ffffff",
+              "colorTo": "9E172C",
+              "baseLength": 5,
+              "length": 0
+            }
+          ]
+        },
+        "pierceDamageFactor": 0.15,
+        "length": 200,
+        "despawnEffect": "pointHit",
+        "smokeEffect": {
+          "type": "ParticleEffect",
+          "line": true,
+          "particles": 2,
+          "cone": 12,
+          "lifetime": 16,
+          "baseLength": 3,
+          "length": 12,
+          "lenFrom": 4,
+          "lenTo": 3,
+          "strokeFrom": 1.2,
+          "strokeTo": 0,
+          "colorFrom": "ffffff",
+          "colorTo": "9E172C"
+        },
+        "shootEffect": {
+          "type": "ParticleEffect",
+          "line": true,
+          "particles": 2,
+          "cone": 12,
+          "lifetime": 16,
+          "baseLength": 3,
+          "length": 12,
+          "lenFrom": 4,
+          "lenTo": 3,
+          "strokeFrom": 1.2,
+          "strokeTo": 0,
+          "colorFrom": "ffffff",
+          "colorTo": "9E172C"
+        }
+      }
+    },
+    {
+      "name": "吞并武器2",
+      "x": 7,
+      "y": 0,
+      "rotate": true,
+      "reload": 80,
+      "shoot": {
+        "type": "ShootSpread",
+        "spread": 2,
+        "shots": 8
+      },
+      "bullet": {
+        "type": "BasicBulletType",
+        "damage": 20,
+        "trailWidth": 4,
+        "lifetime": 5,
+        "speed": 20,
+        "trailLength": 7,
+        "pierce": true,
+        "pierceBuilding": true,
+        "fragRandomSpread": 1,
+        "fragSpread": 180,
+        "fragBullets": 3,
+        "fragBullet": {
+          "type": "BasicBulletType",
+          "damage": 10,
+          "trailWidth": 4,
+          "lifetime": 10,
+          "speed": 10,
+          "trailLength": 7,
+          "pierce": true,
+          "pierceBuilding": true
+        }
+      }
+    }
+  ]
+}

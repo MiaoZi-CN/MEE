@@ -1,0 +1,22 @@
+{
+	"name":"巨型强化合金墙",
+	"description":"保护己方建筑，挡下敌方炮弹，受击时间断释放闪电",
+	"type":"Wall",
+	"health":9000,
+	"size":3,
+	"armor":24,
+	"group":"walls",
+    "flashHit":true,
+	"lightningChance":0.05,
+	//产生闪电概率
+	"lightningDamage":30,
+	//闪电伤害
+	"lightningLength":30,
+	"research":"reinforced-surge-wall-large",
+	"requirements": [
+	"tungsten/18",
+	"surge-alloy/54",
+	"beryllium/45"
+	],
+	"category": "defense",
+}

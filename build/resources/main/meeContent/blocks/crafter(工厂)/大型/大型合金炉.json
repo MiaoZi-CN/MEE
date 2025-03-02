@@ -1,0 +1,68 @@
+{
+  "type": "HeatCrafter",
+  "name": "大型合金炉",
+  "description": "大型的巨浪合金冶炼炉，低速产出大量巨浪合金",
+  "health": 3680,
+  "itemCapacity": 200,
+  "liquidCapacity":420
+  "outputItem": {
+    "item": "surge-alloy",
+    "amount": 4
+  },
+  "size": 4,
+  "hasPower": true,
+  "hasItems": true,
+  "craftTime": 180,
+  "heatRequirement": 15,
+  "craftEffect": "surgeCruciSmoke",
+  "drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+      {
+        "type": "DrawRegion",
+        "suffix": "-bottom"
+      },
+      {
+        "type": "DrawLiquidTile",
+        "drawLiquid": "slag"
+      },
+      {
+        "type": "DrawGlowRegion",
+        "color": "F7E97ED6"
+      },
+      {
+        "type": "DrawRegion",
+        "suffix": "-top",
+        "rotateSpeed": 1
+      },
+      "DrawDefault",
+      {
+        "type": "DrawHeatInput",
+        "suffix": "-heat"
+      }
+    ]
+  },
+  "consumes": {
+    "power": 1.7,
+    "items": {
+      "items": [
+        {
+          "item": "silicon",
+          "amount": 6,
+        }
+      ]
+    },
+    "liquid": {
+      "liquid": "slag",
+      "amount": 2.5
+    }
+  },
+  "requirements": [
+    "surge-alloy/40",
+    "carbide/40",
+    "silicon/120",
+    "tungsten/120"
+  ],
+  "category": "crafting",
+  "research": "surge-crucible",
+}

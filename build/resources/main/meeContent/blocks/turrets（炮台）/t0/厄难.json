@@ -1,0 +1,162 @@
+{
+	"type": "PowerTurret",
+	"name": "厄难",
+	"description": "小型劫难，发射热胶弹，飞行过程中分裂副弹打击敌人",
+	"details": "所以劫难到底是什么原理，发射的什么子弹",
+	"size": 3,
+	"health": 1300,
+	"category": "turret",
+	"coolantMultiplier": 1.5,
+	"heatRequirement": 7,
+	"drawer": {
+		"type": "DrawMulti",
+		"drawers": [
+			{
+				"type": "DrawTurret",
+				"parts": [
+					{
+						"type": "RegionPart",
+						"mirror": true,
+						"x": 0,
+						"y": 0,
+						"suffix": "-前",
+						"moveX": 0,
+						"moveY": 0,
+						"moveRot": -10,
+						"progress": "recoil"
+					}
+				]
+			}
+		]
+	},
+	"shootEffect": {
+		"type": "WaveEffect",
+		"lifetime": 50,
+		"sizeFrom": 1,
+		"sizeTo": 12,
+		"strokeTo": 0,
+		"colorFrom": "E8D174",
+		"colorTo": "E8D17440"
+	},
+	"requirements": [
+		"silicon/200",
+		"beryllium/150",
+		"graphite/150",
+		"surge-alloy/25"
+	],
+	"research": {
+		"parent": "afflict",
+		"requirements": [
+			"surge-alloy/30",
+			"tungsten/70"
+		]
+	},
+	"range": 340,
+	"targetAir": true,
+	"recoil": 3,
+	"reload": 80,
+	"rotateSpeed": 3,
+	"minWarmup": 0.9,
+	"shootWarmupSpeed": 0.9,
+	"shootSound": "cannon",
+	"shootType": {
+		"type": "BasicBulletType",
+		"speed": 6,
+		"damage": 106,
+		"pierce": true,
+		"pierceBuilding": true,
+		"lifetime": 60,
+		"sprite": "circle",
+		"shrinkY": 0,
+		"width": 8,
+		"height": 8,
+		"trailColor": "E8D174FF",
+		"frontColor": "E8D174",
+		"backColor": "E8D174FF",
+		"hitColor": "E8D174FF",
+		"trailChance": 0.6,
+		"trailEffect": {
+			"type": "ParticleEffect",
+			"lifetime": 40,
+			"particles": 2,
+			"baseLength": 0,
+			"length": -12,
+			"sizeFrom": 3,
+			"sizeTo": 1,
+			"colorFrom": "E8D174",
+			"colorTo": "E8D17400"
+		},
+		"fragBullets": 12,
+		"fragOnHit": false,
+		"fragVelocityMin": 0.5,
+		"fragVelocityMax": 1.5,
+		"fragBullet": {
+			"buildingDamageMultiplier": 0.3,
+			"type": "BasicBulletType",
+			"trailColor": "E8D174FF",
+			"width": 3,
+			"height": 8,
+			"speed": 2,
+			"frontColor": "ffffff",
+			"hitColor": "E8D174FF",
+			"lifetime": 40,
+			"damage": 8.4,
+			"pierceArmor": true,
+			"hitSize": 5,
+			"backColor": "E8D174FF",
+			"sprite": "large-orb",
+			"pierce": true,
+			"pierceBuilding": true,
+			"trailWidth": 2.1,
+			"trailLength": 4,
+			"homingRange": 30,
+			"homingPower": 1,
+			"despawnEffect": {
+				"type": "WaveEffect",
+				"lifetime": 12,
+				"sizeFrom": 1,
+				"sizeTo": 2,
+				"strokeTo": 0,
+				"colorFrom": "E8D174",
+				"colorTo": "E8D17440"
+			}
+		},
+		"intervalBullets": 2,
+		"intervalAngle": 180,
+		"intervalSpread": 300,
+		"intervalRandomSpread": 10,
+		"bulletInterval": 5,
+		"hitSound": "cannon",
+		"buildingDamageMultiplier": 0.4,
+		"intervalBullet": {
+			"buildingDamageMultiplier": 0.3,
+			"type": "BasicBulletType",
+			"trailColor": "E8D174FF",
+			"width": 3,
+			"height": 8,
+			"speed": 3,
+			"frontColor": "ffffff",
+			"hitColor": "E8D174FF",
+			"lifetime": 50,
+			"damage": 10,
+			"hitSize": 5,
+			"backColor": "E8D174FF",
+			"sprite": "large-orb",
+			"pierce": true,
+			"pierceBuilding": true,
+			"trailWidth": 2.1,
+			"trailLength": 4,
+			"homingRange": 80,
+			"homingPower": 1,
+			"despawnEffect": {
+				"type": "WaveEffect",
+				"lifetime": 12,
+				"sizeFrom": 1,
+				"sizeTo": 2,
+				"strokeTo": 0,
+				"colorFrom": "E8D174",
+				"colorTo": "E8D17440"
+			}
+		}
+	}
+}

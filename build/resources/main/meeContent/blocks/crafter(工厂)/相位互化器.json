@@ -1,0 +1,38 @@
+{
+  "type": "GenericCrafter",
+  "name": "相位互化器",
+  "description": "使用列位流体稀释钍的放射性，并经过电力诱导形成相织布",
+  "health": 1000,
+  "size": 3,
+  "itemCapacity": 30,
+  "hasPower": true,
+  "outputItem": {
+    "item": "phase-fabric",
+    "amount": 9
+  },
+  "liquidCapacity": 100,
+  "hasLiquids": true,
+  "hasItems": true,
+  "requirements": [
+    "列位石/40",
+    "phase-fabric/40",
+    "silicon/180"
+  ],
+  "category": "crafting",
+  "research": "赫尔斯特",
+  "consumes": {
+    "power": 2,
+    "items": {
+      "items": [
+        {
+          "item": "thorium",
+          "amount": 3
+        }
+      ]
+    },
+    "liquid": {
+      "liquid": "列位流体",
+      "amount": 0.6
+    }
+  }
+}

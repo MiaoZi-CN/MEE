@@ -1,0 +1,44 @@
+	{
+	"type": "ConsumeGenerator",
+	"name": "氢电站",
+	"description": "利用氢气少量发电",
+	"health": 700,
+	"size": 3,
+	"hasLiquids":true
+	"consumes": {
+		"liquid": {
+			"liquid": "hydrogen",
+			"amount": 0.08
+		}
+	},
+    "requirements": [
+    "oxide/25"
+    "silicon/40"
+    "graphite/60"
+	],
+	"category": "power",
+	"research": "turbine-condenser",
+	"placeableLiquid":true,
+	"warmupSpeed":0.7
+	"liquidCapacity":100, //液体容量
+	"powerProduction":8
+"drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+      {
+        "type": "DrawRegion",
+        "suffix": "-bottom"
+      },
+      {
+        "type": "DrawLiquidRegion",
+        "drawLiquid": "hydrogen"
+      },
+      "DrawDefault"
+      {
+        "type": "DrawGlowRegion",
+        "color": "D1EFFFFF"
+      },
+    ]
+  },
+	}
+	

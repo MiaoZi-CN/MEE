@@ -1,0 +1,79 @@
+{
+	"name": "宿主",
+	"type": "flying",
+	"health": 4600,
+	"speed": 1.5,
+	"drag": 0.05,
+	"hitSize": 20,
+	"flying": true,
+	"rotateSpeed": 1.5,
+	"accel": 0.08,
+	"targetAir": false,
+	"circleTarget": true,
+	"weapons": [
+		{
+			"name": "neoplasm-bomb-launcher",
+			"reload": 40,
+			"shootSound": "瘤液喷吐",
+			"minShootVelocity": 0.75,
+			"shootEffect": {
+				"type": "WaveEffect",
+				"colorFrom": "#FF6B00",
+				"colorTo": "#CC5500",
+				"lifetime": 10
+			},
+			"bullet": {
+				"type": "BombBulletType",
+				"speed": 1,
+				"lifetime": 150,
+				"damage": 150,
+				"knockback": 0.5,
+				"hitSize": 8,
+				"pierce": false,
+				"status": "corroded",
+				"statusDuration": 60,
+				"spin": 3,
+				"width": 20,
+				"height": 20,
+				"splashDamage": 500,
+				"splashDamageRadius": 60,
+				"shootEffect": "none",
+				"smokeEffect": "none",
+				"frontColor": "#FF6B00",
+				"backColor": "#CC5500",
+				"hitEffect": {
+					"type": "ExplosionEffect",
+					"color": "#FF4500",
+					"radius": 40,
+					"lifetime": 30
+				},
+				"fragBullet": {
+					"type": "LiquidBulletType",
+					"liquid": "neoplasm",
+					"lifetime": 1,
+					"speed": 1,
+					"puddleSize": 5,
+					"orbSize": 5,
+					"damage": 0
+				}
+			}
+		}
+	],
+	"abilities": [
+		{
+			"type": "LiquidExplodeAbility",
+			"liquid": "neoplasm",
+			"amount": 90,
+			"radAmountScale": 1,
+			"radScale": 1,
+			"noiseMag": 10,
+			"noiseScl": 5
+		},
+		{
+			"type": "SpawnDeathAbility",
+			"unit": "mee-小型吞噬者",
+			"amount": 3,
+			"spread": 20
+		}
+	]
+}

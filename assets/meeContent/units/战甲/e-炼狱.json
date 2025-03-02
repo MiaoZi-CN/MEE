@@ -1,0 +1,555 @@
+{
+  "type": "mech",
+  "name": "炼狱",
+  "template": "ErekirUnitType",
+  "hitSize": 35,
+  "speed": 0.4,
+  "rotateSpeed": 0.9,
+  "armor": 27,
+  "description": "战甲单位，使用高温射线炮火焰喷射器进攻敌人，拥有高血量，",
+  "health": 24800,
+  "research": "d-吞并",
+  "weapons": [
+    {
+      "name": "炼狱武器",
+      "rotate": false,
+      "x": 0,
+      "y": 5,
+      "reload": 700,
+      "shootStatus": "unmoving",
+      "mirror": false,
+      "shootStatusDuration": 100,
+      "shootSound": "shotgun",
+      "parts": [
+        {
+          "type": "HaloPart",
+          "shapes": 4,
+          "tri": true,
+          "y": 0,
+          "haloRotation": 180,
+          "radius": 5,
+          "radiusTo": 8,
+          "triLength": 4,
+          "triLengthTo": 4,
+          "haloRadius": 16,
+          "haloRadiusTo": 5,
+          "haloRotateSpeed": 2.4,
+          "color": "9E172C",
+          "layer": 110,
+          "colorTo": "9E172C",
+          "progress": "warmup"
+        },
+        {
+          "type": "ShapePart",
+          "y": 0,
+          "circle": true,
+          "hollow": true,
+          "radius": 5,
+          "radiusTo": 5,
+          "stroke": 1,
+          "strokeTo": 1,
+          "layer": 110,
+          "color": "9E172C"
+        },
+        {
+          "type": "HaloPart",
+          "progress": {
+            "type": "warmup",
+            "op": "delay",
+            "amount": 0.3
+          },
+          "rotateSpeed": 0,
+          "shapeRotation": 0,
+          "y": 20,
+          "sides": 4,
+          "shapes": 1,
+          "color": "ffffff",
+          "colorTo": "9E172C",
+          "tri": false,
+          "radius": 0,
+          "radiusTo": 4,
+          "hollow": true,
+          "haloRadius": 0,
+          "haloRotateSpeed": 1,
+          "layer": 110
+        },
+        {
+          "type": "HaloPart",
+          "progress": {
+            "type": "warmup",
+            "op": "delay",
+            "amount": 0.3
+          },
+          "rotateSpeed": 0,
+          "shapeRotation": 0,
+          "y": 32,
+          "sides": 4,
+          "shapes": 1,
+          "color": "ffffff",
+          "colorTo": "9E172C",
+          "tri": false,
+          "radius": 0,
+          "radiusTo": 6,
+          "hollow": true,
+          "haloRadius": 0,
+          "haloRotateSpeed": 2,
+          "layer": 110
+        },
+        {
+          "type": "HaloPart",
+          "progress": {
+            "type": "warmup",
+            "op": "delay",
+            "amount": 0.3
+          },
+          "rotateSpeed": 0,
+          "shapeRotation": 0,
+          "y": 44,
+          "sides": 4,
+          "shapes": 1,
+          "color": "ffffff",
+          "colorTo": "9E172C",
+          "tri": false,
+          "radius": 0,
+          "radiusTo": 12,
+          "hollow": true,
+          "haloRadius": 0,
+          "haloRotateSpeed": 3,
+          "layer": 110
+        },
+        {
+          "type": "HaloPart",
+          "shapes": 2,
+          "tri": true,
+          "y": 0,
+          "radius": 0,
+          "radiusTo": 8,
+          "triLength": 18,
+          "triLengthTo": 10,
+          "haloRadius": 10,
+          "haloRadiusTo": 20,
+          "haloRotation": 90,
+          "haloRotateSpeed": 0,
+          "color": "ffffff",
+          "colorTo": "9E172C",
+          "layer": 110,
+          "progress": "warmup"
+        },
+        {
+          "type": "HaloPart",
+          "shapes": 2,
+          "tri": true,
+          "y": 0,
+          "radius": 0,
+          "radiusTo": 8,
+          "triLength": 10,
+          "triLengthTo": 2,
+          "haloRadius": 10,
+          "haloRadiusTo": 20,
+          "haloRotation": 90,
+          "shapeRotation": 180,
+          "haloRotateSpeed": 0,
+          "color": "9E172C",
+          "colorTo": "9E172C",
+          "layer": 110,
+          "progress": "warmup"
+        }
+      ],
+      "shoot": {
+        "firstShotDelay": 100
+      },
+      "bullet": {
+        "type": "PointBulletType",
+        "speed": 10,
+        "lifetime": 30,
+        "hitShake": 8,
+        "damage": 800,
+        "trailSpacing": 9,
+        "chargeEffect": {
+          "type": "MultiEffect",
+          "effects": [
+            {
+              "type": "ParticleEffect",
+              "particles": 11,
+              "sizeFrom": 1,
+              "sizeTo": 10,
+              "length": 0,
+              "lifetime": 50,
+              "baseLength": 0,
+              "colorFrom": "9e172c",
+              "colorTo": "9E172C"
+            },
+            {
+              "type": "ParticleEffect",
+              "region": "mee-星",
+              "particles": 1,
+              "sizeFrom": 30,
+              "sizeTo": 0,
+              "length": 0,
+              "lifetime": 90,
+              "baseLength": 0,
+              "colorFrom": "FFFFFF",
+              "colorTo": "9E172CFF",
+              "useRotation": true,
+              "spin": 10
+            },
+            {
+              "type": "WaveEffect",
+              "lifetime": 90,
+              "sizeFrom": 5,
+              "sizeTo": 0,
+              "strokeFrom": 1,
+              "strokeTo": 1,
+              "colorFrom": "ffffff",
+              "colorTo": "9E172CFF"
+            },
+            {
+              "type": "WaveEffect",
+              "lifetime": 90,
+              "sizeFrom": 30,
+              "sizeTo": 5,
+              "strokeFrom": 1,
+              "strokeTo": 1,
+              "colorFrom": "ffffff",
+              "colorTo": "9E172CFF"
+            },
+            {
+              "type": "WaveEffect",
+              "lifetime": 90,
+              "sizeFrom": 10,
+              "sizeTo": 5,
+              "strokeFrom": 1,
+              "strokeTo": 1,
+              "colorFrom": "ffffff",
+              "colorTo": "9E172CFF"
+            }
+          ]
+        },
+        "despawnEffect": {
+          "type": "MultiEffect",
+          "effects": [
+            {
+              "type": "ParticleEffect",
+              "region": "mee-菱形1",
+              "particles": 10,
+              "strokeFrom": 10,
+              "sizeFrom": 25,
+              "sizeTo": 0,
+              "strokeTo": 1,
+              "lenFrom": 36,
+              "lenTo": 20,
+              "length": 40,
+              "baseLength": 10,
+              "lifetime": 90,
+              "colorFrom": "FFFFFF",
+              "colorTo": "9E172C",
+              "cone": 360
+            },
+            {
+              "type": "ParticleEffect",
+              "particles": 12,
+              "line": true,
+              "strokeFrom": 8,
+              "strokeTo": 0,
+              "lenFrom": 20,
+              "lenTo": 5,
+              "length": 120,
+              "baseLength": 5,
+              "lifetime": 70,
+              "colorFrom": "ffffff",
+              "colorTo": "9E172C"
+            },
+            {
+              "type": "ParticleEffect",
+              "particles": 1,
+              "length": 0,
+              "sizeFrom": 20,
+              "sizeTo": 0,
+              "baseLength": 0,
+              "lifetime": 100,
+              "colorFrom": "ffffff",
+              "colorTo": "9E172C"
+            },
+            {
+              "type": "ParticleEffect",
+              "particles": 12,
+              "strokeFrom": 8,
+              "strokeTo": 0,
+              "length": 30,
+              "baseLength": 5,
+              "lifetime": 70,
+              "colorFrom": "ffffff",
+              "colorTo": "9E172C"
+            },
+            {
+              "type": "WaveEffect",
+              "lifetime": 90,
+              "sizeFrom": 0,
+              "sizeTo": 90,
+              "strokeFrom": 9,
+              "strokeTo": 0,
+              "colorFrom": "ffffff",
+              "colorTo": "9E172C",
+              "interp": "pow10Out"
+            }
+          ]
+        },
+        "hitEffect": {
+          "type": "MultiEffect",
+          "effects": [
+            {
+              "type": "ParticleEffect",
+              "region": "mee-菱形1",
+              "particles": 10,
+              "strokeFrom": 10,
+              "sizeFrom": 25,
+              "sizeTo": 0,
+              "strokeTo": 1,
+              "lenFrom": 36,
+              "lenTo": 20,
+              "length": 40,
+              "baseLength": 10,
+              "lifetime": 90,
+              "colorFrom": "FFFFFF",
+              "colorTo": "9E172C",
+              "cone": 360
+            },
+            {
+              "type": "ParticleEffect",
+              "particles": 12,
+              "line": true,
+              "strokeFrom": 8,
+              "strokeTo": 0,
+              "lenFrom": 20,
+              "lenTo": 5,
+              "length": 120,
+              "baseLength": 5,
+              "lifetime": 70,
+              "colorFrom": "ffffff",
+              "colorTo": "9E172C"
+            },
+            {
+              "type": "ParticleEffect",
+              "particles": 1,
+              "length": 0,
+              "sizeFrom": 20,
+              "sizeTo": 0,
+              "baseLength": 0,
+              "lifetime": 100,
+              "colorFrom": "ffffff",
+              "colorTo": "9E172C"
+            },
+            {
+              "type": "ParticleEffect",
+              "particles": 12,
+              "strokeFrom": 8,
+              "strokeTo": 0,
+              "length": 30,
+              "baseLength": 5,
+              "lifetime": 70,
+              "colorFrom": "ffffff",
+              "colorTo": "9E172C"
+            },
+            {
+              "type": "WaveEffect",
+              "lifetime": 90,
+              "sizeFrom": 0,
+              "sizeTo": 90,
+              "strokeFrom": 9,
+              "strokeTo": 0,
+              "colorFrom": "ffffff",
+              "colorTo": "9E172C",
+              "interp": "pow10Out"
+            }
+          ]
+        },
+        "trailEffect": {
+          "type": "MultiEffect",
+          "effects": [
+            {
+              "type": "ParticleEffect",
+              "particles": 5,
+              "sizeFrom": 3,
+              "sizeTo": 0,
+              "length": 1,
+              "lifetime": 25,
+              "baseLength": 8,
+              "colorFrom": "FFFFFF",
+              "colorTo": "9E172C"
+            },
+            {
+              "type": "ParticleEffect",
+              "randLength": false,
+              "line": true,
+              "lenFrom": 20,
+              "lenTo": 20,
+              "strokeFrom": 7,
+              "strokeTo": 0,
+              "length": 0,
+              "baseLength": 1,
+              "lifetime": 50,
+              "colorFrom": "FF8C00",
+              "colorTo": "FF8C00",
+              "cone": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "炼狱武器2",
+      "rotate": false,
+      "mirror": false,
+      "shootY": 3,
+      "reload": 20,
+      "x": 9,
+      "y": 0,
+      "bullet": {
+        "type": "RailBulletType",
+        "damage": 87,
+        "pierce": true,
+        "pierceBuilding": true,
+        "pierceEffect": "none",
+        "pointEffect": {
+          "type": "ParticleEffect",
+          "line": true,
+          "particles": 1,
+          "randLength": false,
+          "lenFrom": 20,
+          "lenTo": 20,
+          "strokeFrom": 2,
+          "strokeTo": 0,
+          "length": 0,
+          "baseLength": 1,
+          "lifetime": 6,
+          "colorFrom": "ffffff",
+          "colorTo": "9E172C",
+          "cone": 0
+        },
+        "hitEffect": "hitBulletColor",
+        "endEffect": "none",
+        "pierceDamageFactor": 0.15,
+        "length": 200,
+        "despawnEffect": "pointHit",
+        "smokeEffect": {
+          "type": "ParticleEffect",
+          "line": true,
+          "particles": 2,
+          "cone": 12,
+          "lifetime": 16,
+          "baseLength": 3,
+          "length": 12,
+          "lenFrom": 4,
+          "lenTo": 3,
+          "strokeFrom": 1.2,
+          "strokeTo": 0,
+          "colorFrom": "ffffff",
+          "colorTo": "9E172C"
+        },
+        "shootEffect": {
+          "type": "ParticleEffect",
+          "line": true,
+          "particles": 2,
+          "cone": 12,
+          "lifetime": 16,
+          "baseLength": 3,
+          "length": 12,
+          "lenFrom": 4,
+          "lenTo": 3,
+          "strokeFrom": 1.2,
+          "strokeTo": 0,
+          "colorFrom": "ffffff",
+          "colorTo": "9E172C"
+        }
+      }
+    },
+    {
+      "name": "炼狱武器1",
+      "reload": 6,
+      "top": false,
+      //上部图层
+      "layerOffset": -0.001,
+      //图层偏移
+      "x": 30,
+      "y": 0,
+      "rotate": true,
+      //旋转
+      "rotationLimit": 70,
+      //旋转限制
+      "shootSound": "flame",
+      "ejectEffect": "none",
+      "shootY": 25,
+      "inaccuracy": 2,
+      "shoot": {
+        "shots": 3
+      },
+      "bullet": {
+        "type": "BulletType",
+        "lifetime": 20,
+        "pierce": true,
+        "damage": 38,
+        "pierceCap": 3,
+        "pierceArmor": true,
+        "speed": 10,
+        "makeFire": true,
+        "despawnEffect": "none",
+        "statusDuration": 500,
+        "status": "burning",
+        "shootEffect": {
+          "type": "multiEffect",
+          "layer": 70,
+          "effects": [
+            {
+              "type": "ParticleEffect",
+              "particles": 4,
+              "sizeFrom": 6,
+              "sizeTo": 1,
+              "length": 220,
+              "lifetime": 25,
+              "lightColor": "171717FF",
+              "colorFrom": "171717FF",
+              "colorTo": "17171699",
+              "cone": 9
+            },
+            {
+              "type": "ParticleEffect",
+              "particles": 4,
+              "sizeFrom": 5,
+              "sizeTo": 2,
+              "length": 207,
+              "lifetime": 30,
+              "lightColor": "F98F4AFF",
+              "colorFrom": "F98F4AFF",
+              "colorTo": "F98F4AFF",
+              "cone": 10
+            },
+            {
+              "type": "ParticleEffect",
+              "particles": 4,
+              "sizeFrom": 7,
+              "sizeTo": 4,
+              "length": 205,
+              "lifetime": 35,
+              "lightColor": "9E172CFF",
+              "colorFrom": "ffffff",
+              "colorTo": "9E172CFF",
+              "cone": 11
+            },
+            {
+              "type": "ParticleEffect",
+              "particles": 4,
+              "sizeFrom": 6,
+              "sizeTo": 3,
+              "length": 190,
+              "lifetime": 55,
+              "lightColor": "343434FF",
+              "colorFrom": "343434FF",
+              "colorTo": "343434FF",
+              "cone": 12
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

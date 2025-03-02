@@ -1,0 +1,64 @@
+{
+  "type": "mech",
+  "name": "蚀骨",
+  "template": "ErekirUnitType",
+  "hitSize": 12,
+  "armor": 6,
+  "speed": 0.8,
+  "research": "战甲重构厂",
+  "description": "战甲单位，在战斗中修复自己，并发射穿透散弹",
+  "health": 2800,
+  "weapons": [
+    {
+      "name": "蚀骨武器1",
+      "y": 0,
+      "x": 10,
+      "reload": 28,
+      "rotate": true,
+      //旋转
+      "rotationLimit": 45,
+      //旋转限制
+      "top": false,
+      //上部图层
+      "layerOffset": -0.001,
+      //图层偏移
+      "shoot": {
+        "type": "ShootSpread",
+        "spread": 6,
+        "shots": 4
+      },
+      "bullet": {
+        "type": "BasicBulletType",
+        "damage": 34,
+        "trailWidth": 2,
+        "lifetime": 8,
+        "speed": 15,
+        "trailLength": 7,
+        "pierce": true,
+        "pierceBuilding": false
+      }
+    },
+    {
+      "name": "蚀骨武器2",
+      "y": 0,
+      "x": 3,
+      "rotate": true,
+      //旋转
+      "rotationLimit": 45,
+      //旋转限制,
+      "recoil": 4,
+      "reload": 80,
+      "shootSound": "sap",
+      "bullet": {
+        "statusDuration": 0,
+        "type": "SapBulletType",
+        "damage": 12,
+        "sapStrength": 1,
+        "knockback": 0.2,
+        "length": 60,
+        "color": "9E172CFF"
+      }
+      //来自铧金的蛛蟹
+    }
+  ]
+}

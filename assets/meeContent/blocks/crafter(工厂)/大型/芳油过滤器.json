@@ -1,0 +1,45 @@
+{
+	"type": "GenericCrafter",
+	"name": "芳油过滤器",
+	"description": "隔离芳油中的杂质，剩下水，需要排污",
+	"outputLiquid": { "liquid": "water", "amount": 1.9},
+	"outputItem": {
+    "item": "芳油污",
+    "amount": 5
+  },
+		"health": 1620,
+	"size": 3,
+	"hasPower": true,
+	"hasLiquids": true,
+	"hasItems": true,
+	"craftTime": 20,
+	"itemCapacity": 10,
+    "liquidCapacity": 60,
+"drawer":{
+	    "type":"DrawMulti",
+	    "drawers":[
+	    {
+	    "type":"DrawRegion",
+	    "suffix":"-bottom"
+	    },
+	    {
+	       "type":"DrawLiquidRegion",
+	    "drawLiquid":"arkycite"
+	    },
+	    "DrawDefault"
+	    ]}
+	"consumes": {
+    "power":0.5,
+    "liquid": 
+	{"liquid": "arkycite", "amount": 2.5 }
+    }
+"requirements": [
+    "tungsten/100"
+    "beryllium/135"
+	"oxide/40",
+	"carbide/25"
+	],
+	"category": "crafting",
+	"research":"隔油池"
+	
+}

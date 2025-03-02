@@ -1,0 +1,6 @@
+{
+"requirements": [
+    "graphite/300",
+    "beryllium/350"
+  ],
+  }

@@ -1,0 +1,76 @@
+{
+  "type": "BurstDrill",
+  "name": "崩解钻头",
+  "description": "以极快速度挖掘矿物",
+  "tier": 20,
+  "drillTime": 110,
+  "arrowSpacing": 3,
+  "itemCapacity": 100,
+  "fogRadius": 20,
+  "arrowOffset": 0,
+  "glowColor": "D1EFFFFF",
+  "size": 6,
+  "research": "离子轰击钻",
+  "category": "production",
+  "consumes": {
+    "power": 4,
+    "liquid": {
+      "liquid": "cyanogen",
+      "amount": 0.07
+    }
+  },
+  "arrows": 4,
+  "requirements": [
+    "thorium/100",
+    "carbide/70",
+    "silicon/50"
+  ],
+  "shake": 16,
+  "drillEffect": {
+    "type": "MultiEffect",
+    "effects": [
+      {
+        "type": "ParticleEffect",
+        "lifetime": 120,
+        "region": "mee-星",
+        "particles": 12,
+        "sizeFrom": 24,
+        "sizeTo": 0,
+        "colorFrom": "D1EFFFFF",
+        "colorTo": "D1EFFFFF",
+        "baseLength": 16,
+        "length": 80,
+        "useRotation": true,
+        "spin": 0,
+        "cone": 360,
+        "sizeInterp": "pow5Out"
+      },
+      {
+        "type": "WaveEffect",
+        "lifetime": 80,
+        "sizeFrom": 4,
+        "sizeTo": 120,
+        "strokeFrom": 4,
+        "strokeTo": 0,
+        "colorFrom": "D1EFFFFF",
+        "colorTo": "D1EFFFFF",
+        "interp": "pow5Out"
+      },
+      {
+        "type": "ParticleEffect",
+        "line": true,
+        "lifetime": 50,
+        "baseLength": 10,
+        "length": 120,
+        "lenFrom": 30,
+        "lenTo": 0,
+        "strokeFrom": 2,
+        "strokeTo": 0,
+        "colorFrom": "D1EFFFFF",
+        "colorTo": "D1EFFFFF",
+        "interp": "pow5In"
+      }
+    ]
+  }
+}
+		

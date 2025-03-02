@@ -1,0 +1,36 @@
+{
+"type": "missile",
+"template": "MissileUnitType",
+"name":"瘤导弹",
+"description":"生物化的导弹",
+"speed": 2,
+"hitSize":2,
+"maxRange": 6,
+"lifetime":300
+"health":200,
+"abilities": [
+		{
+	"type": "SpawnDeathAbility",
+			"unit": "音效",
+			"amount": 1,
+			"randAmount":0
+	}
+		{
+			"type": "MoveEffectAbility",
+		     "interval": 3,
+		     "y": -8,
+			"color": "77252BFF"
+			"effect": {
+				"type": "ParticleEffect",
+				"particles": 1,
+				"sizeFrom": 3,
+				"sizeTo": 3,
+				"length": 0,
+				"lifetime": 50,
+				"layer": 109,
+				"colorFrom": "77252BFF",
+				"colorTo": "77252BFF"
+			}
+			}
+	]
+    }

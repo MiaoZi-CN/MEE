@@ -1,0 +1,17 @@
+{
+	"name":"巨型钨墙",
+	"description":"保护己方建筑，挡下敌方炮弹",
+	"details":"为什么没有巨型合金墙这类的呢，答曰:马上加"
+	"type":"Wall",
+	"health":6480,
+	"size":3,
+	"armor":16
+	"group":"walls",
+"research":
+	{
+"requirements": ["tungsten/640",],
+				"parent":"tungsten-wall-large"
+    }
+	"requirements": ["tungsten/54",],
+	"category": "defense",
+}

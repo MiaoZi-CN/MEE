@@ -1,0 +1,201 @@
+{
+  "type": "ItemTurret",
+  "name": "疮痍",
+  "description": "大型导弹发射器，支持发射下列导弹——\n[#c9a5c8]集束导弹：发射大量弹体，以绝对的数量优势淹没敌人\n[#9e172c]高速导弹：由大量泰特希合金构筑而成的弹体，其弹体炸裂后会留下一个球状闪电\n[#8bbeb0]核弹：极高的伤害系数以及巨大范围，严重毁伤范围内物体",
+  "canOverdrive": false,
+  "size": 5,
+  "shootWarmupSpeed": 0.006,
+  "minWarmup": 0.9,
+  "reload": 1600,
+  "health": 6000,
+  "category": "turret",
+  "research": {
+    "parent": "scathe",
+    "requirements": [
+      "surge-alloy/800",
+      "tungsten/1000",
+      "thorium/560",
+      "phase-fabric/200"
+    ]
+  },
+  "range": 1200,
+  "targetAir": true,
+  "targetGround": true,
+  "rotateSpeed": 1.5,
+  "requirements": [
+    "silicon/500",
+    "surge-alloy/200",
+    "carbide/200",
+    "phase-fabric/200",
+    "oxide/200",
+    "泰特希合金/100"
+  ],
+  "shootEffect": "shootBig",
+  "smokeEffect": "shootSmokeMissile",
+  "shootSound": "missileLaunch",
+  "consumes": {
+    "power": 40,
+    "liquid": {
+      "liquid": "cyanogen",
+      "amount": 0.5
+    }
+  },
+  "ammoPerShot": 150,
+  "maxAmmo": 300,
+  "drawer": {
+    "type": "DrawTurret",
+    "parts": [
+      {
+        "type": "RegionPart",
+        "suffix": "-1",
+        "heatProgress": "warmup",
+        "mirror": false,
+        "moveX": 0,
+        "layer": 30,
+        "moveY": 8
+      },
+      {
+        "type": "RegionPart",
+        "suffix": "-2",
+        "heatProgress": "warmup",
+        "mirror": true,
+        "moveX": 0,
+        "moveY": 0,
+        "moveRot": -17,
+        "heatColor": "ff5512"
+      }
+    ]
+  },
+  "ammoTypes": {
+    "carbide": {
+      "lifetime": 10,
+      "speed": 0,
+      "hittable": false,
+      "reflectable": false,
+      "ammoMultiplier": 1,
+      "spawnBullets": [
+        {
+          "instantDisappear": true,
+          "fragBullets": 3,
+          "fragRandomSpread": 80,
+          "fragBullet": {
+            "instantDisappear": true,
+            "spawnUnit": "疮痍碳化物导弹"
+          }
+        }
+      ],
+      "fragBullets": 1,
+      "fragRandomSpread": 0,
+      "fragBullet": {
+        "lifetime": 10,
+        "speed": 0,
+        "hittable": false,
+        "reflectable": false,
+        "ammoMultiplier": 1,
+        "spawnBullets": [
+          {
+            "instantDisappear": true,
+            "fragBullets": 3,
+            "fragRandomSpread": 80,
+            "fragBullet": {
+              "instantDisappear": true,
+              "spawnUnit": "疮痍碳化物导弹"
+            }
+          }
+        ],
+        "fragBullets": 1,
+        "fragRandomSpread": 0,
+        "fragBullet": {
+          "lifetime": 10,
+          "speed": 0,
+          "hittable": false,
+          "reflectable": false,
+          "ammoMultiplier": 1,
+          "spawnBullets": [
+            {
+              "instantDisappear": true,
+              "fragBullets": 3,
+              "fragRandomSpread": 80,
+              "fragBullet": {
+                "instantDisappear": true,
+                "spawnUnit": "疮痍碳化物导弹"
+              }
+            }
+          ],
+          "fragBullets": 1,
+          "fragRandomSpread": 0,
+          "fragBullet": {
+            "lifetime": 10,
+            "speed": 0,
+            "hittable": false,
+            "reflectable": false,
+            "ammoMultiplier": 1,
+            "spawnBullets": [
+              {
+                "instantDisappear": true,
+                "fragBullets": 3,
+                "fragRandomSpread": 80,
+                "fragBullet": {
+                  "instantDisappear": true,
+                  "spawnUnit": "疮痍碳化物导弹"
+                }
+              }
+            ],
+            "fragBullets": 1,
+            "fragRandomSpread": 0,
+            "fragBullet": {
+              "lifetime": 10,
+              "speed": 0,
+              "hittable": false,
+              "reflectable": false,
+              "ammoMultiplier": 1,
+              "spawnBullets": [
+                {
+                  "instantDisappear": true,
+                  "fragBullets": 3,
+                  "fragRandomSpread": 80,
+                  "fragBullet": {
+                    "instantDisappear": true,
+                    "spawnUnit": "疮痍碳化物导弹"
+                  }
+                }
+              ],
+              "fragBullets": 1,
+              "fragRandomSpread": 0,
+              "fragBullet": {
+                "lifetime": 10,
+                "speed": 0,
+                "hittable": false,
+                "reflectable": false,
+                "ammoMultiplier": 1,
+                "spawnBullets": [
+                  {
+                    "instantDisappear": true,
+                    "fragBullets": 3,
+                    "fragRandomSpread": 80,
+                    "fragBullet": {
+                      "instantDisappear": true,
+                      "spawnUnit": "疮痍碳化物导弹"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "泰特希合金": {
+      "speed": 0,
+      "spawnUnit": "疮痍合金导弹",
+      "instantDisappear": true,
+      "ammoMultiplier": 1
+    },
+    "fissile-matter": {
+      "speed": 0,
+      "spawnUnit": "疮痍核弹",
+      "instantDisappear": true,
+      "ammoMultiplier": 1
+    }
+  }
+}

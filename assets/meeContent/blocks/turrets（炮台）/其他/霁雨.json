@@ -1,0 +1,106 @@
+{
+  "type": "ItemTurret",
+  "name": "霁雨",
+  "description": "职业对空的20mm狙击炮，命中时产生大量破片，对体积较大目标或集群单位效果极佳，但不适合小规模作战",
+  "health": 3250,
+  "size": 4,
+  "category": "turret",
+  "reload": 20,
+  "range": 560,
+  "rotateSpeed": 8,
+  "canOverdrive": false,
+  "maxAmmo": 36,
+  "ammoPerShot": 4,
+  "shootY": 5,
+  "shake": 6,
+  "shootSound": "shootAlt",
+  "targetGround": false,
+  "targetAir": true,
+  "requirements": [
+    "silicon/300",
+    "thorium/400",
+    "surge-alloy/30",
+    "oxide/100"
+  ],
+  "ammoTypes": {
+    "tungsten": {
+      "type": "BasicBulletType",
+      "lifetime": 48,
+      "speed": 12,
+      "trailColor": "8e8e8e",
+      "trailLength": 6,
+      "trailChance": 1,
+      "trailRotation": true,
+      "trailEffect": {
+        "type": "ParticleEffect",
+        "cone": 24,
+        "particles": 12,
+        "lifetime": 22,
+        "baseLength": 0,
+        "length": -24,
+        "sizeFrom": 2,
+        "sizeTo": 0,
+        "colorFrom": "8e8e8e",
+        "colorTo": "8e8e8e"
+      },
+      "collidesAir": true,
+      "collidesGround": false,
+      "damage": 228,
+      "hitEffect": {
+        "type": "ParticleEffect",
+        "cone": 360,
+        "particles": 3,
+        "baseLength": 0,
+        "length": 12,
+        "sizeFrom": 2,
+        "sizeTo": 0,
+        "colorFrom": "92DD7E",
+        "colorTo": "92DD7E"
+      },
+      "fragBullets": 12,
+      "fragSpread": 30,
+      "fragRandomSpread": 12,
+      "fragLifeMax": 1,
+      "fragLifeMin": 0.6,
+      "fragVelocityMax": 1,
+      "fragBullet": {
+        "type": "ArtilleryBulletType",
+        "lifetime": 23,
+        "speed": 10,
+        "drag": 0.16,
+        "trailColor": "8e8e8e",
+        "collidesGround": false,
+        "collidesAir": true,
+        "splashDamage": 60,
+        "pierceArmor": true,
+        "splashDamageRadius": 24,
+        "despawnEffect": {
+          "type": "MultiEffect",
+          "effects": [
+            {
+              "type": "WaveEffect",
+              "interp": "circleOut",
+              "lifetime": 22,
+              "sizeFrom": 0,
+              "sizeTo": 24,
+              "strokeFrom": 2,
+              "strokeTo": 0
+            },
+            {
+              "type": "ParticleEffect",
+              "interp": "pow10Out",
+              "lifetime": 22,
+              "sizeFrom": 24,
+              "sizeTo": 8,
+              "colorFrom": "5e5e5e60",
+              "colorTo": "5e5e5e00"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "research": "disperse"
+}
+    
+    

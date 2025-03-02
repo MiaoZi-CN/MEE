@@ -1,0 +1,112 @@
+{
+  "name": "悲悯",
+  "description": "综合辅助与火力支持于一身的强大战略级单位，其导弹可以极为高效地破坏目标内部结构",
+  "speed": 0.96,
+  "armor": 12,
+  "rotateSpeed": 0.7,
+  "engineSize": 6,
+  "engineOffset": 32,
+  "lowAltitude": false,
+  "hitSize": 62,
+  "health": 38500,
+  "flying": true,
+  "shadowElevation": 3,
+  "parts": [
+    {
+      "type": "RegionPart",
+      "y": 0,
+      "x": 0,
+      "mirror": true,
+      "suffix": "-翼",
+      "under": true,
+      "moveY": -1,
+      "moveX": -1,
+      "moveRot": -20,
+      "progress": "warmup"
+    },
+    {
+      "type": "RegionPart",
+      "y": 0,
+      "x": 0,
+      "mirror": true,
+      "suffix": "-前",
+      "under": true,
+      "moveY": -6,
+      "moveX": 6,
+      "progress": "recoil"
+    }
+  ],
+  "research": {
+    "parent": "飞船构建终端",
+    "requirements": [
+      "thorium/7000",
+      "silicon/15000",
+      "oxide/6000",
+      "列位石/300"
+    ]
+  },
+  "weapons": [
+    {
+      "reload": 600,
+      "shootSound": "悲悯-shoot",
+      "bullet": {
+        "instantDisappear": true,
+        "spawnUnit": "悲悯导弹",
+        "smokeEffect": {
+          "type": "ParticleEffect",
+          "particles": 12,
+          "line": true,
+          "strokeFrom": 2,
+          "strokeTo": 1,
+          "lenFrom": 26,
+          "lenTo": 5,
+          "length": 80,
+          "baseLength": 2,
+          "lifetime": 50,
+          "colorFrom": "FFFFFF",
+          "colorTo": "BF92F9FF",
+          "cone": 35
+        }
+      }
+    }
+  ],
+  "abilities": [
+    {
+      "type": "SuppressionFieldAbility",
+      "orbRadius": 13,
+      "x": 0,
+      "y": 0,
+      "particleSize": 9,
+      "layer": 110,
+      "color": "BF92F9FF"
+    },
+    {
+      "type": "EnergyFieldAbility",
+      "x": 0,
+      "y": 0,
+      "layer": 110,
+      "damage": 220,
+      "reload": 10,
+      "range": 380,
+      "healPercent": 0.65,
+      "effectRadius": 4,
+      "sectors": 6,
+      "sectorRad": 0.11,
+      "hitEffect": {
+        "type": "ParticleEffect",
+        "particles": 1,
+        "sizeFrom": 16,
+        "sizeTo": 35,
+        "baseLength": 0,
+        "lifetime": 15,
+        "colorFrom": "bf92f9",
+        "colorTo": "bf92f9ff",
+        "cone": 360
+      },
+      "damageEffect": "chainLightning",
+      "shootSound": "悲悯-能量场",
+      "maxTargets": 3,
+      "color": "bf92f9"
+    }
+  ]
+}

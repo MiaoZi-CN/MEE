@@ -1,0 +1,15 @@
+{
+"type":"WallCrafter",
+"name":"微型碎墙机",
+"description":"以极慢的速度挖墙，生产沙子"
+"ambientSound":"drill",
+"health":160,
+"size":1,
+"rotateSpeed":0.5,
+"drillTime":105
+"output":"sand",
+"requirements":[
+"beryllium/7"]
+"category":"production",
+"alwaysUnlocked":true,
+}

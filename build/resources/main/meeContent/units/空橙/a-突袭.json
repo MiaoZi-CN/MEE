@@ -1,0 +1,65 @@
+{
+  "type": "hover",
+  "name": "突袭",
+  "description": "战略型空中单位，可以使用低制导导弹来进攻敌人",
+  "speed": 2.1,
+  "hitSize": 7,
+  "health": 520,
+  "engineSize": 5,
+  "hovering": true,
+  "template": "ErekirUnitType",
+  "shadowElevation": 0,
+  "armor": 2,
+  "research": "战机制造厂",
+  "parts": [
+    {
+      "type": "HoverPart",
+      //悬浮动画块
+      "mirror": false,
+      //是否镜像显示
+      "x": 0,
+      "y": 0,
+      //平面坐标位置
+      "radius": 11,
+      //半径
+      "phase": 90,
+      //
+      "stroke": 2,
+      //
+      "layerOffset": -0.001,
+      //图层
+      "color": "DEEDFFFF"
+      //颜色
+    }
+  ],
+  //来自@Cheems
+  "weapons": [
+    {
+      "name": "突袭武器",
+      "x": -2.7,
+      "y": -4.3,
+      "rotate": false,
+      "reload": 13,
+      "mirror": true,
+      "shootCone": 180,
+      "baseRotation": 55,
+      "shoot": {
+        "type": "ShootSpread",
+        "spread": 10,
+        "shots": 2
+      },
+      "bullet": {
+        "type": "BasicBulletType",
+        "homingPower": 0.33,
+        "homingDelay": 4,
+        "damage": 6,
+        "trailWidth": 1,
+        "lifetime": 40,
+        "pierceArmor": true,
+        "width": 2,
+        "speed": 3.5,
+        "trailLength": 10
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name":"单位维修基站"
+  "description":"毫无疑问，日渐激烈的前线会带给我们大量的残损单位，而我们的单位工厂无法支撑我们短时间内大量拉起一支部队——那么，单位维修基站或许可以缓解这种情况"
+  "type":"RepairTower"
+  "requirements":[
+   "graphite/190"
+   "silicon/130"
+   "tungsten/200"
+   "oxide/100"
+   ]
+   "category":"units",
+   "size":4
+   "range":200
+   "healAmount":10
+	"research":{
+		"parent":"unit-repair-tower"
+	}
+   "consumes": {
+		"power": 2,
+		"liquid":{"liquid":"ozone","amount":"0.3"}
+		},
+ }

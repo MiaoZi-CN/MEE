@@ -1,0 +1,40 @@
+{
+  "type": "legs",
+  "name": "偿还",
+  "description": "战蝎单位，向敌人发射追踪子弹",
+  "speed": 1,
+  "hitSize": 7,
+  "health": 950,
+  "armor": 2,
+  "research": "战蝎制造厂",
+  "template": "ErekirUnitType",
+  "legCount": 6,
+  "lockLegBase": true,
+  "legContinuousMove": true,
+  "legExtension": 5,
+  "legLength": 10,
+  "legBaseOffset": 3.5,
+  "legMaxLength": 1.8,
+  "legMinLength": 0.8,
+  "legMoveSpace": 1.7,
+  "weapons": [
+    {
+      "name": "偿还武器",
+      "mirror": true,
+      "x": 3,
+      "y": -3,
+      "reload": 22,
+      "recoil": 0,
+      "shootSound": "spark",
+      "inaccuracy": 0,
+      "bullet": {
+        "type": "LightningBulletType",
+        "damage": 15,
+        "pierceArmor": true,
+        "lightningColor": "99F8FFFF",
+        "lightningLength": 18,
+        "buildingDamageMultiplier": 2
+      }
+    }
+  ]
+}

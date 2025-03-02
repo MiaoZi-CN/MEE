@@ -1,0 +1,130 @@
+{
+  "type": "HeaterGenerator",
+  "name": "核裂变堆",
+  "description": "用中子撞击钍的中子产生核裂变，需要水来冷却。[red]需要排出核污水，若没有及时排出将产生泄漏并过热爆炸",
+  "details": "[red]欢迎来到M E N（nuke）（更多埃里克尔核弹）",
+  "health": 10000,
+  "size": 5,
+  "canOverdrive": false,
+  "explosionRadius": 44,
+  "destroyBullet": {
+    "type": "BasicBulletType",
+    "lifetime": 0,
+    "speed": 0,
+    "splashDamage": 1,
+    "splashDamageRadius": 600,
+    "status": "裂解",
+    "statusDuration": 2000,
+    "fragBullets": 10,
+    "despawnEffect": {
+      "type": "MultiEffect",
+      "effects": [
+        {
+          "type": "ParticleEffect",
+          "region": "circle",
+          "lifetime": 200,
+          "particles": 1,
+          "sizeFrom": 144,
+          "sizeTo": 0,
+          "baseLength": 0,
+          "length": 0,
+          "colorFrom": "92DD7EFF",
+          "colorTo": "92DD7EFF",
+          "layer": 110
+        }
+      ]
+    },
+    "fragBullet": {
+      "fragBullets": 1,
+      "type": "LightningBulletType",
+      "damage": 2000,
+      "pierceArmor": true,
+      "lifetime": 1,
+      "lightningColor": "92DD7EFF",
+      "lightningLength": 30,
+      "fragBullet": {
+        "type": "BasicBulletType",
+        "damage": 2,
+        "lifetime": 1,
+        "splashDamage": 2050,
+        "splashDamageRadius": 144,
+        "pierceArmor": true,
+        "fragBullet": {
+          "fragBullets": 1,
+          "type": "LightningBulletType",
+          "damage": 2000,
+          "pierceArmor": true,
+          "lifetime": 1,
+          "lightningColor": "92DD7EFF",
+          "lightningLength": 30
+        }
+      }
+    }
+  },
+  "outputLiquid": {
+    "liquid": "核废水",
+    "amount": 1
+  },
+  "hasItems": true,
+  "hasLiquids": true,
+  "itemCapacity": 120,
+  "liquidCapacity": 120,
+  "explodeOnFull": true,
+  "consumes": {
+    "items": [
+      "thorium/17",
+      "graphite/10"
+    ],
+    "liquid": {
+      "liquid": "water",
+      "amount": 3.5
+    }
+  },
+  "explosionPuddleLiquid": "核废水",
+  "explosionPuddles": 100,
+  "powerProduction": 120,
+  "drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+      {
+        "type": "DrawRegion",
+        "suffix": "-bottom"
+      },
+      {
+        "type": "DrawCrucibleFlame",
+        "flameColor": "92DD7EFF",
+        "flameRadiusScl": 10,
+        "flameRadiusMag": 10
+      },
+      {
+        "type": "DrawPlasma",
+        "suffix": "-p-",
+        "plasma1": "9BDE7E7E",
+        "plasma2": "9BDE7E7E"
+      },
+      "DrawDefault",
+      {
+        "type": "DrawRegion",
+        "suffix": "-玻璃"
+      },
+      {
+        "type": "DrawLiquidRegion",
+        "drawLiquid": "核废水"
+      },
+      "DrawHeatOutput",
+      {
+        "type": "DrawGlowRegion",
+        "color": "5AA161FF"
+      }
+    ]
+  },
+  "category": "power",
+  "heatOutput": 40,
+  "requirements": [
+    "beryllium/150",
+    "silicon/200",
+    "oxide/200",
+    "thorium/70"
+  ],
+  "research": "转子反应堆"
+}

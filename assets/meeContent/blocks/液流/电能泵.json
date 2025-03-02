@@ -1,0 +1,30 @@
+{
+  "type": "Pump",
+  "category": "liquid",
+  "name": "电能泵",
+  "health": 500,
+  "hasLiquids": true,
+  "liquidCapacity": 300,
+  "pumpAmount": 0.21,
+  "size": 3,
+  "research": "reinforced-pump",
+  "consumes": {
+    "power": 4.5
+  },
+  "requirements": [
+    "tungsten/50",
+    "thorium/30",
+    "carbide/5"
+  ],
+  "drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+      {
+        "type": "DrawRegion",
+        "suffix": "-bottom"
+      },
+      "DrawDefault",
+      "DrawPumpLiquid"
+    ]
+  }
+}

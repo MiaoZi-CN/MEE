@@ -1,0 +1,159 @@
+{
+  "type": "ItemTurret",
+  "name": "印记",
+  "description": "非常简易的守备武器，但可以有效填补前期火力空缺",
+  "details": "炮台x\n雷达✓",
+  "health": 1200,
+  "size": 2,
+  "category": "turret",
+  "reload": 80,
+  "range": 120,
+  "rotateSpeed": 15,
+  "maxAmmo": 20,
+  "ammoPerShot": 4,
+  "shootY": 5,
+  "shake": 1.4,
+  "shootSound": "shootAlt",
+  "targetGround": true,
+  "targetAir": true,
+  "requirements": [
+    "beryllium/60"
+  ],
+  "ammoTypes": {
+    "beryllium": {
+      "type": "PointBulletType",
+      "speed": 20,
+      "buildingDamageMultiplier": 0.3,
+      "damage": 40,
+      "splashDamage": 40,
+      "splashDamageRadius": 24,
+      "hitEffect": {
+        "type": "ParticleEffect",
+        "cone": 360,
+        "particles": 3,
+        "baseLength": 0,
+        "length": 12,
+        "sizeFrom": 2,
+        "sizeTo": 0,
+        "colorFrom": "92DD7E",
+        "colorTo": "92DD7E"
+      },
+      "despawnEffect": {
+        "type": "ParticleEffect",
+        "cone": 0,
+        "particles": 1,
+        "baseLength": 0,
+        "length": 0,
+        "sizeFrom": 3.4,
+        "sizeTo": 0,
+        "colorFrom": "92DD7E",
+        "colorTo": "92DD7E"
+      },
+      "trailEffect": {
+        "type": "MultiEffect",
+        "effects": [
+          {
+            "type": "ParticleEffect",
+            "line": true,
+            "cone": 0,
+            "particles": 1,
+            "lifetime": 20,
+            "baseLength": 0.1,
+            "length": 0,
+            "lenFrom": 12,
+            "lenTo": 12,
+            "strokeFrom": 3,
+            "strokeTo": 0,
+            "colorFrom": "92DD7E",
+            "colorTo": "92DD7E"
+          },
+          {
+            "type": "ParticleEffect",
+            "interp": "circleOut",
+            "cone": 360,
+            "particles": 3,
+            "lifetime": 24,
+            "baseLength": 8,
+            "length": 12,
+            "lenFrom": 12,
+            "lenTo": 12,
+            "sizeFrom": 2,
+            "sizeTo": 0,
+            "colorFrom": "92DD7E",
+            "colorTo": "92DD7E"
+          }
+        ]
+      }
+    },
+    "tungsten": {
+      "type": "PointBulletType",
+      "speed": 20,
+      "rangeChange": 24,
+      "buildingDamageMultiplier": 0.3,
+      "damage": 80,
+      "splashDamage": 80,
+      "splashDamageRadius": 24,
+      "hitEffect": {
+        "type": "ParticleEffect",
+        "cone": 360,
+        "particles": 3,
+        "baseLength": 0,
+        "length": 12,
+        "sizeFrom": 2,
+        "sizeTo": 0,
+        "colorFrom": "D3D3D3",
+        "colorTo": "D3D3D3"
+      },
+      "despawnEffect": {
+        "type": "ParticleEffect",
+        "cone": 0,
+        "particles": 1,
+        "baseLength": 0,
+        "length": 0,
+        "sizeFrom": 3.4,
+        "sizeTo": 0,
+        "colorFrom": "D3D3D3",
+        "colorTo": "D3D3D3"
+      },
+      "trailEffect": {
+        "type": "MultiEffect",
+        "effects": [
+          {
+            "type": "ParticleEffect",
+            "line": true,
+            "cone": 0,
+            "particles": 1,
+            "lifetime": 20,
+            "baseLength": 0.1,
+            "length": 0,
+            "lenFrom": 12,
+            "lenTo": 12,
+            "strokeFrom": 3,
+            "strokeTo": 0,
+            "colorFrom": "D3D3D3",
+            "colorTo": "D3D3Di"
+          },
+          {
+            "type": "ParticleEffect",
+            "interp": "circleOut",
+            "cone": 360,
+            "particles": 3,
+            "lifetime": 24,
+            "baseLength": 8,
+            "length": 12,
+            "lenFrom": 12,
+            "lenTo": 12,
+            "sizeFrom": 2,
+            "sizeTo": 0,
+            "colorFrom": "D3D3D3",
+            "colorTo": "D3D3D3"
+          }
+        ]
+      }
+    }
+  },
+  "alwaysUnlocked": true,
+  "research":"赫尔斯特"
+}
+    
+    

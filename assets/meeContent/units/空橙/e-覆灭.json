@@ -1,0 +1,280 @@
+{
+  "type": "payload",
+  "payloadCapacity":600,
+  "allowedInPayloads":false,
+  "useUnitCap":false,
+  "name": "覆灭",
+  "description": "高级战略空中单位，配有高速轨道炮与挂载导弹，附带点防装置，可以有效造成敌人的损伤",
+  "speed": 1.42,
+  "hitSize": 45,
+  "health": 12000,
+  "engineSize": 0,
+  "armor": 16,
+  "flying": true,
+  "template": "ErekirUnitType",
+  "shadowElevation": 3,
+
+  "accel": 0.05,
+  "drag": 0.032,
+
+  "research": "d-遣散",
+  
+  "parts":[
+    {
+      "type":"HoverPart",//悬浮动画块
+      "mirror":false,//是否镜像显示
+      "x":0,"y":0,//平面坐标位置
+      "radius": 20,//半径
+      "phase":200,//
+      "stroke":2,//
+      "layerOffset":-0.001,//图层
+      "color":"E28654"//颜色
+    }
+    {
+	"type":"HoverPart",//悬浮动画块
+	"mirror":false,//是否镜像显示
+	"x":0,"y":0,//平面坐标位置
+	"radius":20,//半径
+	"phase":80,//
+	"stroke":2,//
+	"layerOffset":-0.001,//图层
+	"color":"DEEDFFFF"//颜色
+	}
+	{
+					"type":"ShapePart",
+					"circle":true,
+					"hollow":true,
+					"mirror":false,
+					"x":0,"y":0,
+
+					"stroke":4,
+					"strokeTo":4,
+					"radius":15,
+					"radiusTo":15,
+					"color":"EA8878",
+					"colorTo":"EA8878",
+					"layer":110
+				},
+				{
+					"type":"HaloPart",
+					"tri":true,
+					"mirror":false,
+					"x":0,"y":0,
+
+					"shapes":2,
+					"haloRotateSpeed":-0.4,
+					"triLength":0,
+					"triLengthTo":15.5,
+					"radius":15,
+					"radiusTo":15,
+					"haloRadius":15,
+					"haloRadiusTo":15,
+					"color":"EA8878",
+					"colorTo":"EA8878",
+					"layer":110
+				},
+				{
+					"type":"ShapePart",
+					"circle":true,
+					"hollow":false,
+					"mirror":false,
+					"x":0,"y":0,
+
+					"radius":15,
+					"radiusTo":15,
+					"color":"343434FF",
+					"colorTo":"343434FF",
+					"layer":75
+				},
+  ]
+
+  "abilities": [
+    {
+      "type": "ShieldArcAbility",
+      "radius": 130,
+      "angle": 82,
+      "regen": 9.56,
+      "cooldown": 28,
+      "max": 1000,
+      "y": -10,
+      "width": 10
+    }
+
+  ],
+  "weapons": [
+    {
+      "name": "点防",
+      "type": "PointDefenseWeapon",
+      "x": 0,
+      "y": 1,
+      "rotate": true,
+      "shootSound": "lasercharge2",
+      "recoil": 0,
+      "rotateSpeed": 9,
+      "reload": 17,
+      "targetInterval": 5,
+      "targetSwitchInterval": 5,
+      "bullet": {
+        "maxRange": 80,
+        "damage": 50
+      }
+    }
+    {
+      "name": "覆灭武器1"
+      "y": -10,
+      "x": 11,
+      "inaccuracy": 6,
+      "shootSound": "missile",
+      "rotate": true,
+      "recoil": 2,
+      "reload": 15,
+      "shoot":{
+        "type":"ShootAlternate",
+        "barrels":2,
+        "spread":12
+        "shots":4,
+      }
+      "bullet":{
+        "type":"MissileBulletType",
+        "lifetime":100,
+        "speed":4,
+        "layer": 110,
+
+        "weaveScale": 5,
+        "weaveMag": 3,
+
+        "homingPower":0.08,
+        "damage":50,
+
+        "shootEffect": {
+          "type": "ParticleEffect",
+          "interp": "pow3In",
+          "sizeInterp": "pow10In",
+          "lifetime": 50,
+
+          "baseLength": 0,
+          "length": 12,
+          "sizeFrom": 2,
+          "sizeTo": 0,
+          "colorFrom": "EA8878",
+          "colorTo": "EA8878"
+        }
+      },
+    }
+    {
+      "name": "覆灭武器",
+      "rotate": true,//旋转
+      "x": 16,
+      "y": -11,
+      "reload": 5,
+      "shootY": 10
+      "shootSound": "railgun",
+      "bullet": {
+	"type": "RailBulletType",
+				"damage": 30,
+				"pierce": true,
+				"pierceBuilding": true,
+				"pierceEffect":"none"
+				"pointEffect":
+				{
+				"type": "ParticleEffect",
+				"line":true
+				"particles": 1,
+				"randLength": false,
+					"lenFrom": 17,
+					"lenTo":17,
+					"strokeFrom": 3,
+					"strokeTo": 0,
+					"length": 0,
+					"baseLength": 1,
+					"lifetime": 6,
+					"colorFrom": "ffffff",
+					"colorTo": "EA8878",
+					"cone": 0
+				}
+				  ,
+				"hitEffect": "hitBulletColor",
+				
+				"pierceDamageFactor": 0.15,
+				"length":350
+				"despawnEffect": "pointHit"
+        "smokeEffect": {
+          "type": "ParticleEffect",
+          "line": true,
+          "particles": 2,
+          "cone": 12,
+          "lifetime": 16,
+
+          "baseLength": 3,
+          "length": 12,
+          "lenFrom": 4,
+          "lenTo": 3,
+          "strokeFrom": 1.2,
+          "strokeTo": 0,
+          "colorFrom": "ffffff",
+          "colorTo": "EA8878"
+        },
+        "shootEffect": {
+          "type": "ParticleEffect",
+          "line": true,
+          "particles": 2,
+          "cone": 12,
+          "lifetime": 16,
+
+          "baseLength": 3,
+          "length": 12,
+          "lenFrom": 4,
+          "lenTo": 3,
+          "strokeFrom": 1.2,
+          "strokeTo": 0,
+          "colorFrom": "ffffff",
+          "colorTo": "EA8878"
+        }
+        "endEffect":
+		{
+		"type":"multiEffect",
+		"effects":[
+		{
+			"type":"ParticleEffect",
+			"particles":1,
+			"sizeFrom":6,
+			"sizeTo":6,
+			"length":0,
+			"layer":110,
+			"region":"circle",
+			"interp":"swing",
+			"layer":75
+			"lifetime":38,
+			"colorFrom":"343434FF",
+			"colorTo":"343434FF"
+			},
+			{
+			"type":"WaveEffect",
+			"lifetime":35,
+			"sizeFrom":0,
+			"sizeTo":23,
+			"lightColor":"BF92F9FF",
+			"interp":"circleOut",
+			"strokeFrom":5,
+			"strokeTo":0,
+			"colorFrom":"EA8878",
+			"colorTo":"EA8878"
+			},
+			{
+			"type":"WaveEffect",
+			"lifetime":35,
+			"sizeFrom":5,
+			"sizeTo":5,
+			"lightColor":"BF92F9FF",
+			"interp":"circleOut",
+			"strokeFrom":3,
+			"strokeTo":2,
+			"colorFrom":"EA8878",
+			"colorTo":"EA8878"
+		   }
+		  ]
+		 }
+		}
+      }
+	]
+  }

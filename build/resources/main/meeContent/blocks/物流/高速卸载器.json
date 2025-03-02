@@ -1,0 +1,10 @@
+{
+  "type": "DirectionalUnloader",
+  "name": "高速卸载器",
+  "health": 320,
+  "requirements": [
+    "tungsten/30",
+    "thorium/20"
+  ],
+  "research": "duct-unloader"
+}

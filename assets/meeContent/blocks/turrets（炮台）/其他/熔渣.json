@@ -1,0 +1,102 @@
+{
+  "type": "LiquidTurret",
+  "name": "熔渣",
+  "description": "使用热点燃氢气喷出高温火焰，燃烧敌人",
+  "liquidCapacity": 400,
+  "health": 850,
+  "size": 3,
+  "shoot": {
+    "type": "ShootSpread",
+    "shots": 5,
+    "spread": 0.2
+  },
+  "inaccuracy": 2,
+  "category": "turret",
+  "research": "定罪",
+  "reload": 13,
+  "range": 230,
+  "shootY": -1,
+  "shootSound": "flame",
+  "targetGround": true,
+  "targetAir": true,
+  "requirements": [
+    "tungsten/100",
+    "oxide/40"
+  ],
+  "consumes": {
+    "power": 0.5
+  },
+  "shootEffect": {
+    "type": "multiEffect",
+    "effects": [
+      {
+        "type": "ParticleEffect",
+        "particles": 4,
+        "sizeFrom": 6,
+        "sizeTo": 1,
+        "layer": 90,
+        "length": 220,
+        "lifetime": 30,
+        "lightColor": "171717FF",
+        "colorFrom": "171717FF",
+        "colorTo": "17171699",
+        "cone": 9
+      },
+      {
+        "type": "ParticleEffect",
+        "particles": 4,
+        "sizeFrom": 5,
+        "sizeTo": 2,
+        "layer": 110,
+        "length": 207,
+        "lifetime": 30,
+        "lightColor": "F98F4AFF",
+        "colorFrom": "F98F4AFF",
+        "colorTo": "F98F4AFF",
+        "cone": 10
+      },
+      {
+        "type": "ParticleEffect",
+        "particles": 4,
+        "sizeFrom": 7,
+        "sizeTo": 4,
+        "layer": 110,
+        "length": 205,
+        "lifetime": 35,
+        "lightColor": "9E172CFF",
+        "colorFrom": "ffffff",
+        "colorTo": "9E172CFF",
+        "cone": 11
+      },
+      {
+        "type": "ParticleEffect",
+        "particles": 4,
+        "sizeFrom": 6,
+        "sizeTo": 3,
+        "length": 190,
+        "layer": 80,
+        "lifetime": 55,
+        "lightColor": "343434FF",
+        "colorFrom": "343434FF",
+        "colorTo": "343434FF",
+        "cone": 12
+      }
+    ]
+  },
+  "ammoTypes": {
+    "hydrogen": {
+      "type": "BulletType",
+      "status": "melting",
+      "statusDuration": 550,
+      "buildingDamageMultiplier": 0.1,
+      "collides": true,
+      "pierce": true,
+      "damage": 25,
+      "pierceArmor": true,
+      "speed": 10,
+      "lifetime": 25,
+      "despawnEffect": "none",
+      "hitEffect": "none"
+    }
+  }
+}

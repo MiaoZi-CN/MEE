@@ -1,0 +1,22 @@
+{"type": "BeamDrill",
+"name":"离子轰击钻",
+"description": "通过激光轰炸矿床",
+"tier":10
+"drillTime":20,
+"size":4
+"range": 60,
+"research": "large-plasma-bore",
+"requirements": [
+        "beryllium/180",
+        "graphite/220"
+        "tungsten/70"
+        "surge-alloy/10"
+        "carbide/20"
+    ],
+"category": "production",
+"consumes": {
+    "power":1.5,
+    "liquid": 
+	{"liquid": "cyanogen", "amount": 0.1 }
+    }
+		}

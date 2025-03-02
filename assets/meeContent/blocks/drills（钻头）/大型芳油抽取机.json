@@ -1,0 +1,41 @@
+{
+"type": "GenericCrafter",
+"name":"大型芳油提取机" ,
+"description":"高速提取地下的芳油",
+"health": 1400,
+"size": 4,
+"floating":true,
+"hasPower": true,
+"hasLiquids": true,
+"liquidCapacity": 160,
+	"drawer":{
+		"type":"DrawMulti",
+		"drawers":[
+		"DrawDefault",
+		 {
+	       "type":"DrawLiquidRegion",
+	    "drawLiquid":"arkycite"
+	    },
+	        {
+				"type":"DrawRegion",
+				"suffix":"-转"
+				"rotateSpeed":3
+				"spinSprite": true,
+			}
+					]
+	},
+	"requirements": [
+	    {"item": "beryllium", "amount": 250},
+	    {"item": "tungsten", "amount": 70},
+		{"item": "thorium", "amount": 200}
+],
+"consumes": { "power": 3.35
+ "items": {
+	"items": [
+	{ "item": "thorium", "amount": 3 }
+	]
+	}},
+"outputLiquid": {"liquid": "arkycite", "amount": 0.4},
+"category": "production",
+"research": "离子轰击钻"
+}

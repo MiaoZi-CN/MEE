@@ -1,0 +1,365 @@
+{
+  "type": "PowerTurret",
+  "name": "亵渎",
+  "description": "大型劫难，消耗热量发射三枚子弹，在飞行过程中分裂追踪弹，需要水来润滑",
+  "size": 5,
+  "canOverdrive": false,
+  "category": "turret",
+  "coolantMultiplier": 1.5,
+  "heatRequirement": 60,
+  "unitSort": "strongest",
+  "shoot": {
+    "type": "ShootSpread",
+    "spread": 13,
+    "shots": 3
+  },
+  "consumes": {
+    "power": 10,
+    "liquid": {
+      "liquid": "water",
+      "amount": 4.4
+    }
+  },
+  "requirements": [
+    "silicon/2500",
+    "beryllium/3000",
+    "surge-alloy/1200",
+    "carbide/900",
+    "thorium/2000",
+    "oxide/2000",
+    "phase-fabric/500"
+  ],
+  "drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+      {
+        "type": "DrawTurret",
+        "parts": [
+          {
+            "type": "RegionPart",
+            "mirror": true,
+            "x": 0,
+            "y": 0,
+            "suffix": "-侧",
+            "moveX": 2,
+            "moveY": 0,
+            "moveRot": -20,
+            "progress": "recoil"
+          },
+          {
+            "type": "ShapePart",
+            "hollow": true,
+            "sides": 4,
+            "x": 0,
+            "y": -22,
+            "radius": 0,
+            "radiusTo": 9,
+            "stroke": 0,
+            "strokeTo": 2,
+            "color": "E8D174FF",
+            "rotateSpeed": 0.8,
+            "layer": 110
+          },
+          {
+            "type": "HaloPart",
+            "shapes": 4,
+            "tri": true,
+            "y": -22,
+            "haloRotation": 180,
+            "radius": 0,
+            "radiusTo": 5,
+            "triLength": 4,
+            "triLengthTo": 4,
+            "haloRadius": 16,
+            "haloRadiusTo": 5,
+            "haloRotateSpeed": 2.4,
+            "color": "E8D174FF",
+            "layer": 110,
+            "colorTo": "E8D174FF",
+            "progress": "warmup"
+          },
+          {
+            "type": "ShapePart",
+            "y": -22,
+            "circle": true,
+            "hollow": true,
+            "radius": 0,
+            "radiusTo": 5,
+            "stroke": 0,
+            "strokeTo": 1,
+            "layer": 110,
+            "color": "E8D174FF"
+          },
+          {
+            "type": "HaloPart",
+            "progress": {
+              "type": "warmup",
+              "op": "delay",
+              "amount": 0.3
+            },
+            "rotateSpeed": 0,
+            "shapeRotation": 0,
+            "y": 20,
+            "sides": 3,
+            "shapes": 1,
+            "color": "ffffff",
+            "colorTo": "E8D174FF",
+            "tri": true,
+            "radius": 0,
+            "radiusTo": 16,
+            "triLength": 600,
+            "triLengthTo": 4,
+            "haloRadius": 0,
+            "haloRotateSpeed": 0,
+            "layer": 110
+          },
+          {
+            "type": "HaloPart",
+            "shapes": 2,
+            "tri": true,
+            "y": -22,
+            "radius": 0,
+            "radiusTo": 8,
+            "triLength": 18,
+            "triLengthTo": 10,
+            "haloRadius": 10,
+            "haloRadiusTo": 20,
+            "haloRotation": 90,
+            "haloRotateSpeed": 0,
+            "color": "ffffff",
+            "colorTo": "E8D174FF",
+            "layer": 110,
+            "progress": "warmup"
+          },
+          {
+            "type": "HaloPart",
+            "shapes": 2,
+            "tri": true,
+            "y": -22,
+            "radius": 0,
+            "radiusTo": 8,
+            "triLength": 10,
+            "triLengthTo": 2,
+            "haloRadius": 10,
+            "haloRadiusTo": 20,
+            "haloRotation": 90,
+            "shapeRotation": 180,
+            "haloRotateSpeed": 0,
+            "color": "E8D174FF",
+            "colorTo": "E8D174FF",
+            "layer": 110,
+            "progress": "warmup"
+          },
+          {
+            "type": "FlarePart",
+            "layer": 110,
+            "y": 6,
+            "progress": {
+              "type": "warmup",
+              "op": "blend",
+              "other": "reload",
+              "amount": 0.6
+            },
+            "color1": "E8D174FF",
+            "stroke": 5,
+            "radius": 5,
+            "radiusTo": 40
+          }
+        ]
+      }
+    ]
+  },
+  "research": {
+    "parent": "afflict",
+    "requirements": [
+      "silicon/4000",
+      "beryllium/6000",
+      "surge-alloy/1000",
+      "carbide/5000",
+      "thorium/5000",
+      "oxide/5000",
+      "phase-fabric/1500",
+      "列位石/3000",
+      "泰特希合金/1000"
+    ]
+  },
+  "range": 380,
+  "targetAir": true,
+  "recoil": 3,
+  "reload": 130,
+  "rotateSpeed": 1,
+  "minWarmup": 0.9,
+  "shootWarmupSpeed": 0.02,
+  "shootSound": "largeCannon",
+  "shootEffect": {
+    "type": "MultiEffect",
+    "effects": [
+      {
+        "type": "WaveEffect",
+        "lifetime": 15,
+        "colorFrom": "E8D174FF",
+        "colorTo": "E8D174FF",
+        "sizeFrom": 0,
+        "sizeTo": 50,
+        "strokeFrom": 12,
+        "strokeTo": 0
+      }
+    ]
+  },
+  "shootType": {
+    "type": "BasicBulletType",
+    "sprite": "large-orb",
+    "width": 20,
+    "height": 20,
+    "shrinkY": 0,
+    "speed": 4,
+    "damage": 1000,
+    "lifetime": 100,
+    "pierce": true,
+    "homingRange": 80,
+    "homingPower": 0.01,
+    "buildingDamageMultiplier": 0.1,
+    "trailColor": "E8D174FF",
+    "backColor": "E8D174FF",
+    "hitColor": "E8D174FF",
+    "trailWidth": 10,
+    "trailLength": 20,
+    "trailChance": 50,
+    "despawnSound": "dullExplosion",
+    "intervalAngle": 180,
+    "intervalSpread": 150,
+    "intervalBullets": 2,
+    "bulletInterval": 6,
+    "intervalRandomSpread": 0,
+    "intervalDelay": 2,
+    "fragBullets": 7,
+    "parts": [
+      {
+        "type": "ShapePart",
+        "circle": true,
+        "hollow": true,
+        "radius": 26,
+        "radiusTo": 26,
+        "stroke": 2,
+        "strokeTo": 2,
+        "layer": 110,
+        "color": "E8D174"
+      },
+      {
+        "type": "HaloPart",
+        "tri": true,
+        "triLength": 6,
+        "triLengthTo": 6,
+        "shapes": 5,
+        "haloRadius": 26,
+        "haloRadiusTo": 26,
+        "haloRotateSpeed": 2.4,
+        "radius": 8,
+        "radiusTo": 8,
+        "color": "E8D174",
+        "colorTo": "E8D174"
+      },
+      {
+        "type": "ShapePart",
+        "circle": true,
+        "hollow": true,
+        "radius": 32,
+        "radiusTo": 32,
+        "stroke": 2,
+        "strokeTo": 2,
+        "layer": 110,
+        "color": "E8D174"
+      }
+    ],
+    "despawnEffect": {
+      "type": "MultiEffect",
+      "effects": [
+        {
+          "type": "WaveEffect",
+          "lifetime": 50,
+          "colorFrom": "E8D174FF",
+          "colorTo": "E8D174FF",
+          "sizeFrom": 0,
+          "sizeTo": 50,
+          "strokeFrom": 12,
+          "strokeTo": 0
+        },
+        {
+          "type": "ParticleEffect",
+          "lifetime": 80,
+          "particles": 8,
+          "sizeFrom": 12,
+          "sizeTo": 8,
+          "baseLength": 0,
+          "length": 80,
+          "cone": 360,
+          "colorFrom": "E8D17440",
+          "colorTo": "E8D17400"
+        }
+      ]
+    },
+    "hitEffect": {
+      "type": "MultiEffect",
+      "effects": [
+        {
+          "type": "WaveEffect",
+          "lifetime": 15,
+          "colorFrom": "E8D174FF",
+          "colorTo": "E8D174FF",
+          "sizeFrom": 0,
+          "sizeTo": 50,
+          "strokeFrom": 12,
+          "strokeTo": 0
+        }
+      ]
+    },
+    "trailEffect": {
+      "type": "ParticleEffect",
+      "particles": 5,
+      "sizeFrom": 4,
+      "sizeTo": 0,
+      "length": 0,
+      "lifetime": 55,
+      "colorFrom": "E8D174FF",
+      "colorTo": "E8D174FF"
+    },
+    "fragBullet": {
+      "type": "BasicBulletType",
+      "speed": 5,
+      "damage": 60,
+      "homingRange": 100,
+      "homingPower": 0.2,
+      "pierce": true,
+      "pierceBuilding": true,
+      "lifetime": 25,
+      "buildingDamageMultiplier": 0.1,
+      "width": 1,
+      "height": 1,
+      "backColor": "E8D174FF",
+      "hitColor": "E8D174FF",
+      "frontColor": "E8D174FF",
+      "trailColor": "E8D174FF",
+      "trailWidth": 1,
+      "trailLength": 30
+    },
+    "intervalBullet": {
+      "type": "BasicBulletType",
+      "speed": 5,
+      "damage": 60,
+      "homingRange": 100,
+      "homingPower": 0.2,
+      "pierce": true,
+      "pierceBuilding": true,
+      "lifetime": 25,
+      "buildingDamageMultiplier": 0.1,
+      "width": 3,
+      "height": 1,
+      "backColor": "E8D174FF",
+      "hitColor": "E8D174FF",
+      "frontColor": "E8D174FF",
+      "trailColor": "E8D174FF",
+      "trailWidth": 1,
+      "trailLength": 30
+    }
+  }
+}

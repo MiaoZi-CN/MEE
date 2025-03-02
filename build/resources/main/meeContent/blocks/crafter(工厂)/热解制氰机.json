@@ -1,0 +1,41 @@
+{
+	"type": "HeatCrafter",
+	"name": "热解制氰机",
+	"description": "利用芳油的不稳定性热解氰气，效率极低",
+	"details":"效率低了点，但好用？"
+	"outputLiquid":"cyanogen/0.065"
+		"health": 3000,
+		"itemCapacity":30
+	"size": 2,
+	"heatRequirement":5
+	"hasPower": true,
+	"hasLiquids": true,
+		"drawer":{
+	    "type":"DrawMulti",
+	    "drawers":[
+	    {
+	    "type":"DrawRegion",
+	    "suffix":"-bottom"
+	    },
+	    {
+	       "type":"DrawLiquidTile",
+	    "drawLiquid":"cyanogen"
+	    },
+	    "DrawDefault",
+	]},
+	"craftTime": 120,
+    "liquidCapacity": 60,
+	"consumes": {
+    "power":3,
+    "liquid": 
+	{"liquid": "arkycite", "amount": 0.5}
+    }
+"requirements": [
+    "carbide/5"
+    "beryllium/85"
+	"oxide/20",
+	],
+	"category": "crafting",
+	"research":"cyanogen-synthesizer"
+	
+}

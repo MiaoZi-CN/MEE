@@ -1,0 +1,71 @@
+{
+  "type": "GenericCrafter",
+  //type，不用多说
+  "name": "爆破硅炉",
+  "description": "利用臭氧和石墨爆炸冶硅，效率高",
+  "details": "可是他是弧光硅炉.json欸",
+  "health": 3000,
+  "itemCapacity": 144,
+  //物品存量
+  "liquidCapacity": 40,
+  "size": 4,
+  //大小
+  "craftEffect": {
+    "type": "ExplosionEffect",
+    "waveColor": "73737390",
+    "waveRad": 16,
+    "smokeColor": "73737390",
+    "sparkColor": "FFE176FF"
+  },
+  "outputItem": {
+    "item": "silicon",
+    "amount": 13
+  },
+  //输出物品，"silicon/10"也可以
+  "hasPower": true,
+  //可否接电
+  "hasLiquids": true,
+  "drawer": {
+    //drawer，最好之后了解，drawer比较重要
+    "type": "DrawMulti",
+    "drawers": [
+      {
+        "type": "DrawRegion",
+        "suffix": "-bottom"
+      },
+      {
+        "type": "DrawCrucibleFlame"
+      },
+      {
+        "type": "DrawArcSmelt"
+      },
+      {
+        type: "DrawDefault"
+      }
+    ]
+  },
+  "craftTime": 45,
+  //每次制造间隔
+  "consumes": {
+    //消耗
+    "power": 7,
+    //电力，1比60
+    "items": [
+      "sand/12",
+      "graphite/6"
+    ],
+    "liquid": {
+      "liquid": "ozone",
+      "amount": 0.23
+    }
+  },
+  "requirements": [
+    "silicon/80",
+    "tungsten/80",
+    "oxide/40",
+    "beryllium/100",
+    "carbide/10"
+  ],
+  "category": "crafting",
+  "research": "silicon-arc-furnace"
+}

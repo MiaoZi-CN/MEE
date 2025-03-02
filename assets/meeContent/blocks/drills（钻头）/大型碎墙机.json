@@ -1,0 +1,18 @@
+{
+"type":"WallCrafter",
+"name":"大型碎墙机",
+"description":"以更快的速度挖墙，生产沙子",
+"ambientSound":"drill",
+"health":860,
+"size":3,
+"fogRadius":20,
+"rotateSpeed":6,
+"drillTime":28,
+"output":"sand",
+"consumes": { "power": 1.8},
+"requirements":[
+"oxide/50",
+"beryllium/220"],
+"category":"production",
+"research":"离子轰击钻",
+}

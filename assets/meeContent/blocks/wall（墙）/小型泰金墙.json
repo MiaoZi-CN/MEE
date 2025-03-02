@@ -1,0 +1,23 @@
+{
+	"name":"小型泰金墙",
+	"description":"高级墙壁，吸收敌人攻击释放的能量并释放",
+	"type":"Wall",
+	"health":7500,
+	"size":1,
+	"armor":20
+	"group":"walls",
+    "flashHit":true
+	"chanceDeflect":50
+	"lightningChance":0.5,
+	//产生闪电概率
+	"lightningDamage":50,
+	//闪电伤害
+	"lightningLength":30
+	"research":
+	{
+"requirements": ["泰特希合金/6",],
+				"parent":"泰特希合金墙"
+    }
+	"requirements": ["泰特希合金/6",],
+	"category": "defense",
+}

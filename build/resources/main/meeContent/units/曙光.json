@@ -1,0 +1,29 @@
+{
+	"type": "tether",
+	"name": "曙光",
+	"description": "自动建造，无法大面积手动操控",
+	"speed":3,
+	"hitSize":15,
+	"fogRadius":3,//迷雾揭示范围
+"targetable":false,//可被选为目标
+"hittable":false,//可被击中
+"parts":[
+	{"type":"HoverPart",//悬浮动画块
+	"mirror":false,//是否镜像显示
+	"x":0,"y":-5,//平面坐标位置
+	"radius":7,//半径
+	"phase":90,//
+	"stroke":2,//
+	"layerOffset":-0.001,//图层
+	"color":"DEEDFFFF"//颜色
+	}	]
+	"flying":true,	
+	"rotateSpeed":5,
+	"hitSize":0, 
+	"health": 10,
+	"armor":3,
+	"buildSpeed":2,
+	"defaultController":"BuilderAI",
+	"template":"ErekirUnitType"
+	"research":"建造机终端"
+			    }
